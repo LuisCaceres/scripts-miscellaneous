@@ -1,0 +1,12 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "lib": ["DOM", "ESNext"],
+        "module": "ESNext",
+        "outDir": "dist",
+        "rootDir": "src",
+        "sourceMap": false,
+        "strict": true,
+        "target": "ESNext"
+    }
+}
