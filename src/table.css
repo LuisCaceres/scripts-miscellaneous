@@ -1,0 +1,15 @@
+/* The following are styles for a table. */
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    border: solid;
+}
+
+th:nth-of-type(odd)
+
+.table__container {
+    overflow: auto;
+}
