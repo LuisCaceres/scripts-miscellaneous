@@ -1,14 +1,24 @@
 /* The following are styles for a table. */
 
+:root {
+    /* --color-1: black; */
+    --blue: #00205B;
+    --white: #FFFFFF;
+}
+
 table {
     border-collapse: collapse;
 }
 
 th, td {
+    padding: 1rem;
     border: solid;
 }
 
-th:nth-of-type(odd)
+th {
+    background: var(--blue);
+    color: var(--white);
+}
 
 .table__container {
     overflow: auto;
