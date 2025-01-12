@@ -6,6 +6,10 @@
     --white: #FFFFFF;
 }
 
+body {
+    margin: 2rem;
+}
+
 table {
     border-collapse: collapse;
 }
@@ -23,3 +27,14 @@ th {
 .table__container {
     overflow: auto;
 }
+
+/* CSS COUNTERS START */
+.table {
+    counter-reset: section;
+}
+
+.td:nth-of-type(1)::before {
+    counter-increment: section;
+    content: counter(section);
+}
+/* CSS COUNTERS END */
