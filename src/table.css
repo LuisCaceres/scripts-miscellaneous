@@ -29,11 +29,11 @@ th {
 }
 
 /* CSS COUNTERS START */
-.table {
+table {
     counter-reset: section;
 }
 
-.td:nth-of-type(1)::before {
+td:nth-of-type(1)::before {
     counter-increment: section;
     content: counter(section);
 }
