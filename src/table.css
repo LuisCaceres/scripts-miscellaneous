@@ -8,6 +8,11 @@
 
 body {
     margin: 2rem;
+    font-family: "Verdana";
+}
+
+p {
+    max-width: 44rem;
 }
 
 table {
@@ -38,3 +43,28 @@ td:nth-of-type(1)::before {
     content: counter(section);
 }
 /* CSS COUNTERS END */
+
+/* FONT AWESOME ICONS START */
+/* These icons are added via JavaScript. */
+/* Ensure that the HTML document contains the following: 
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> 
+*/
+.fa {
+    display: block;
+    margin-block-end: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.fa-exclamation-circle {
+    color: red;
+}
+
+.fa-exclamation-triangle {
+    color: orange;
+}
+
+.fa-check {
+    color: green;
+}
+
+/* FONT AWESOME ICONS END */
