@@ -19,7 +19,7 @@
                 icon.classList.add('fa-check');
                 break;
             case 'U':
-                icon.classList.add('fa-circle-question');
+                icon.classList.add('fa-question-circle');
                 break;
             case 'W':
                 icon.classList.add('fa-exclamation-triangle');
