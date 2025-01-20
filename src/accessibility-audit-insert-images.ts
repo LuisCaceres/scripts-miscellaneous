@@ -19,6 +19,7 @@
                 const link = document.createElement('a');
                 link.href = `${path}/${file}.${extension}`;
                 link.target = '_blank';
+                link.textContent = `${file}.${extension}`;
 
                 currentNode.replaceWith(link);
             }
