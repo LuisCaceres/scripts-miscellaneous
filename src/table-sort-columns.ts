@@ -1,10 +1,10 @@
-const table = document.querySelector('table') as HTMLTableElement;
+const table = $0 as HTMLTableSectionElement;
 const rows = Array.from(table.rows);
 
 {
     function toNumber(row: HTMLTableRowElement) {
         const cells = row.cells;
-        const value1 = row.cells[0].textContent;
+        const value1 = cells[0].textContent;
         let number;
 
         switch (value1) {
@@ -50,4 +50,4 @@ const rows = Array.from(table.rows);
     rows.reverse();
 }
 
-table.tBodies[0].append(...rows);
+table.append(...rows);
