@@ -1,4 +1,6 @@
-// Save data on server.
+/* The HTML file that contains an accessibility audit should reference this file with a `script` tag to include the functionality below. */
+
+// Save data on server when pressing the keys `ctrl` and `s`.
 window.addEventListener('keydown', async event => {
 
     if (event.ctrlKey && (event.key === 'S' || event.key === 's')) {

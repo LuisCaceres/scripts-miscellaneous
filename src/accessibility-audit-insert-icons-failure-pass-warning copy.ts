@@ -5,29 +5,29 @@
 
     // For each cell 'cell' in 'cells'.
     for (const cell of cells) {
-        const textContent = cell.textContent?.toUpperCase().slice(0, 1);
+        const textContent = cell.textContent?.toUpperCase().trim();
         
         const icon = document.createElement('span');
         icon.ariaHidden = 'true';
         icon.classList.add('fa');
 
         switch(textContent) {
-            case 'F':
+            case 'FAILURE':
                 icon.classList.add('fa-exclamation-circle');
                 break;
-            case 'P':
+            case 'PASS':
                 icon.classList.add('fa-check');
                 break;
-            case 'U':
+            case 'UNVERIFIED':
                 icon.classList.add('fa-question-circle');
                 break;
-            case 'W':
+            case 'WARNING':
                 icon.classList.add('fa-exclamation-triangle');
                 break;
             default:
                 break;
         }
 
-        cell.prepend('icon');
+        cell.prepend(icon);
     }
 }

@@ -1,4 +1,4 @@
-/* The following piece of code generates a list of comma separated values (CSV) so that they can be consumed by https://www.becsv.com/csv-table.php to create a HTML table. */
+/* The following piece of code generates a list of comma separated values (CSV) from a HTML file. This list is then consumed by https://www.becsv.com/csv-table.php to create a HTML table. */
 
 const headers = [
     'Artist',
