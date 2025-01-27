@@ -1,6 +1,6 @@
 {
-    const columnNumber = 0;
-    const selector = `td:nth-of-type(${columnNumber + 1})`;
+    const columnNumber = 1;
+    const selector = `td:nth-of-type(${columnNumber})`;
     const cells = Array.from(document.querySelectorAll(selector)) as HTMLTableCellElement[];
 
     // For each cell 'cell' in 'cells'.
