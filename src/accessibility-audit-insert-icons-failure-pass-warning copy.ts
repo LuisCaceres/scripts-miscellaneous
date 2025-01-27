@@ -7,7 +7,7 @@
     for (const cell of cells) {
         const textContent = cell.textContent?.toUpperCase().trim();
         
-        const icon = document.createElement('span');
+        const icon = cell.querySelector('.fa') || document.createElement('span');
         icon.ariaHidden = 'true';
         icon.classList.add('fa');
 
