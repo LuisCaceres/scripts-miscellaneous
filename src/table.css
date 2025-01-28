@@ -16,9 +16,17 @@
 body {
     max-inline-size: 80rem;
     padding: 1rem;
-    margin: 2rem;
-    border-color: white;
+    background: var(--white);
+    margin: 1rem;
     font-family: "Verdana";
+}
+
+h1, h2, h3, h4, h5, h6 {
+    inline-size: fit-content;
+    padding: 1rem;
+    margin: 1rem;
+    background: var(--yellow);
+    color: var(--blue);
 }
 
 p {
