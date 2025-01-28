@@ -4,15 +4,25 @@
     /* --color-1: black; */
     --blue: #00205B;
     --white: #FFFFFF;
+    --yellow: #fae110;
+
+    background-color: var(--yellow);
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
-    margin: 2rem;
+    min-inline-size: 80rem;
+    padding: 1rem;
+    margin: auto;
+    border-color: white;
     font-family: "Verdana";
 }
 
 p {
-    max-width: 44rem;
+    max-inline-size: 44rem;
 }
 
 table {
@@ -22,6 +32,8 @@ table {
 th, td {
     padding: 1rem;
     border: solid;
+    text-align: start;
+    vertical-align: top;
 }
 
 th {
