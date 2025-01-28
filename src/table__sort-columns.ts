@@ -1,6 +1,3 @@
-const table = $0 as HTMLTableSectionElement;
-const rows = Array.from(table.rows);
-
 {
     function toNumber(row: HTMLTableRowElement) {
         const cells = row.cells;
@@ -38,6 +35,14 @@ const rows = Array.from(table.rows);
         return number;
     }
 
+    const tbody = $0 as HTMLTableSectionElement;
+
+    if (tbody.nodeName.toUpperCase() !== 'TBODY') {
+        alert('Please select a `tbody` element before proceeding.');
+        throw Error(`Elemented selected isn't a \`tbody\` element.`);
+    }
+
+    const rows = Array.from(tbody.rows);
     const map = new Map();
 
     rows.forEach(row => {
@@ -48,6 +53,6 @@ const rows = Array.from(table.rows);
     // Sort `rows` accordingly.
     rows.sort((rowA, rowB) => map.get(rowA) - map.get(rowB));
     rows.reverse();
-}
 
-table.append(...rows);
+    tbody.append(...rows);
+}
