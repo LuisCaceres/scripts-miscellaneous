@@ -1,7 +1,10 @@
 {
+    // Let `columnNumber` be number of the column whose cells will be used to sort the rows of this table.
+    const columnNumber = 1;
+
     function toNumber(row: HTMLTableRowElement) {
         const cells = row.cells;
-        const value1 = cells[0].textContent;
+        const value1 = (cells[columnNumber - 1].textContent || '').toUpperCase().trim();
         let number;
 
         switch (value1) {
