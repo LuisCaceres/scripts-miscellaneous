@@ -1,7 +1,7 @@
 {
     // For example, it matches `{{image-1}}` and `{{image-10}}.
-    const regex = /{{(image-\d+)}}/;
-    const path = 'images/';
+    const regex = /{{(img-\d+)}}/;
+    const path = 'images';
     const extension = 'png';
 
     const treeWalker = document.createTreeWalker(document, NodeFilter.SHOW_TEXT);
@@ -19,7 +19,6 @@
         currentNode = treeWalker.nextNode() as Text;
     }
 
-
     // For each node 'node' in 'nodes'.
     for (const node of nodes) {
         const file = node?.textContent?.match(regex)?.[1];
@@ -29,7 +28,4 @@
         link.textContent = `${file}.${extension}`;
         node.replaceWith(link);
     }
-
-
-
 }
