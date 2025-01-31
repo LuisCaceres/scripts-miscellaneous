@@ -2,7 +2,7 @@
     // Let `position` be the column number of the new column to be inserted.
     const position1 = 3;
     const position2 = 4;
-    const placeholder = '\n{{screenshot n}}';
+    const placeholder = '{{screenshot n}}';
 
     const table = $0 as HTMLTableElement;
 
