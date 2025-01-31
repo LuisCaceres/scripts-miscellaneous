@@ -8,6 +8,7 @@
         const textContent = cell.textContent?.toUpperCase().trim();
         
         const icon = cell.querySelector('.fa') || document.createElement('span');
+        icon.removeAttribute('class');
         icon.ariaHidden = 'true';
         icon.classList.add('fa');
 
