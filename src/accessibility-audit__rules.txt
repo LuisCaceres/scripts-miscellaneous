@@ -1,0 +1,37 @@
+* Heading levels should only increase by one.
+* The HTML attribute \`aria-current\` must be used to distinguish the active item in a group of items.
+* The HTML attribute \`role\` with a value of \`group\` must be used to define the start and the end of content that shows and hides. 
+* Absolute, fixed, relative and sticky positioning should be avoided in CSS.
+* The \`order\` CSS property with a value other than \`0\` should be avoided in CSS. 
+* The HTML attribute \`tabindex\` with a value greater than \`0\` must be avoided.
+* The CSS property \`animation\` should be avoided unless the web page can honor the user's request to disable animations.
+* Labels for form elements must be unique.
+* Form elements must have an accessible name.
+* Each occurrence of the HTML attribute \`id\` must have a unique value.
+* The content of the HTML element \`title\` must be same as the content of the HTML \`h1\` element.
+* There must at least and at most one HTML element \`h1\` on a web page.
+* Form elements should have a HTML attribute \`autocomplete\` if appropriate.
+* The HTML attribute \`maxLengh\` should be avoided.  
+* Form elements in the invalid state must have a HTML attribute \`aria-invalid\`.
+* Form elements that are required for form submission must have a HTML attribute \`aria-required\`.
+* A group of checkboxes with a HTML attribute \`name\` of equal value must be descendants of a HTML element \`fieldset\`.
+* A group of radio button with a HTML attribute \`name\` of equal value must be descendants of a HTML element \`fieldset\`.
+* There must not be any character key shortcuts.
+* There must be no boxes with a fixed height in CSS.
+* The HTML \`role\` attribute must always have a valid value.
+* The CSS property \`box-shadow\` should be avoided.
+* There must be interactive elements as descendants of other interactive elements.
+* The HTML element \`html\` must have a \`lang\` attribute with a valid value.
+* HTML tables must be well formed.
+* The web page must have a \`header\`, \`main\` and \`footer\` elements.
+* The web page must have sufficient colour contrast.
+*  The HTML attribute \`hidden\` must be used instead of the CSS property \`display\` with a value of \`none\`.
+* A HTML element \`button\` or \`link\` must always have text content.
+* A HTML element \`img\` must always have an \`alt\` attribute.
+* A HTML element \`table\` must always have an accessible name.
+* A HTML element \`iframe\` must always have a \`title\` attribute.
+* The user must be able to use common keyboard shortcuts to go back to the previous page, or to move forward to the next page.
+* The user must be able to use common keyboard shortcuts to scroll down or up the web page.
+* The text alternative of images must be must be clearly visible and legible when the images fail to load on the web page.
+* A HTML element \`button\` must not behave as a link.
+* A HTML element \`a\` must not behave as a button.
