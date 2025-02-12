@@ -4,6 +4,7 @@ import * as path from 'path';
 import * as url from 'url';
 
 const port = 8001;
+
 const mimeTypes = {
     default: 'application/octet-stream',
     html: 'text/html; charset=UTF-8',
@@ -38,9 +39,15 @@ async function getFile(url: string) {
     const pathTraversal = !filePath.startsWith(rootPath);
     const exists = await fs.promises.access(filePath).then(...toBoolean);
     const found = !pathTraversal && exists;
-    const streamPath = found ? filePath : rootPath + '/index.html';
-    const ext = path.extname(streamPath).substring(1).toLowerCase();
-    const stream = fs.createReadStream(streamPath);
+
+    let streamPath, ext, stream;
+
+    if (found) {
+        streamPath = found ? filePath : rootPath + '/index.html';
+        ext = path.extname(streamPath).substring(1).toLowerCase();
+        stream = fs.createReadStream(streamPath);
+    }
+
     return { found, ext, stream };
 };
 
@@ -50,7 +57,6 @@ http.createServer(async (request, response) => {
     const statusCode = file.found ? 200 : 404;
     const mimeType = mimeTypes[file.ext] || mimeTypes.default;
     response.writeHead(statusCode, {'Content-Type': mimeType});
-    file.stream.pipe(response);
 
     if (request.method === 'POST') {
         const filePath = url.parse(request.headers.referer as string);
@@ -65,6 +71,13 @@ http.createServer(async (request, response) => {
 
             await fs.promises.writeFile(rootPath + filePath.pathname, data, 'utf8').catch(error => console.log(error));
         });
+    }
+    else if (statusCode === 404) {
+        console.log(request.url);
+        response.write('Hello world');
+    }
+    if (file.stream) {
+        file.stream.pipe(response);
     }
 }).listen(port);
 
