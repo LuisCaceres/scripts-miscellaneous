@@ -1,11 +1,10 @@
-const fs = require('node:fs');
-const http = require('node:http');
-const path = require('node:path');
-const url = require('node:url');
+import * as fs from 'fs';
+import * as http from 'http';
+import * as path from 'path';
+import * as url from 'url';
 
 const port = 8001;
-
-const MIME_TYPES = {
+const mimeTypes = {
     default: 'application/octet-stream',
     html: 'text/html; charset=UTF-8',
     js: 'application/javascript',
@@ -17,46 +16,54 @@ const MIME_TYPES = {
     svg: 'image/svg+xml',
 };
 
-const STATIC_PATH = path.join(process.cwd(), '');
-const toBool = [() => true, () => false];
+// Let `toBoolean` be a couple of functions, the first one returning always `true` and the second one always return `false`.
+const toBoolean = [() => true, () => false];
 
-const prepareFile = async (url) => {
-    const paths = [STATIC_PATH, url];
+// Let `rootPath` be the path of the current folder.
+const rootPath = process.cwd();
+
+/**
+ * 
+ * @param url 
+ * @returns 
+ */
+async function getFile(url: string) {
+    const paths = [rootPath, url];
 
     if (url.endsWith('/')) {
         paths.push('index.html');
     }
-
+    // Let `filePath` be 
     const filePath = path.join(...paths);
-    const pathTraversal = !filePath.startsWith(STATIC_PATH);
-    const exists = await fs.promises.access(filePath).then(...toBool);
+    const pathTraversal = !filePath.startsWith(rootPath);
+    const exists = await fs.promises.access(filePath).then(...toBoolean);
     const found = !pathTraversal && exists;
-    const streamPath = found ? filePath : STATIC_PATH + '/index.html';
+    const streamPath = found ? filePath : rootPath + '/index.html';
     const ext = path.extname(streamPath).substring(1).toLowerCase();
     const stream = fs.createReadStream(streamPath);
     return { found, ext, stream };
 };
 
-http.createServer(async (req, res) => {
-    const file = await prepareFile(req.url);
+http.createServer(async (request, response) => {
+    console.log(request.url);
+    const file = await getFile(request.url as string);
     const statusCode = file.found ? 200 : 404;
-    const mimeType = MIME_TYPES[file.ext] || MIME_TYPES.default;
-    res.writeHead(statusCode, {'Content-Type': mimeType});
-    file.stream.pipe(res);
+    const mimeType = mimeTypes[file.ext] || mimeTypes.default;
+    response.writeHead(statusCode, {'Content-Type': mimeType});
+    file.stream.pipe(response);
 
-    if (req.method === 'POST') {
-        const filePath = url.parse(req.headers.referer);
+    if (request.method === 'POST') {
+        const filePath = url.parse(request.headers.referer as string);
+
         let data = '';
-        req.on('data', chunk => {
+        request.on('data', chunk => {
             data += chunk.toString();
         });
 
-        req.on('end', () => {
-            res.end('Data received');
+        request.on('end', async() => {
+            response.end('Data received');
 
-            fs.writeFile(STATIC_PATH + filePath.pathname, data, 'utf8', function(err) {
-                if (err) return console.log(err);
-            })
+            await fs.promises.writeFile(rootPath + filePath.pathname, data, 'utf8').catch(error => console.log(error));
         });
     }
 }).listen(port);
