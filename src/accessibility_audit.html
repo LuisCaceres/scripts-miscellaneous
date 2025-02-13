@@ -1,1731 +1,30 @@
 <html lang="en">
-<style type="text/css">
-    .q-plugin .sho-header button.sho-close-button svg {
-        vertical-align: middle;
-    }
-
-    .q-plugin .sho-header button.sho-close-button {
-        background-color: white;
-        border: none;
-        min-width: 0;
-        height: 22px !important;
-        min-height: 22px !important;
-        cursor: pointer;
-        padding: 0;
-    }
-
-    .q-plugin .sho-header button.sho-close-button:hover {
-        background-color: white !important;
-    }
-</style>
-<style type="text/css">
-    @font-face {
-        font-family: "Ciutadella-Regular";
-        src: url("https://shopping.qantas.com/static/fonts/Ciutadella-Regular.woff") format("woff");
-    }
-
-    .q-plugin {
-        max-width: 250px;
-        box-shadow: 0 3px 16px 0 #00000019, 0 2px 4px 0 #00000019;
-        font: 400 11px "Ciutadella-Regular", Helvetica !important;
-        letter-spacing: 0;
-        color: #323232;
-        background-color: #ffffff;
-    }
-
-    .q-plugin a,
-    .q-plugin button {
-        all: unset;
-    }
-
-    .q-plugin .sho-header {
-        background-color: #ffffff;
-        padding: 18px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        position: relative;
-    }
-
-    .q-plugin .sho-header-logo {
-        width: 131px;
-        height: 26px;
-    }
-
-    .q-plugin .sho-header .sho-close-button {
-        width: 17px;
-        height: 17px;
-    }
-
-    .q-plugin .sho-header .sho-user-pod {
-        text-align: right;
-    }
-
-    .q-plugin .sho-header .sho-user-pod p {
-        font: 400 12px "Ciutadella-Regular", Helvetica !important;
-        margin: 0;
-        line-height: 13px;
-    }
-
-    .q-plugin .sho-header .sho-user-pod a {
-        cursor: pointer;
-        font: 400 12px "Ciutadella-Regular", Helvetica !important;
-        text-decoration: underline;
-    }
-
-    .q-plugin footer {
-        height: 36px;
-        margin-top: 1px;
-        display: flex;
-    }
-
-    .q-plugin footer :first-child {
-        margin-right: 1px;
-    }
-
-    .q-plugin footer a {
-        background-color: #f1f1f1;
-        width: 50%;
-        text-decoration: underline;
-        font: 400 13px "Ciutadella-Regular", Helvetica !important;
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        cursor: pointer;
-    }
-
-    .q-plugin .sho-main {
-        background-color: #ffffff;
-        text-align: center;
-        padding: 0;
-        margin: 0;
-    }
-
-    .q-plugin .sho-main p.sho-title {
-        text-align: center;
-        font: 400 14px "Ciutadella-Regular", Helvetica !important;
-        padding: 0 20px 10px 20px;
-        margin: 0;
-        letter-spacing: 0;
-        color: #323232;
-    }
-
-    .q-plugin .sho-main p.sho-title strong {
-        font: 600 15px "Ciutadella-Regular", Helvetica !important;
-        letter-spacing: 0;
-        color: #323232;
-    }
-
-    .q-plugin button.sho-button {
-        font: 400 14px "Ciutadella-Regular", Helvetica !important;
-        letter-spacing: 0.5px;
-        text-align: center;
-        min-width: 195px;
-        max-width: fit-content;
-        max-width: -moz-max-content;
-        min-height: 40px !important;
-        height: 40px !important;
-        border-radius: 3px;
-        background-color: #e40000;
-        text-transform: uppercase;
-        color: #ffffff;
-        cursor: pointer;
-        border: none !important;
-        margin: 0 0 10px 0 !important;
-        padding: 0 !important;
-        box-shadow: none;
-    }
-
-    .q-plugin button.sho-button:hover {
-        background-color: #e40000;
-    }
-
-    .q-plugin button.sho-button:before {
-        content: none;
-    }
-
-    .q-plugin button.sho-button svg {
-        margin-right: 4px;
-        vertical-align: middle;
-    }
-
-    .q-plugin button.sho-success {
-        background-color: #66aa4f;
-    }
-
-    .q-plugin button.sho-success:hover {
-        background-color: #66aa4f;
-    }
-
-    .q-plugin button.suboptimal {
-        cursor: not-allowed;
-        background-color: #dadada;
-        color: #555555;
-    }
-
-    .q-plugin button.suboptimal:hover {
-        background-color: #dadada;
-        color: #555555;
-    }
-</style>
-<style type="text/css">
-    @font-face {
-        font-family: "Ciutadella-Regular";
-        src: url("https://shopping.qantas.com/static/fonts/Ciutadella-Regular.woff") format("woff");
-    }
-
-    .q-plugin {
-        max-width: 250px;
-        box-shadow: 0 3px 16px 0 #00000019, 0 2px 4px 0 #00000019;
-        font: 400 11px "Ciutadella-Regular", Helvetica !important;
-        letter-spacing: 0;
-        color: #323232;
-        background-color: #ffffff;
-    }
-
-    .q-plugin a,
-    .q-plugin button {
-        all: unset;
-    }
-
-    .q-plugin .sho-header {
-        background-color: #ffffff;
-        padding: 18px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        position: relative;
-    }
-
-    .q-plugin .sho-header-logo {
-        width: 131px;
-        height: 26px;
-    }
-
-    .q-plugin .sho-header .sho-close-button {
-        width: 17px;
-        height: 17px;
-    }
-
-    .q-plugin .sho-header .sho-user-pod {
-        text-align: right;
-    }
-
-    .q-plugin .sho-header .sho-user-pod p {
-        font: 400 12px "Ciutadella-Regular", Helvetica !important;
-        margin: 0;
-        line-height: 13px;
-    }
-
-    .q-plugin .sho-header .sho-user-pod a {
-        cursor: pointer;
-        font: 400 12px "Ciutadella-Regular", Helvetica !important;
-        text-decoration: underline;
-    }
-
-    .q-plugin footer {
-        height: 36px;
-        margin-top: 1px;
-        display: flex;
-    }
-
-    .q-plugin footer :first-child {
-        margin-right: 1px;
-    }
-
-    .q-plugin footer a {
-        background-color: #f1f1f1;
-        width: 50%;
-        text-decoration: underline;
-        font: 400 13px "Ciutadella-Regular", Helvetica !important;
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        cursor: pointer;
-    }
-
-    .q-plugin .sho-main {
-        background-color: #ffffff;
-        text-align: center;
-        padding: 0;
-        margin: 0;
-    }
-
-    .q-plugin .sho-main p.sho-title {
-        text-align: center;
-        font: 400 14px "Ciutadella-Regular", Helvetica !important;
-        padding: 0 20px 10px 20px;
-        margin: 0;
-        letter-spacing: 0;
-        color: #323232;
-    }
-
-    .q-plugin .sho-main p.sho-title strong {
-        font: 600 15px "Ciutadella-Regular", Helvetica !important;
-        letter-spacing: 0;
-        color: #323232;
-    }
-
-    .q-plugin .sho-hidden {
-        display: none;
-        height: 0;
-    }
-
-    .q-plugin .sho-terms {
-        background-color: #ffffff;
-    }
-
-    .q-plugin .sho-terms a {
-        padding-bottom: 18px !important;
-        display: block;
-        cursor: pointer;
-        text-decoration: underline !important;
-        font: 400 12px "Ciutadella-Regular", Helvetica !important;
-        line-height: normal;
-        letter-spacing: normal;
-        text-align: center;
-        color: #555555 !important;
-    }
-
-    .q-plugin .sho-terms a:hover {
-        border: none;
-    }
-
-    .q-plugin .sho-terms p {
-        text-align: left;
-        font: 400 12px "Ciutadella-Regular", Helvetica !important;
-        line-height: 1.42;
-        letter-spacing: normal;
-        color: #555555;
-    }
-
-    .q-plugin .sho-terms-details {
-        background-color: #f1f1f1;
-        padding: 15px;
-    }
-
-    .q-plugin .sho-terms-details p {
-        color: #323232;
-        margin: 0;
-        padding: 0;
-    }
-
-    .q-plugin .sho-terms-details p.sho-terms-details-title {
-        display: flex;
-    }
-
-    .q-plugin .sho-terms-details p.sho-terms-details-title .sho-tc-close {
-        font: 400 11px "Ciutadella-Regular", Helvetica !important;
-        margin-left: auto;
-    }
-
-    .q-plugin .sho-terms-details p.sho-terms-details-title strong {
-        color: #323232;
-        display: inline;
-        font: 600 13px "Ciutadella-Regular", Helvetica !important;
-    }
-
-    .q-plugin .sho-terms-details-text {
-        height: 155px;
-        overflow-y: scroll;
-    }
-</style>
-<style type="text/css">
-    @font-face {
-        font-family: "Ciutadella-Regular";
-        src: url("https://shopping.qantas.com/static/fonts/Ciutadella-Regular.woff") format("woff");
-    }
-
-    .q-plugin {
-        max-width: 250px;
-        box-shadow: 0 3px 16px 0 #00000019, 0 2px 4px 0 #00000019;
-        font: 400 11px "Ciutadella-Regular", Helvetica !important;
-        letter-spacing: 0;
-        color: #323232;
-        background-color: #ffffff;
-    }
-
-    .q-plugin a,
-    .q-plugin button {
-        all: unset;
-    }
-
-    .q-plugin .sho-header {
-        background-color: #ffffff;
-        padding: 18px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        position: relative;
-    }
-
-    .q-plugin .sho-header-logo {
-        width: 131px;
-        height: 26px;
-    }
-
-    .q-plugin .sho-header .sho-close-button {
-        width: 17px;
-        height: 17px;
-    }
-
-    .q-plugin .sho-header .sho-user-pod {
-        text-align: right;
-    }
-
-    .q-plugin .sho-header .sho-user-pod p {
-        font: 400 12px "Ciutadella-Regular", Helvetica !important;
-        margin: 0;
-        line-height: 13px;
-    }
-
-    .q-plugin .sho-header .sho-user-pod a {
-        cursor: pointer;
-        font: 400 12px "Ciutadella-Regular", Helvetica !important;
-        text-decoration: underline;
-    }
-
-    .q-plugin footer {
-        height: 36px;
-        margin-top: 1px;
-        display: flex;
-    }
-
-    .q-plugin footer :first-child {
-        margin-right: 1px;
-    }
-
-    .q-plugin footer a {
-        background-color: #f1f1f1;
-        width: 50%;
-        text-decoration: underline;
-        font: 400 13px "Ciutadella-Regular", Helvetica !important;
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        cursor: pointer;
-    }
-
-    .q-plugin .sho-main {
-        background-color: #ffffff;
-        text-align: center;
-        padding: 0;
-        margin: 0;
-    }
-
-    .q-plugin .sho-main p.sho-title {
-        text-align: center;
-        font: 400 14px "Ciutadella-Regular", Helvetica !important;
-        padding: 0 20px 10px 20px;
-        margin: 0;
-        letter-spacing: 0;
-        color: #323232;
-    }
-
-    .q-plugin .sho-main p.sho-title strong {
-        font: 600 15px "Ciutadella-Regular", Helvetica !important;
-        letter-spacing: 0;
-        color: #323232;
-    }
-</style>
 
 <head>
-    <style type="text/css">
-        .q-plugin .sho-header button.sho-close-button svg {
-            vertical-align: middle;
-        }
-
-        .q-plugin .sho-header button.sho-close-button {
-            background-color: white;
-            border: none;
-            min-width: 0;
-            height: 22px !important;
-            min-height: 22px !important;
-            cursor: pointer;
-            padding: 0;
-        }
-
-        .q-plugin .sho-header button.sho-close-button:hover {
-            background-color: white !important;
-        }
-    </style>
-    <style type="text/css">
-        @font-face {
-            font-family: "Ciutadella-Regular";
-            src: url("https://shopping.qantas.com/static/fonts/Ciutadella-Regular.woff") format("woff");
-        }
-
-        .q-plugin {
-            max-width: 250px;
-            box-shadow: 0 3px 16px 0 #00000019, 0 2px 4px 0 #00000019;
-            font: 400 11px "Ciutadella-Regular", Helvetica !important;
-            letter-spacing: 0;
-            color: #323232;
-            background-color: #ffffff;
-        }
-
-        .q-plugin a,
-        .q-plugin button {
-            all: unset;
-        }
-
-        .q-plugin .sho-header {
-            background-color: #ffffff;
-            padding: 18px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            position: relative;
-        }
-
-        .q-plugin .sho-header-logo {
-            width: 131px;
-            height: 26px;
-        }
-
-        .q-plugin .sho-header .sho-close-button {
-            width: 17px;
-            height: 17px;
-        }
-
-        .q-plugin .sho-header .sho-user-pod {
-            text-align: right;
-        }
-
-        .q-plugin .sho-header .sho-user-pod p {
-            font: 400 12px "Ciutadella-Regular", Helvetica !important;
-            margin: 0;
-            line-height: 13px;
-        }
-
-        .q-plugin .sho-header .sho-user-pod a {
-            cursor: pointer;
-            font: 400 12px "Ciutadella-Regular", Helvetica !important;
-            text-decoration: underline;
-        }
-
-        .q-plugin footer {
-            height: 36px;
-            margin-top: 1px;
-            display: flex;
-        }
-
-        .q-plugin footer :first-child {
-            margin-right: 1px;
-        }
-
-        .q-plugin footer a {
-            background-color: #f1f1f1;
-            width: 50%;
-            text-decoration: underline;
-            font: 400 13px "Ciutadella-Regular", Helvetica !important;
-            align-items: center;
-            display: flex;
-            justify-content: center;
-            cursor: pointer;
-        }
-
-        .q-plugin .sho-main {
-            background-color: #ffffff;
-            text-align: center;
-            padding: 0;
-            margin: 0;
-        }
-
-        .q-plugin .sho-main p.sho-title {
-            text-align: center;
-            font: 400 14px "Ciutadella-Regular", Helvetica !important;
-            padding: 0 20px 10px 20px;
-            margin: 0;
-            letter-spacing: 0;
-            color: #323232;
-        }
-
-        .q-plugin .sho-main p.sho-title strong {
-            font: 600 15px "Ciutadella-Regular", Helvetica !important;
-            letter-spacing: 0;
-            color: #323232;
-        }
-
-        .q-plugin button.sho-button {
-            font: 400 14px "Ciutadella-Regular", Helvetica !important;
-            letter-spacing: 0.5px;
-            text-align: center;
-            min-width: 195px;
-            max-width: fit-content;
-            max-width: -moz-max-content;
-            min-height: 40px !important;
-            height: 40px !important;
-            border-radius: 3px;
-            background-color: #e40000;
-            text-transform: uppercase;
-            color: #ffffff;
-            cursor: pointer;
-            border: none !important;
-            margin: 0 0 10px 0 !important;
-            padding: 0 !important;
-            box-shadow: none;
-        }
-
-        .q-plugin button.sho-button:hover {
-            background-color: #e40000;
-        }
-
-        .q-plugin button.sho-button:before {
-            content: none;
-        }
-
-        .q-plugin button.sho-button svg {
-            margin-right: 4px;
-            vertical-align: middle;
-        }
-
-        .q-plugin button.sho-success {
-            background-color: #66aa4f;
-        }
-
-        .q-plugin button.sho-success:hover {
-            background-color: #66aa4f;
-        }
-
-        .q-plugin button.suboptimal {
-            cursor: not-allowed;
-            background-color: #dadada;
-            color: #555555;
-        }
-
-        .q-plugin button.suboptimal:hover {
-            background-color: #dadada;
-            color: #555555;
-        }
-    </style>
-    <style type="text/css">
-        @font-face {
-            font-family: "Ciutadella-Regular";
-            src: url("https://shopping.qantas.com/static/fonts/Ciutadella-Regular.woff") format("woff");
-        }
-
-        .q-plugin {
-            max-width: 250px;
-            box-shadow: 0 3px 16px 0 #00000019, 0 2px 4px 0 #00000019;
-            font: 400 11px "Ciutadella-Regular", Helvetica !important;
-            letter-spacing: 0;
-            color: #323232;
-            background-color: #ffffff;
-        }
-
-        .q-plugin a,
-        .q-plugin button {
-            all: unset;
-        }
-
-        .q-plugin .sho-header {
-            background-color: #ffffff;
-            padding: 18px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            position: relative;
-        }
-
-        .q-plugin .sho-header-logo {
-            width: 131px;
-            height: 26px;
-        }
-
-        .q-plugin .sho-header .sho-close-button {
-            width: 17px;
-            height: 17px;
-        }
-
-        .q-plugin .sho-header .sho-user-pod {
-            text-align: right;
-        }
-
-        .q-plugin .sho-header .sho-user-pod p {
-            font: 400 12px "Ciutadella-Regular", Helvetica !important;
-            margin: 0;
-            line-height: 13px;
-        }
-
-        .q-plugin .sho-header .sho-user-pod a {
-            cursor: pointer;
-            font: 400 12px "Ciutadella-Regular", Helvetica !important;
-            text-decoration: underline;
-        }
-
-        .q-plugin footer {
-            height: 36px;
-            margin-top: 1px;
-            display: flex;
-        }
-
-        .q-plugin footer :first-child {
-            margin-right: 1px;
-        }
-
-        .q-plugin footer a {
-            background-color: #f1f1f1;
-            width: 50%;
-            text-decoration: underline;
-            font: 400 13px "Ciutadella-Regular", Helvetica !important;
-            align-items: center;
-            display: flex;
-            justify-content: center;
-            cursor: pointer;
-        }
-
-        .q-plugin .sho-main {
-            background-color: #ffffff;
-            text-align: center;
-            padding: 0;
-            margin: 0;
-        }
-
-        .q-plugin .sho-main p.sho-title {
-            text-align: center;
-            font: 400 14px "Ciutadella-Regular", Helvetica !important;
-            padding: 0 20px 10px 20px;
-            margin: 0;
-            letter-spacing: 0;
-            color: #323232;
-        }
-
-        .q-plugin .sho-main p.sho-title strong {
-            font: 600 15px "Ciutadella-Regular", Helvetica !important;
-            letter-spacing: 0;
-            color: #323232;
-        }
-
-        .q-plugin .sho-hidden {
-            display: none;
-            height: 0;
-        }
-
-        .q-plugin .sho-terms {
-            background-color: #ffffff;
-        }
-
-        .q-plugin .sho-terms a {
-            padding-bottom: 18px !important;
-            display: block;
-            cursor: pointer;
-            text-decoration: underline !important;
-            font: 400 12px "Ciutadella-Regular", Helvetica !important;
-            line-height: normal;
-            letter-spacing: normal;
-            text-align: center;
-            color: #555555 !important;
-        }
-
-        .q-plugin .sho-terms a:hover {
-            border: none;
-        }
-
-        .q-plugin .sho-terms p {
-            text-align: left;
-            font: 400 12px "Ciutadella-Regular", Helvetica !important;
-            line-height: 1.42;
-            letter-spacing: normal;
-            color: #555555;
-        }
-
-        .q-plugin .sho-terms-details {
-            background-color: #f1f1f1;
-            padding: 15px;
-        }
-
-        .q-plugin .sho-terms-details p {
-            color: #323232;
-            margin: 0;
-            padding: 0;
-        }
-
-        .q-plugin .sho-terms-details p.sho-terms-details-title {
-            display: flex;
-        }
-
-        .q-plugin .sho-terms-details p.sho-terms-details-title .sho-tc-close {
-            font: 400 11px "Ciutadella-Regular", Helvetica !important;
-            margin-left: auto;
-        }
-
-        .q-plugin .sho-terms-details p.sho-terms-details-title strong {
-            color: #323232;
-            display: inline;
-            font: 600 13px "Ciutadella-Regular", Helvetica !important;
-        }
-
-        .q-plugin .sho-terms-details-text {
-            height: 155px;
-            overflow-y: scroll;
-        }
-    </style>
-    <style type="text/css">
-        @font-face {
-            font-family: "Ciutadella-Regular";
-            src: url("https://shopping.qantas.com/static/fonts/Ciutadella-Regular.woff") format("woff");
-        }
-
-        .q-plugin {
-            max-width: 250px;
-            box-shadow: 0 3px 16px 0 #00000019, 0 2px 4px 0 #00000019;
-            font: 400 11px "Ciutadella-Regular", Helvetica !important;
-            letter-spacing: 0;
-            color: #323232;
-            background-color: #ffffff;
-        }
-
-        .q-plugin a,
-        .q-plugin button {
-            all: unset;
-        }
-
-        .q-plugin .sho-header {
-            background-color: #ffffff;
-            padding: 18px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            position: relative;
-        }
-
-        .q-plugin .sho-header-logo {
-            width: 131px;
-            height: 26px;
-        }
-
-        .q-plugin .sho-header .sho-close-button {
-            width: 17px;
-            height: 17px;
-        }
-
-        .q-plugin .sho-header .sho-user-pod {
-            text-align: right;
-        }
-
-        .q-plugin .sho-header .sho-user-pod p {
-            font: 400 12px "Ciutadella-Regular", Helvetica !important;
-            margin: 0;
-            line-height: 13px;
-        }
-
-        .q-plugin .sho-header .sho-user-pod a {
-            cursor: pointer;
-            font: 400 12px "Ciutadella-Regular", Helvetica !important;
-            text-decoration: underline;
-        }
-
-        .q-plugin footer {
-            height: 36px;
-            margin-top: 1px;
-            display: flex;
-        }
-
-        .q-plugin footer :first-child {
-            margin-right: 1px;
-        }
-
-        .q-plugin footer a {
-            background-color: #f1f1f1;
-            width: 50%;
-            text-decoration: underline;
-            font: 400 13px "Ciutadella-Regular", Helvetica !important;
-            align-items: center;
-            display: flex;
-            justify-content: center;
-            cursor: pointer;
-        }
-
-        .q-plugin .sho-main {
-            background-color: #ffffff;
-            text-align: center;
-            padding: 0;
-            margin: 0;
-        }
-
-        .q-plugin .sho-main p.sho-title {
-            text-align: center;
-            font: 400 14px "Ciutadella-Regular", Helvetica !important;
-            padding: 0 20px 10px 20px;
-            margin: 0;
-            letter-spacing: 0;
-            color: #323232;
-        }
-
-        .q-plugin .sho-main p.sho-title strong {
-            font: 600 15px "Ciutadella-Regular", Helvetica !important;
-            letter-spacing: 0;
-            color: #323232;
-        }
-    </style>
-    <style type="text/css">
-        .q-plugin .sho-header button.sho-close-button svg {
-            vertical-align: middle;
-        }
-
-        .q-plugin .sho-header button.sho-close-button {
-            background-color: white;
-            border: none;
-            min-width: 0;
-            height: 22px !important;
-            min-height: 22px !important;
-            cursor: pointer;
-            padding: 0;
-        }
-
-        .q-plugin .sho-header button.sho-close-button:hover {
-            background-color: white !important;
-        }
-    </style>
-    <style type="text/css">
-        @font-face {
-            font-family: "Ciutadella-Regular";
-            src: url("https://shopping.qantas.com/static/fonts/Ciutadella-Regular.woff") format("woff");
-        }
-
-        .q-plugin {
-            max-width: 250px;
-            box-shadow: 0 3px 16px 0 #00000019, 0 2px 4px 0 #00000019;
-            font: 400 11px "Ciutadella-Regular", Helvetica !important;
-            letter-spacing: 0;
-            color: #323232;
-            background-color: #ffffff;
-        }
-
-        .q-plugin a,
-        .q-plugin button {
-            all: unset;
-        }
-
-        .q-plugin .sho-header {
-            background-color: #ffffff;
-            padding: 18px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            position: relative;
-        }
-
-        .q-plugin .sho-header-logo {
-            width: 131px;
-            height: 26px;
-        }
-
-        .q-plugin .sho-header .sho-close-button {
-            width: 17px;
-            height: 17px;
-        }
-
-        .q-plugin .sho-header .sho-user-pod {
-            text-align: right;
-        }
-
-        .q-plugin .sho-header .sho-user-pod p {
-            font: 400 12px "Ciutadella-Regular", Helvetica !important;
-            margin: 0;
-            line-height: 13px;
-        }
-
-        .q-plugin .sho-header .sho-user-pod a {
-            cursor: pointer;
-            font: 400 12px "Ciutadella-Regular", Helvetica !important;
-            text-decoration: underline;
-        }
-
-        .q-plugin footer {
-            height: 36px;
-            margin-top: 1px;
-            display: flex;
-        }
-
-        .q-plugin footer :first-child {
-            margin-right: 1px;
-        }
-
-        .q-plugin footer a {
-            background-color: #f1f1f1;
-            width: 50%;
-            text-decoration: underline;
-            font: 400 13px "Ciutadella-Regular", Helvetica !important;
-            align-items: center;
-            display: flex;
-            justify-content: center;
-            cursor: pointer;
-        }
-
-        .q-plugin .sho-main {
-            background-color: #ffffff;
-            text-align: center;
-            padding: 0;
-            margin: 0;
-        }
-
-        .q-plugin .sho-main p.sho-title {
-            text-align: center;
-            font: 400 14px "Ciutadella-Regular", Helvetica !important;
-            padding: 0 20px 10px 20px;
-            margin: 0;
-            letter-spacing: 0;
-            color: #323232;
-        }
-
-        .q-plugin .sho-main p.sho-title strong {
-            font: 600 15px "Ciutadella-Regular", Helvetica !important;
-            letter-spacing: 0;
-            color: #323232;
-        }
-
-        .q-plugin button.sho-button {
-            font: 400 14px "Ciutadella-Regular", Helvetica !important;
-            letter-spacing: 0.5px;
-            text-align: center;
-            min-width: 195px;
-            max-width: fit-content;
-            max-width: -moz-max-content;
-            min-height: 40px !important;
-            height: 40px !important;
-            border-radius: 3px;
-            background-color: #e40000;
-            text-transform: uppercase;
-            color: #ffffff;
-            cursor: pointer;
-            border: none !important;
-            margin: 0 0 10px 0 !important;
-            padding: 0 !important;
-            box-shadow: none;
-        }
-
-        .q-plugin button.sho-button:hover {
-            background-color: #e40000;
-        }
-
-        .q-plugin button.sho-button:before {
-            content: none;
-        }
-
-        .q-plugin button.sho-button svg {
-            margin-right: 4px;
-            vertical-align: middle;
-        }
-
-        .q-plugin button.sho-success {
-            background-color: #66aa4f;
-        }
-
-        .q-plugin button.sho-success:hover {
-            background-color: #66aa4f;
-        }
-
-        .q-plugin button.suboptimal {
-            cursor: not-allowed;
-            background-color: #dadada;
-            color: #555555;
-        }
-
-        .q-plugin button.suboptimal:hover {
-            background-color: #dadada;
-            color: #555555;
-        }
-    </style>
-    <style type="text/css">
-        @font-face {
-            font-family: "Ciutadella-Regular";
-            src: url("https://shopping.qantas.com/static/fonts/Ciutadella-Regular.woff") format("woff");
-        }
-
-        .q-plugin {
-            max-width: 250px;
-            box-shadow: 0 3px 16px 0 #00000019, 0 2px 4px 0 #00000019;
-            font: 400 11px "Ciutadella-Regular", Helvetica !important;
-            letter-spacing: 0;
-            color: #323232;
-            background-color: #ffffff;
-        }
-
-        .q-plugin a,
-        .q-plugin button {
-            all: unset;
-        }
-
-        .q-plugin .sho-header {
-            background-color: #ffffff;
-            padding: 18px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            position: relative;
-        }
-
-        .q-plugin .sho-header-logo {
-            width: 131px;
-            height: 26px;
-        }
-
-        .q-plugin .sho-header .sho-close-button {
-            width: 17px;
-            height: 17px;
-        }
-
-        .q-plugin .sho-header .sho-user-pod {
-            text-align: right;
-        }
-
-        .q-plugin .sho-header .sho-user-pod p {
-            font: 400 12px "Ciutadella-Regular", Helvetica !important;
-            margin: 0;
-            line-height: 13px;
-        }
-
-        .q-plugin .sho-header .sho-user-pod a {
-            cursor: pointer;
-            font: 400 12px "Ciutadella-Regular", Helvetica !important;
-            text-decoration: underline;
-        }
-
-        .q-plugin footer {
-            height: 36px;
-            margin-top: 1px;
-            display: flex;
-        }
-
-        .q-plugin footer :first-child {
-            margin-right: 1px;
-        }
-
-        .q-plugin footer a {
-            background-color: #f1f1f1;
-            width: 50%;
-            text-decoration: underline;
-            font: 400 13px "Ciutadella-Regular", Helvetica !important;
-            align-items: center;
-            display: flex;
-            justify-content: center;
-            cursor: pointer;
-        }
-
-        .q-plugin .sho-main {
-            background-color: #ffffff;
-            text-align: center;
-            padding: 0;
-            margin: 0;
-        }
-
-        .q-plugin .sho-main p.sho-title {
-            text-align: center;
-            font: 400 14px "Ciutadella-Regular", Helvetica !important;
-            padding: 0 20px 10px 20px;
-            margin: 0;
-            letter-spacing: 0;
-            color: #323232;
-        }
-
-        .q-plugin .sho-main p.sho-title strong {
-            font: 600 15px "Ciutadella-Regular", Helvetica !important;
-            letter-spacing: 0;
-            color: #323232;
-        }
-
-        .q-plugin .sho-hidden {
-            display: none;
-            height: 0;
-        }
-
-        .q-plugin .sho-terms {
-            background-color: #ffffff;
-        }
-
-        .q-plugin .sho-terms a {
-            padding-bottom: 18px !important;
-            display: block;
-            cursor: pointer;
-            text-decoration: underline !important;
-            font: 400 12px "Ciutadella-Regular", Helvetica !important;
-            line-height: normal;
-            letter-spacing: normal;
-            text-align: center;
-            color: #555555 !important;
-        }
-
-        .q-plugin .sho-terms a:hover {
-            border: none;
-        }
-
-        .q-plugin .sho-terms p {
-            text-align: left;
-            font: 400 12px "Ciutadella-Regular", Helvetica !important;
-            line-height: 1.42;
-            letter-spacing: normal;
-            color: #555555;
-        }
-
-        .q-plugin .sho-terms-details {
-            background-color: #f1f1f1;
-            padding: 15px;
-        }
-
-        .q-plugin .sho-terms-details p {
-            color: #323232;
-            margin: 0;
-            padding: 0;
-        }
-
-        .q-plugin .sho-terms-details p.sho-terms-details-title {
-            display: flex;
-        }
-
-        .q-plugin .sho-terms-details p.sho-terms-details-title .sho-tc-close {
-            font: 400 11px "Ciutadella-Regular", Helvetica !important;
-            margin-left: auto;
-        }
-
-        .q-plugin .sho-terms-details p.sho-terms-details-title strong {
-            color: #323232;
-            display: inline;
-            font: 600 13px "Ciutadella-Regular", Helvetica !important;
-        }
-
-        .q-plugin .sho-terms-details-text {
-            height: 155px;
-            overflow-y: scroll;
-        }
-    </style>
-    <style type="text/css">
-        @font-face {
-            font-family: "Ciutadella-Regular";
-            src: url("https://shopping.qantas.com/static/fonts/Ciutadella-Regular.woff") format("woff");
-        }
-
-        .q-plugin {
-            max-width: 250px;
-            box-shadow: 0 3px 16px 0 #00000019, 0 2px 4px 0 #00000019;
-            font: 400 11px "Ciutadella-Regular", Helvetica !important;
-            letter-spacing: 0;
-            color: #323232;
-            background-color: #ffffff;
-        }
-
-        .q-plugin a,
-        .q-plugin button {
-            all: unset;
-        }
-
-        .q-plugin .sho-header {
-            background-color: #ffffff;
-            padding: 18px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            position: relative;
-        }
-
-        .q-plugin .sho-header-logo {
-            width: 131px;
-            height: 26px;
-        }
-
-        .q-plugin .sho-header .sho-close-button {
-            width: 17px;
-            height: 17px;
-        }
-
-        .q-plugin .sho-header .sho-user-pod {
-            text-align: right;
-        }
-
-        .q-plugin .sho-header .sho-user-pod p {
-            font: 400 12px "Ciutadella-Regular", Helvetica !important;
-            margin: 0;
-            line-height: 13px;
-        }
-
-        .q-plugin .sho-header .sho-user-pod a {
-            cursor: pointer;
-            font: 400 12px "Ciutadella-Regular", Helvetica !important;
-            text-decoration: underline;
-        }
-
-        .q-plugin footer {
-            height: 36px;
-            margin-top: 1px;
-            display: flex;
-        }
-
-        .q-plugin footer :first-child {
-            margin-right: 1px;
-        }
-
-        .q-plugin footer a {
-            background-color: #f1f1f1;
-            width: 50%;
-            text-decoration: underline;
-            font: 400 13px "Ciutadella-Regular", Helvetica !important;
-            align-items: center;
-            display: flex;
-            justify-content: center;
-            cursor: pointer;
-        }
-
-        .q-plugin .sho-main {
-            background-color: #ffffff;
-            text-align: center;
-            padding: 0;
-            margin: 0;
-        }
-
-        .q-plugin .sho-main p.sho-title {
-            text-align: center;
-            font: 400 14px "Ciutadella-Regular", Helvetica !important;
-            padding: 0 20px 10px 20px;
-            margin: 0;
-            letter-spacing: 0;
-            color: #323232;
-        }
-
-        .q-plugin .sho-main p.sho-title strong {
-            font: 600 15px "Ciutadella-Regular", Helvetica !important;
-            letter-spacing: 0;
-            color: #323232;
-        }
-    </style>
-    <style type="text/css">
-        .q-plugin .sho-header button.sho-close-button svg {
-            vertical-align: middle;
-        }
-
-        .q-plugin .sho-header button.sho-close-button {
-            background-color: white;
-            border: none;
-            min-width: 0;
-            height: 22px !important;
-            min-height: 22px !important;
-            cursor: pointer;
-            padding: 0;
-        }
-
-        .q-plugin .sho-header button.sho-close-button:hover {
-            background-color: white !important;
-        }
-    </style>
-    <style type="text/css">
-        @font-face {
-            font-family: "Ciutadella-Regular";
-            src: url("https://shopping.qantas.com/static/fonts/Ciutadella-Regular.woff") format("woff");
-        }
-
-        .q-plugin {
-            max-width: 250px;
-            box-shadow: 0 3px 16px 0 #00000019, 0 2px 4px 0 #00000019;
-            font: 400 11px "Ciutadella-Regular", Helvetica !important;
-            letter-spacing: 0;
-            color: #323232;
-            background-color: #ffffff;
-        }
-
-        .q-plugin a,
-        .q-plugin button {
-            all: unset;
-        }
-
-        .q-plugin .sho-header {
-            background-color: #ffffff;
-            padding: 18px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            position: relative;
-        }
-
-        .q-plugin .sho-header-logo {
-            width: 131px;
-            height: 26px;
-        }
-
-        .q-plugin .sho-header .sho-close-button {
-            width: 17px;
-            height: 17px;
-        }
-
-        .q-plugin .sho-header .sho-user-pod {
-            text-align: right;
-        }
-
-        .q-plugin .sho-header .sho-user-pod p {
-            font: 400 12px "Ciutadella-Regular", Helvetica !important;
-            margin: 0;
-            line-height: 13px;
-        }
-
-        .q-plugin .sho-header .sho-user-pod a {
-            cursor: pointer;
-            font: 400 12px "Ciutadella-Regular", Helvetica !important;
-            text-decoration: underline;
-        }
-
-        .q-plugin footer {
-            height: 36px;
-            margin-top: 1px;
-            display: flex;
-        }
-
-        .q-plugin footer :first-child {
-            margin-right: 1px;
-        }
-
-        .q-plugin footer a {
-            background-color: #f1f1f1;
-            width: 50%;
-            text-decoration: underline;
-            font: 400 13px "Ciutadella-Regular", Helvetica !important;
-            align-items: center;
-            display: flex;
-            justify-content: center;
-            cursor: pointer;
-        }
-
-        .q-plugin .sho-main {
-            background-color: #ffffff;
-            text-align: center;
-            padding: 0;
-            margin: 0;
-        }
-
-        .q-plugin .sho-main p.sho-title {
-            text-align: center;
-            font: 400 14px "Ciutadella-Regular", Helvetica !important;
-            padding: 0 20px 10px 20px;
-            margin: 0;
-            letter-spacing: 0;
-            color: #323232;
-        }
-
-        .q-plugin .sho-main p.sho-title strong {
-            font: 600 15px "Ciutadella-Regular", Helvetica !important;
-            letter-spacing: 0;
-            color: #323232;
-        }
-
-        .q-plugin button.sho-button {
-            font: 400 14px "Ciutadella-Regular", Helvetica !important;
-            letter-spacing: 0.5px;
-            text-align: center;
-            min-width: 195px;
-            max-width: fit-content;
-            max-width: -moz-max-content;
-            min-height: 40px !important;
-            height: 40px !important;
-            border-radius: 3px;
-            background-color: #e40000;
-            text-transform: uppercase;
-            color: #ffffff;
-            cursor: pointer;
-            border: none !important;
-            margin: 0 0 10px 0 !important;
-            padding: 0 !important;
-            box-shadow: none;
-        }
-
-        .q-plugin button.sho-button:hover {
-            background-color: #e40000;
-        }
-
-        .q-plugin button.sho-button:before {
-            content: none;
-        }
-
-        .q-plugin button.sho-button svg {
-            margin-right: 4px;
-            vertical-align: middle;
-        }
-
-        .q-plugin button.sho-success {
-            background-color: #66aa4f;
-        }
-
-        .q-plugin button.sho-success:hover {
-            background-color: #66aa4f;
-        }
-
-        .q-plugin button.suboptimal {
-            cursor: not-allowed;
-            background-color: #dadada;
-            color: #555555;
-        }
-
-        .q-plugin button.suboptimal:hover {
-            background-color: #dadada;
-            color: #555555;
-        }
-    </style>
-    <style type="text/css">
-        @font-face {
-            font-family: "Ciutadella-Regular";
-            src: url("https://shopping.qantas.com/static/fonts/Ciutadella-Regular.woff") format("woff");
-        }
-
-        .q-plugin {
-            max-width: 250px;
-            box-shadow: 0 3px 16px 0 #00000019, 0 2px 4px 0 #00000019;
-            font: 400 11px "Ciutadella-Regular", Helvetica !important;
-            letter-spacing: 0;
-            color: #323232;
-            background-color: #ffffff;
-        }
-
-        .q-plugin a,
-        .q-plugin button {
-            all: unset;
-        }
-
-        .q-plugin .sho-header {
-            background-color: #ffffff;
-            padding: 18px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            position: relative;
-        }
-
-        .q-plugin .sho-header-logo {
-            width: 131px;
-            height: 26px;
-        }
-
-        .q-plugin .sho-header .sho-close-button {
-            width: 17px;
-            height: 17px;
-        }
-
-        .q-plugin .sho-header .sho-user-pod {
-            text-align: right;
-        }
-
-        .q-plugin .sho-header .sho-user-pod p {
-            font: 400 12px "Ciutadella-Regular", Helvetica !important;
-            margin: 0;
-            line-height: 13px;
-        }
-
-        .q-plugin .sho-header .sho-user-pod a {
-            cursor: pointer;
-            font: 400 12px "Ciutadella-Regular", Helvetica !important;
-            text-decoration: underline;
-        }
-
-        .q-plugin footer {
-            height: 36px;
-            margin-top: 1px;
-            display: flex;
-        }
-
-        .q-plugin footer :first-child {
-            margin-right: 1px;
-        }
-
-        .q-plugin footer a {
-            background-color: #f1f1f1;
-            width: 50%;
-            text-decoration: underline;
-            font: 400 13px "Ciutadella-Regular", Helvetica !important;
-            align-items: center;
-            display: flex;
-            justify-content: center;
-            cursor: pointer;
-        }
-
-        .q-plugin .sho-main {
-            background-color: #ffffff;
-            text-align: center;
-            padding: 0;
-            margin: 0;
-        }
-
-        .q-plugin .sho-main p.sho-title {
-            text-align: center;
-            font: 400 14px "Ciutadella-Regular", Helvetica !important;
-            padding: 0 20px 10px 20px;
-            margin: 0;
-            letter-spacing: 0;
-            color: #323232;
-        }
-
-        .q-plugin .sho-main p.sho-title strong {
-            font: 600 15px "Ciutadella-Regular", Helvetica !important;
-            letter-spacing: 0;
-            color: #323232;
-        }
-
-        .q-plugin .sho-hidden {
-            display: none;
-            height: 0;
-        }
-
-        .q-plugin .sho-terms {
-            background-color: #ffffff;
-        }
-
-        .q-plugin .sho-terms a {
-            padding-bottom: 18px !important;
-            display: block;
-            cursor: pointer;
-            text-decoration: underline !important;
-            font: 400 12px "Ciutadella-Regular", Helvetica !important;
-            line-height: normal;
-            letter-spacing: normal;
-            text-align: center;
-            color: #555555 !important;
-        }
-
-        .q-plugin .sho-terms a:hover {
-            border: none;
-        }
-
-        .q-plugin .sho-terms p {
-            text-align: left;
-            font: 400 12px "Ciutadella-Regular", Helvetica !important;
-            line-height: 1.42;
-            letter-spacing: normal;
-            color: #555555;
-        }
-
-        .q-plugin .sho-terms-details {
-            background-color: #f1f1f1;
-            padding: 15px;
-        }
-
-        .q-plugin .sho-terms-details p {
-            color: #323232;
-            margin: 0;
-            padding: 0;
-        }
-
-        .q-plugin .sho-terms-details p.sho-terms-details-title {
-            display: flex;
-        }
-
-        .q-plugin .sho-terms-details p.sho-terms-details-title .sho-tc-close {
-            font: 400 11px "Ciutadella-Regular", Helvetica !important;
-            margin-left: auto;
-        }
-
-        .q-plugin .sho-terms-details p.sho-terms-details-title strong {
-            color: #323232;
-            display: inline;
-            font: 600 13px "Ciutadella-Regular", Helvetica !important;
-        }
-
-        .q-plugin .sho-terms-details-text {
-            height: 155px;
-            overflow-y: scroll;
-        }
-    </style>
-    <style type="text/css">
-        @font-face {
-            font-family: "Ciutadella-Regular";
-            src: url("https://shopping.qantas.com/static/fonts/Ciutadella-Regular.woff") format("woff");
-        }
-
-        .q-plugin {
-            max-width: 250px;
-            box-shadow: 0 3px 16px 0 #00000019, 0 2px 4px 0 #00000019;
-            font: 400 11px "Ciutadella-Regular", Helvetica !important;
-            letter-spacing: 0;
-            color: #323232;
-            background-color: #ffffff;
-        }
-
-        .q-plugin a,
-        .q-plugin button {
-            all: unset;
-        }
-
-        .q-plugin .sho-header {
-            background-color: #ffffff;
-            padding: 18px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            position: relative;
-        }
-
-        .q-plugin .sho-header-logo {
-            width: 131px;
-            height: 26px;
-        }
-
-        .q-plugin .sho-header .sho-close-button {
-            width: 17px;
-            height: 17px;
-        }
-
-        .q-plugin .sho-header .sho-user-pod {
-            text-align: right;
-        }
-
-        .q-plugin .sho-header .sho-user-pod p {
-            font: 400 12px "Ciutadella-Regular", Helvetica !important;
-            margin: 0;
-            line-height: 13px;
-        }
-
-        .q-plugin .sho-header .sho-user-pod a {
-            cursor: pointer;
-            font: 400 12px "Ciutadella-Regular", Helvetica !important;
-            text-decoration: underline;
-        }
-
-        .q-plugin footer {
-            height: 36px;
-            margin-top: 1px;
-            display: flex;
-        }
-
-        .q-plugin footer :first-child {
-            margin-right: 1px;
-        }
-
-        .q-plugin footer a {
-            background-color: #f1f1f1;
-            width: 50%;
-            text-decoration: underline;
-            font: 400 13px "Ciutadella-Regular", Helvetica !important;
-            align-items: center;
-            display: flex;
-            justify-content: center;
-            cursor: pointer;
-        }
-
-        .q-plugin .sho-main {
-            background-color: #ffffff;
-            text-align: center;
-            padding: 0;
-            margin: 0;
-        }
-
-        .q-plugin .sho-main p.sho-title {
-            text-align: center;
-            font: 400 14px "Ciutadella-Regular", Helvetica !important;
-            padding: 0 20px 10px 20px;
-            margin: 0;
-            letter-spacing: 0;
-            color: #323232;
-        }
-
-        .q-plugin .sho-main p.sho-title strong {
-            font: 600 15px "Ciutadella-Regular", Helvetica !important;
-            letter-spacing: 0;
-            color: #323232;
-        }
-    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accessibility Evaluation</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"
         type="text/css">
     <link rel="stylesheet" href="table.css">
-    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+
     <style>
+        td:nth-of-type(2) {
+            inline-size: 20rem;
+            max-inline-size: 20rem;
+        }
+
         td:nth-of-type(4) {
+            inline-size: 40rem;
+            max-inline-size: 40rem;
+        }
+
+        td:nth-of-type(5) {
+            inline-size: 40rem;
+            max-inline-size: 40rem;
+        }
+
+        td:nth-of-type(6) {
             inline-size: 40rem;
             max-inline-size: 40rem;
         }
@@ -1739,14 +38,40 @@
 
 <body>
     <h1>Accessibility Evaluation</h1>
+    <p>The following is an accessibility evaluation of &lt;what&gt;.</p>
+    <div hidden="">
+        <h2>Questionnaire</h2>
+        <p>Answer the following questions to get a list of relevant test cases.</p>
+        <form action="">
+            <fieldset>
+                <legend>Which one of these is the evaluation subject?</legend>
+                <p><label for="">
+                        <input type="radio" name="a" id="1"> Web page
+                    </label></p>
+                <p><label for="">
+                        <input type="radio" name="a" id="1"> User interface component
+                    </label></p>
+                <p><label for="">
+                        <input type="radio" name="a" id="1"> Word document
+                    </label></p>
+                <p><label for="">
+                        <input type="radio" name="a" id="1"> PDF document
+                    </label></p>
+                <p><label for="">
+                        <input type="radio" name="a" id="1"> Other
+                    </label></p>
+            </fieldset>
+        </form>
+    </div>
     <div class="table__container">
         <table>
             <tbody>
                 <tr>
                     <th>ID</th>
                     <th>Success Criterion</th>
-                    <th>Status</th>
-                    <th>Question</th>
+
+                    <th>Is this success criterion relevant?</th>
+                    <th>Result of test (unverified, pass, warning, failure)</th>
                     <th>Test cases</th>
                     <th>Issues</th>
 
@@ -1769,9 +94,16 @@
                             to
                             user agents, including assistive technologies.</p>
                     </td>
+
+                    <td>Are there interactive elements such as buttons, form fields or links?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td><br></td>
-                    <td></td>
+                    <td>For each button that expands and collapses content:<br><br>1. JAWS says "collapsed" when the
+                        associated content isn't visible.<br><br>2. JAWS says "expanded" when the associated content is
+                        visible.<br><br>3. JAWS says "start" when it reaches the start of the associated content
+                        immediately below the button.<br><br>4. JAWS says "end" when it reaches the end of the
+                        associated content immediately below the button.</td>
                     <td></td>
 
 
@@ -1785,9 +117,12 @@
                             again in the same process is either:</p>
                         <p>* auto-populated, or<br>* available for the user to select.</p>
                     </td>
+
+                    <td>Are there form fields such as drop-downs or text boxes?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td>Are there form fields such as drop-downs or text boxes?</td>
-                    <td></td>
+                    <td>1. I don't need to manually enter information that I've previously provided.&nbsp;&nbsp;</td>
                     <td></td>
 
 
@@ -1799,8 +134,11 @@
                         <h2>Labels or Instructions </h2>
                         <p>Labels or instructions are provided when content requires user input.</p>
                     </td>
+
+                    <td>Are there form fields such as checkboxes, drop-downs, radio buttons or text boxes?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td>Are there form fields such as checkboxes, drop-downs, radio buttons or text boxes?</td>
                     <td>For each form field such as checkboxes, dropdowns, radio buttons and text boxes:<br><br>1. There
                         is a visual label immediately adjacent to the form field.<br><br>2. JAWS reads out the label of
                         the form field.</td>
@@ -1818,8 +156,11 @@
                             identified and the error
                             is described to the user in text.</p>
                     </td>
+
+                    <td>Are there form fields such as checkboxes, drop-downs, radio buttons or text boxes?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td>Are there form fields such as checkboxes, drop-downs, radio buttons or text boxes?</td>
                     <td>For each invalid form fields such as checkboxes, dropdowns, radio buttons and text
                         boxes:<br><br>1. There is an error message immediately below the orm field.<br><br>2. JAWS reads
                         out the error&nbsp; message automatically.<br><br>3. JAWS says "invalid" when the form field is
@@ -1839,9 +180,12 @@
                         <p>* Human contact details;<br>* Human contact mechanism;<br>* Self-help option;<br>* A fully
                             automated contact mechanism.</p>
                     </td>
+
+                    <td>Is the evaluation subject a web page or embedded in a web page?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td><br></td>
-                    <td></td>
+                    <td>1. I can find help exactly in the same location on multiple web pages.</td>
                     <td></td>
 
 
@@ -1857,8 +201,11 @@
                             component.
                         </p>
                     </td>
+
+                    <td>Are there form fields such as checkboxes, drop-downs, radio buttons or text boxes?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td>Are there form fields such as checkboxes, drop-downs, radio buttons or text boxes?</td>
                     <td>For each form field such as checkboxes, dropdowns, radio buttons and text boxes:<br><br>1.
                         Keyboard focus doesn't move away when typing into a text box.<br><br>2. Keyboard focus doesn't
                         move away when checking a checkbox or a radio button.<br><br>3.&nbsp;&nbsp;Keyboard focus
@@ -1876,8 +223,11 @@
                             of
                             context.</p>
                     </td>
+
+                    <td>Are there interactive elements such as buttons, form fields or links?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td>Are there interactive elements such as buttons, form fields or links?</td>
                     <td>When an interactive element receives keyboard with the "tab" key.<br><br>1. Keyboard focus
                         doesn't automatically move away from the interactive element.</td>
                     <td></td>
@@ -1892,8 +242,11 @@
                         <p>The default human language of each web page can be programmatically
                             determined.</p>
                     </td>
+
+                    <td>Is the evaluation subject a web page or embedded in a web page?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td><br></td>
                     <td>1. JAWS speaks in the same language specified by the page.</td>
                     <td></td>
 
@@ -1908,9 +261,15 @@
                             user interface components and responding to the motion can be disabled to prevent accidental
                             actuation.</p>
                     </td>
+
+                    <td>Is there any functionality that can be controlled by the user's ability to move their
+                        device?&nbsp;&nbsp;For example, tilting their device left or right to move through pictures in
+                        an interactive album.
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td><br></td>
-                    <td></td>
+                    <td>For every piece of functionality that depends on the user's ability to move their
+                        device:<br><br>1. There's a button that can be pressed to perform the same functionality.</td>
                     <td></td>
 
 
@@ -1924,9 +283,12 @@
                             text,
                             the name contains the text that is presented visually.</p>
                     </td>
+
+                    <td>Are there interactive elements such as buttons, form fields or links?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td>Are there interactive elements such as buttons, form fields or links?</td>
-                    <td>1. The visual label is part of the label that JAWS reads.</td>
+                    <td>1. The visual label is part of the label that JAWS reads out.</td>
                     <td></td>
 
 
@@ -1948,10 +310,13 @@
                         <p>Essential</p>
                         <p>Completing the function on the down-event is essential.</p>
                     </td>
+
+                    <td>Are there interactive elements such as buttons, form fields or links?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td>Are there interactive elements such as buttons, form fields or links?</td>
-                    <td>The following doesn't active an interactive element:<br><br>1. Pressing down with a finger on a
-                        touch screen unless the finger is lifted.<br><br>2. Pressing down the "enter" or "space" key
+                    <td>The following doesn't activate an interactive element:<br><br>1. Pressing down with a finger on
+                        a touch screen unless the finger is lifted.<br><br>2. Pressing down the "enter" or "space" key
                         unless the key is released.<br><br>3. Pressing down on the touchpad unless the finger is lifted.
                     </td>
                     <td></td>
@@ -1968,9 +333,16 @@
                             can be operated with a single pointer without a path-based gesture, unless a multipoint or
                             path-based gesture is essential.</p>
                     </td>
+
+                    <td>Is there any functionality that depends on the user's ability to move their pointer in a
+                        specific path? For example, swiping left or right to move through pictures in an interactive
+                        album.
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
-                    <td></td>
+                    <td>For every piece of functionality that depends on the user's ability to move their pointer on a
+                        specific path:<br><br>1. There's a button that can be pressed to perform the same functionality.
+                    </td>
                     <td></td>
 
 
@@ -1987,8 +359,11 @@
                             ambiguous to
                             users in general.</p>
                     </td>
+
+                    <td>Are there links?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td>Are there links?</td>
                     <td>1. While jumping from link to link, JAWS reads out the text of the link and I can understand the
                         destination of the link.</td>
                     <td></td>
@@ -2005,8 +380,11 @@
                             meaning or operation, focusable components receive
                             focus in an order that preserves meaning and operability.</p>
                     </td>
+
+                    <td>Are there interactive elements such as buttons, form fields or links?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td>Are there interactive elements such as buttons, form fields or links?</td>
                     <td>1. Keyboard focus moves from top to bottom and from left to right without jumping around
                         randomly.</td>
                     <td></td>
@@ -2020,8 +398,11 @@
                         <h2>Page Titled </h2>
                         <p>Web pages have titles that describe topic or purpose.</p>
                     </td>
+
+                    <td>Is the evaluation subject an entire web page, Word document or PDF document?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td>Is the evaluation subject an entire web page, Word document or PDF document?</td>
                     <td>1. JAWS reads out the name of the web page.</td>
                     <td></td>
 
@@ -2035,8 +416,11 @@
                         <p>A mechanism is available to bypass blocks of content that are repeated on
                             multiple web pages.</p>
                     </td>
+
+                    <td>Is there a header, a main content area and a footer?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td>Is there a header, a main content area and a footer?</td>
                     <td>1. JAWS allows me to navigate to the header, main content area and the footer.</td>
                     <td></td>
 
@@ -2050,9 +434,12 @@
                         <p>Web pages do not contain anything that flashes more than three times in any one second
                             period, or the flash is below the general flash and red flash thresholds.</p>
                     </td>
+
+                    <td>Are there any videos or animations?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
-                    <td></td>
+                    <td>1. There isn't anyhing that flashes more than 3 times in any one second period.</td>
                     <td></td>
 
 
@@ -2075,10 +462,14 @@
                             to control the frequency of the update unless the auto-updating is part of an activity where
                             it is essential.</p>
                     </td>
-                    <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
+
                     <td>Is there content that moves, blinks, scrolls or updates automatically without user
-                        intervention?&nbsp;</td>
-                    <td></td>
+                        intervention?&nbsp;
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
+                    <td>1. I can pause or stop any content that automatically moves, blinks, scrolls or auto-updates.
+                    </td>
                     <td></td>
 
 
@@ -2092,8 +483,11 @@
                             given at least 20 seconds to extend the time limit with a simple action (for example, "press
                             the space bar"), and the user is allowed to extend the time limit at least ten times.</p>
                     </td>
+
+                    <td>Are there time limits imposed on the user?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td>Are there time limits imposed on the user?</td>
                     <td>1. I can extend the time limit by pressing the "enter" or "space" key.</td>
                     <td></td>
 
@@ -2109,9 +503,12 @@
                             the keyboard shortcut for a user interface component is only active when that component has
                             focus.</p>
                     </td>
+
+                    <td>Is the evaluation subject a web page or embedded in a web page?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
-                    <td></td>
+                    <td>1. I can press any one letter key and there are no unexpected side effects.</td>
                     <td></td>
 
 
@@ -2126,8 +523,11 @@
                             interface, then focus can be moved away from that component using only a keyboard interface.
                         </p>
                     </td>
+
+                    <td>Is the evaluation subject a web page or embedded in a web page?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td>1. I can move into and out of the evaluation subject by pressing the "tab" key.<br><br>2. I can
                         move from the beginning to the end of the evaluation subject by pressing the "tab" key.</td>
                     <td></td>
@@ -2144,8 +544,11 @@
                             function requires input that depends on the path of the user's movement and not just
                             the endpoints.</p>
                     </td>
+
+                    <td>Are there interactive elements such as buttons, form fields or links?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td>Are there interactive elements such as buttons, form fields or links?</td>
                     <td>For each interactive element:<br><br>1. I can set keyboard focus to it by pressing the "tab"
                         key.<br><br>2. I can press the "enter" or "space" key to activate the interactive
                         element.<br><br>3. I can press any other relavant keys to interact.</td>
@@ -2164,8 +567,11 @@
                             audio
                             volume independently from the overall system volume level.</p>
                     </td>
+
+                    <td>Is there audio or video?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td>Is there audio or video?</td>
                     <td>1. I can pause or stop the audio by pressing the "&lt;which-key&gt;".</td>
                     <td></td>
 
@@ -2181,8 +587,11 @@
                             an
                             action, prompting a response, or distinguishing a visual element.</p>
                     </td>
+
+                    <td>Is there colours?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td>For each colour identified in the evaluation subject:<br><br>1. The colour&nbsp; isn't the only
                         visual indication to communicate meaning.</td>
                     <td></td>
@@ -2201,8 +610,11 @@
                             orientation,
                             or sound.</p>
                     </td>
+
+                    <td>Is there text?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td>Is there text?</td>
                     <td>1. There isn't information that relies on the user's ability to perceive shapes, colours, sizes,
                         visual location, orientations or sounds.</td>
                     <td></td>
@@ -2217,9 +629,12 @@
                         <p>When the sequence in which content is presented affects its meaning, a
                             correct reading sequence can be programmatically determined.</p>
                     </td>
+
+                    <td>Is there text?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td>Is there text?</td>
-                    <td>1.</td>
+                    <td>1. The content associated with a heading always follows the heading.</td>
                     <td></td>
 
 
@@ -2232,8 +647,11 @@
                         <p>Information, structure, and relationships conveyed through
                             presentation can be programmatically determined or are available in text.</p>
                     </td>
+
+                    <td>Are there headings and lists?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td>1. JAWS reads out the text of each visual heading.<br><br>2. JAWS says how many items there are
                         on a list.&nbsp;&nbsp;</td>
                     <td></td>
@@ -2251,8 +669,11 @@
                             alternative
                             for text and is clearly labeled as such.</p>
                     </td>
+
+                    <td>Is there audio or video?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td>Is there audio or video?</td>
                     <td></td>
                     <td></td>
 
@@ -2266,8 +687,11 @@
                         <p>Captions are provided for all prerecorded audio content in synchronized media, except when
                             the media is a media alternative for text and is clearly labeled as such.</p>
                     </td>
+
+                    <td>Is there audio or video?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td>Is there audio or video?</td>
                     <td></td>
                     <td></td>
 
@@ -2289,8 +713,11 @@
                         <p>Either an alternative for time-based media or an audio track is provided that presents
                             equivalent information for prerecorded video-only content.</p>
                     </td>
+
+                    <td>Is there audio or video?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td>Is there audio or video?</td>
                     <td></td>
                     <td></td>
 
@@ -2307,8 +734,11 @@
                             user
                             by assistive technologies without receiving focus.</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -2321,8 +751,11 @@
                         <h2>Accessible Authentication (Minimum) </h2>
                         <p>New</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -2340,8 +773,11 @@
                             storage systems, or that submit user test responses, at least one of
                             the following is true:</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -2358,8 +794,11 @@
                             are provided to the user, unless it would jeopardize the security or purpose of the
                             content.</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -2373,8 +812,11 @@
                         <p>Components that have the same functionality within a set of web
                             pages are identified consistently.</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -2392,8 +834,11 @@
                             is
                             initiated by the user.</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -2410,8 +855,11 @@
                             or phrases that have become part of the vernacular of the immediately surrounding
                             text.</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -2424,8 +872,11 @@
                         <h2>Target Size (Minimum) </h2>
                         <p>New</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -2438,8 +889,11 @@
                         <h2>Dragging Movements </h2>
                         <p>New</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -2452,8 +906,11 @@
                         <h2>Focus Not Obscured (Minimum) </h2>
                         <p>New</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -2468,8 +925,11 @@
                             keyboard
                             focus indicator is visible.</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -2482,8 +942,11 @@
                         <h2>Headings and Labels </h2>
                         <p>Headings and labels describe topic or purpose.</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -2498,8 +961,11 @@
                             pages
                             except where the web page is the result of, or a step in, a process.</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -2514,8 +980,11 @@
                             focus
                             triggers additional content to become visible and then hidden, the following are true:</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -2532,8 +1001,11 @@
                             by
                             changing no other style property:</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -2548,8 +1020,11 @@
                             least
                             3:1 against adjacent color(s):</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -2563,8 +1038,11 @@
                         <p>Content can be presented without loss of information or functionality, and without
                             requiring scrolling in two dimensions for:</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -2578,8 +1056,11 @@
                         <p>If the technologies being used can achieve the visual presentation, text is
                             used to convey information rather than images of text except for the following:</p>
                     </td>
+
+                    <td>Are there any images of text?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td>Are there any images of text?</td>
                     <td></td>
                     <td></td>
 
@@ -2593,8 +1074,11 @@
                         <p>Except for captions and images of text, text can be resized without assistive
                             technology up to 200 percent without loss of content or functionality.</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -2609,8 +1093,11 @@
                             of
                             at least 4.5:1, except for the following:</p>
                     </td>
+
+                    <td>Is there text?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td>Is there text?</td>
                     <td></td>
                     <td></td>
 
@@ -2625,8 +1112,11 @@
                             user
                             can be programmatically determined when:</p>
                     </td>
+
+                    <td>Are there any form fields?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td>Are there any form fields?</td>
                     <td></td>
                     <td></td>
 
@@ -2641,8 +1131,11 @@
                             orientation,
                             such as portrait or landscape, unless a specific display orientation is essential.</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -2655,8 +1148,11 @@
                         <h2>Audio Description (Prerecorded) </h2>
                         <p>Audio description</p>
                     </td>
+
+                    <td><br>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td><br></td>
                     <td></td>
                     <td></td>
 
@@ -2669,8 +1165,11 @@
                         <h2>Captions (Live) </h2>
                         <p>Captions</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -2683,8 +1182,11 @@
                         <h2>Accessible Authentication (Enhanced) </h2>
                         <p>New</p>
                     </td>
+
+                    <td>Is there a login form?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td>Is there a login form?</td>
                     <td></td>
                     <td></td>
 
@@ -2699,8 +1201,11 @@
                             one
                             of the following is true:</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -2713,8 +1218,11 @@
                         <h2>Help </h2>
                         <p>Context-sensitive help</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -2727,8 +1235,11 @@
                         <h2>Change on Request </h2>
                         <p>Changes of context</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -2744,8 +1255,11 @@
                             meaning of the
                             words, in context, is ambiguous without knowing the pronunciation.</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -2762,8 +1276,11 @@
                             does not require reading ability more advanced than the lower
                             secondary education level, is available.</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -2777,8 +1294,11 @@
                         <p>A mechanism for identifying the expanded form or meaning of abbreviations is
                             available.</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -2792,8 +1312,11 @@
                         <p>A mechanism is available for identifying specific definitions of words or
                             phrases used in an unusual or restricted way, including idioms and jargon.</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -2809,8 +1332,11 @@
                             a platform except where the restriction is essential, required to ensure the security of the
                             content, or required to respect user settings.</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -2824,8 +1350,11 @@
                         <p>The size of the target for pointer inputs is at least 44 by 44 CSS
                             pixels except when:</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -2838,8 +1367,11 @@
                         <h2>Focus Appearance </h2>
                         <p>New</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -2852,8 +1384,11 @@
                         <h2>Focus Not Obscured (Enhanced) </h2>
                         <p>New</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -2866,8 +1401,11 @@
                         <h2>Section Headings </h2>
                         <p>Section</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -2882,8 +1420,11 @@
                             identified from link text alone,
                             except where the purpose of the link would be ambiguous to users in general.</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -2897,8 +1438,11 @@
                         <p>Information about the user's location within a set of web pages is available.
                         </p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -2911,8 +1455,11 @@
                         <h2>Animation from Interactions </h2>
                         <p>Motion animation</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -2925,8 +1472,11 @@
                         <h2>Three Flashes </h2>
                         <p>Web pages</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -2942,8 +1492,11 @@
                             unless the data is preserved for more than 20 hours when the user does not take any actions.
                         </p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -2959,8 +1512,11 @@
                             without
                             loss of data after re-authenticating.</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -2976,8 +1532,11 @@
                             involving
                             an emergency.</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -2993,8 +1552,11 @@
                             except for non-interactive
                             synchronized media and real-time events.</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -3008,8 +1570,11 @@
                         <p>All functionality of the content is operable through a keyboard
                             interface without requiring specific timings for individual keystrokes.</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -3022,8 +1587,11 @@
                         <h2>Images of Text (No Exception) </h2>
                         <p>Images of text</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -3038,8 +1606,11 @@
                             available to
                             achieve the following:</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -3056,8 +1627,11 @@
                             expression
                             such as singing or rapping, at least one of the following is true:</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -3072,8 +1646,11 @@
                             ratio of
                             at least 7:1, except for the following:</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -3088,8 +1665,11 @@
                             interface
                             components, icons, and regions can be programmatically determined.</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -3104,8 +1684,11 @@
                             for live
                             audio-only content is provided.</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -3120,8 +1703,11 @@
                             prerecorded
                             synchronized media and for all prerecorded video-only media.</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -3137,8 +1723,11 @@
                             provided for all prerecorded
                             video content in synchronized media.</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -3151,8 +1740,11 @@
                         <h2>Sign Language (Prerecorded) </h2>
                         <p>Sign language interpretation</p>
                     </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
                     <td></td>
                     <td></td>
 
@@ -3162,18 +1754,6 @@
             </tbody>
         </table>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
 
 </html>
