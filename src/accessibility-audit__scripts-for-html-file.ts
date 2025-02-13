@@ -5,6 +5,15 @@
 const editionHistoryItems: string[] = [];
 
 {
+    // Verify that the server has been started so that modifications to this file can be saved.
+    (async function() {
+        debugger;
+        try {
+            await fetch('foo');
+        } catch (error) {
+            alert('Modifications to the file cannot be saved. To do so, please open the command line or terminal at the root folder of this accessibility evaluation. Then type "node server".');
+        }
+    })();
 
     // Save data on server when pressing the keys `ctrl` and `s`.
     window.addEventListener('keydown', async event => {
