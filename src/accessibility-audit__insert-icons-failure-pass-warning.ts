@@ -13,25 +13,29 @@
 
     // For each cell 'cell' in 'cells'.
     for (const cell of cells) {
-        const textContent = cell.textContent?.toUpperCase().trim();
-        
-        const icon = cell.querySelector('.fa') || document.createElement('span');
-        icon.removeAttribute('class');
+        const textContent = cell.textContent?.toUpperCase().trim().slice(0, 1);
+
+        const icon = document.createElement('span');
         icon.ariaHidden = 'true';
         icon.classList.add('fa');
+        cell.textContent = '';
 
-        switch(textContent) {
-            case 'FAILURE':
+        switch (true) {
+            case textContent?.startsWith('F'): // FAILURE
                 icon.classList.add('fa-exclamation-circle');
+                cell.append('Failure');
                 break;
-            case 'PASS':
+            case textContent?.startsWith('P'): // PASS
                 icon.classList.add('fa-check');
+                cell.append('Pass');
                 break;
-            case 'UNVERIFIED':
+            case textContent?.startsWith('U'): // UNVERIFIED
                 icon.classList.add('fa-question-circle');
+                cell.append('Unverified');
                 break;
-            case 'WARNING':
+            case textContent?.startsWith('W'): // WARNING
                 icon.classList.add('fa-exclamation-triangle');
+                cell.append('Warning');
                 break;
             default:
                 break;
