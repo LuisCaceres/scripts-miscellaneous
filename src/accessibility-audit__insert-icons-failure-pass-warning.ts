@@ -1,7 +1,15 @@
 {
     const columnNumber = 1;
     const selector = `td:nth-of-type(${columnNumber})`;
-    const cells = Array.from(document.querySelectorAll(selector)) as HTMLTableCellElement[];
+
+    const table = $0 as HTMLTableElement;
+
+    if (table.nodeName.toUpperCase() !== 'TABLE') {
+        alert('Please select a `table` element before proceeding.');
+        throw Error(`Elemented selected isn't a \`table\` element.`);
+    }
+
+    const cells = Array.from(table.querySelectorAll(selector)) as HTMLTableCellElement[];
 
     // For each cell 'cell' in 'cells'.
     for (const cell of cells) {

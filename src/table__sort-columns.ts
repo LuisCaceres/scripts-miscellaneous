@@ -8,11 +8,11 @@
         let number;
 
         switch (value1) {
-            // case 'Status: Completed':
+            // case 'STATUS: COMPLETED': /* WRITTEN IN CAPITAL LETTERS!!! */
                 // number = 0;
                 // break;
-            // case 'Status: Incomplete':
-                // number = 3;
+            // case 'STATUS: INCOMPLETE': /* WRITTEN IN CAPITAL LETTERS!!! */
+                // number = 1;
                 // break;
             default:
                 break;
@@ -22,10 +22,10 @@
         // const value2 = row.cells[1].textContent;
 
         // switch (value2) {
-        //     // case 'Priority: Low':
+        //     // case 'PRIORITY LOW':
         //     //     number = number + 1;
         //     //     break;
-        //     // case 'Priority: High';
+        //     // case 'PRIORITY HIGH';
         //     //     number = number + 2;
         //     //     break;
         //     default:
