@@ -52,14 +52,22 @@ async function getFile(url: string) {
 };
 
 http.createServer(async (request, response) => {
-    console.log(request.url);
+    console.log(request.url, request.method);
     const file = await getFile(request.url as string);
     const statusCode = file.found ? 200 : 404;
     const mimeType = mimeTypes[file.ext] || mimeTypes.default;
     response.writeHead(statusCode, {'Content-Type': mimeType});
 
     if (request.method === 'POST') {
-        const filePath = url.parse(request.headers.referer as string);
+        let pathName: string;
+
+        if (request.url === '/foo') {
+            pathName = url.parse(request.headers.referer as string).pathname;
+        }
+        else if (request.url === '/bar') {
+            console.log('Hello world!');
+            pathName = '/accessibility_evaluation_report.html';
+        }
 
         let data = '';
         request.on('data', chunk => {
@@ -69,7 +77,7 @@ http.createServer(async (request, response) => {
         request.on('end', async() => {
             response.end('Data received');
 
-            await fs.promises.writeFile(rootPath + filePath.pathname, data, 'utf8').catch(error => console.log(error));
+            await fs.promises.writeFile(rootPath + pathName, data, 'utf8').catch(error => console.log(error));
         });
     }
     else if (statusCode === 404) {
