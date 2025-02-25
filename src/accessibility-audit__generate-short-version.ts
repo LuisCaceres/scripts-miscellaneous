@@ -9,7 +9,7 @@ function generateShortVersion(evaluation: HTMLHtmlElement): HTMLHtmlElement {
         const relevantCell = row.cells[4];
         const text = (relevantCell.textContent || '').trim().toUpperCase();
 
-        if (text === 'PASS' || text === 'UNVERIFIED') {
+        if (text !== 'FAILURE' && text !== 'WARNING') {
             row.remove();
         }
     }
