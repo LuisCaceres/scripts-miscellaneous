@@ -14,6 +14,14 @@ function generateShortVersion(evaluation: HTMLHtmlElement): HTMLHtmlElement {
         }
     }
 
+    // Let `irrelevantElements` be a list of elements that should be excluded from `evaluation`.
+    const irrelevantElements = Array.from(evaluation.querySelectorAll('[data-ae-evaluation-only], :is(td, th):is(:nth-of-type(3)), :is(td, th):is(:nth-of-type(4))'));
+
+    // For each irrelevantElement 'irrelevantElement' in 'irrelevantElements'.
+    for (const irrelevantElement of irrelevantElements) {
+        irrelevantElement.remove();
+    }
+
     return evaluation;
 }
 
