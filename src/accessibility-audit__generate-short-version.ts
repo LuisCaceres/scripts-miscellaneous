@@ -19,4 +19,4 @@ function generateShortVersion(evaluation: HTMLHtmlElement): HTMLHtmlElement {
 
 export {
     generateShortVersion
-}
+}   

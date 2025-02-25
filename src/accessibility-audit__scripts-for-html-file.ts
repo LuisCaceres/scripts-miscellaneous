@@ -40,8 +40,6 @@ const editionHistoryItems: string[] = [];
 
             // // Save data as an edit history item.
             // editionHistoryItems.push(html);
-            const tab = window.open();
-            tab?.document.documentElement.replaceChildren(...Array.from(shortVersion.childNodes));
         }
     });
 
