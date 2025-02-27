@@ -1,4 +1,5 @@
-// The following piece of code creates and initialises a local server with Node.js.
+// The following piece of code creates a local server that can update the contents of any files. To update the contents of a file please open it on an Internet browser, modify the HTML and press the keys "ctrl" + "s". Please note that the file must have an event listener for "key" events. The event listener will communicate to the local server.
+
 import * as fs from 'fs';
 import * as http from 'http';
 import * as path from 'path';
@@ -53,13 +54,36 @@ async function getFile(url: string) {
 };
 
 http.createServer(async (request, response) => {
-    // console.log(request.url);
+    console.log(request.url, request.method);
     const file = await getFile(request.url as string);
     const statusCode = file.found ? 200 : 404;
     const mimeType = mimeTypes[file.ext] || mimeTypes.default;
-    response.writeHead(statusCode, { 'access-control-allow-origin': '*', 'content-type': mimeType });
+    response.writeHead(statusCode, {'access-control-allow-origin': '*', 'content-type': mimeType});
 
-    if (statusCode === 404) {
+    if (request.method === 'POST') {
+        let pathName: string;
+
+        if (request.url === '/foo') {
+            pathName = url.parse(request.headers.referer as string).pathname;
+        }
+        else if (request.url === '/bar') {
+            console.log('Hello world!');
+            pathName = '/accessibility_evaluation_report.html';
+        }
+
+        let data = '';
+        request.on('data', chunk => {
+            data += chunk.toString();
+        });
+
+        request.on('end', async() => {
+            response.end('Data received');
+
+            await fs.promises.writeFile(rootPath + pathName, data, 'utf8').catch(error => console.log(error));
+        });
+    }
+    else if (statusCode === 404) {
+        console.log(request.url);
         response.write('Hello world');
     }
     if (file.stream) {
