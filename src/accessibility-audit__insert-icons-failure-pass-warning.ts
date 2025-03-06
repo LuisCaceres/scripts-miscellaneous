@@ -13,7 +13,8 @@
 
     // For each cell 'cell' in 'cells'.
     for (const cell of cells) {
-        const textContent = cell.textContent?.toUpperCase().trim().slice(0, 1);
+        const textContent = cell.textContent as string;
+        const firstLetter = textContent.toUpperCase().trim().slice(0, 1);
 
         const icon = document.createElement('span');
         icon.ariaHidden = 'true';
@@ -21,23 +22,24 @@
         cell.textContent = '';
 
         switch (true) {
-            case textContent?.startsWith('F'): // FAILURE
+            case firstLetter === 'F': // FAILURE
                 icon.classList.add('fa-exclamation-circle');
                 cell.append('Failure');
                 break;
-            case textContent?.startsWith('P'): // PASS
+            case firstLetter === 'P': // PASS
                 icon.classList.add('fa-check');
                 cell.append('Pass');
                 break;
-            case textContent?.startsWith('U'): // UNVERIFIED
+            case firstLetter === 'U': // UNVERIFIED
                 icon.classList.add('fa-question-circle');
                 cell.append('Unverified');
                 break;
-            case textContent?.startsWith('W'): // WARNING
+            case firstLetter === 'W': // WARNING
                 icon.classList.add('fa-exclamation-triangle');
                 cell.append('Warning');
                 break;
             default:
+                cell.append(textContent);
                 break;
         }
 

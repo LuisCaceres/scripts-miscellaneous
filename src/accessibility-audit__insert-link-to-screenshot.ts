@@ -1,7 +1,7 @@
 {
     // For example, it matches `{{image-1}}` and `{{image-10}}.
     const regex = /{{screenshot\s(\d+)}}/;
-    const path = 'images';
+    const path = 'screenshots';
     const prefix = 'screenshot';
     const extension = 'png';
 
