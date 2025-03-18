@@ -28,12 +28,21 @@
             inline-size: 40rem;
             max-inline-size: 40rem;
         }
+
+        .logo {
+            margin-block-start: 1rem;
+        }
     </style>
     <script src="code/accessibility-audit__scripts-for-html-file.js" type="module"></script>
 </head>
 
 <body>
-    <h1>Accessibility Evaluation</h1>
+    <h1>Accessibility evaluation of {{what}}</h1>
+    <p>
+        This accessibility evaluation has been prepared by Vision Australia.
+        <img alt="" class="logo" src="https://visionaustralia.org/themes/custom/vision_australia/images/logo/logo-desktop.svg">
+    </p>
+
     <div data-ae-evaluation-only="">
         <p>Please read the instructions on how to conduct this accessibility evaluation before proceeding with the
             evaluation.</p>
@@ -103,7 +112,9 @@
                     <td>Is the evaluation subject an entire web page, Word document or PDF document?
                         <p>If yes, please test. If no, please ignore.</p>
                     </td>
-                    <td>1. JAWS reads out the name of the web page.</td>
+                    <td>
+                        1. The screen reader says the name of the web page.
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
                     <td></td>
 
@@ -121,9 +132,9 @@
                     <td>Are there headings and lists?
                         <p>If yes, please test. If no, please ignore.</p>
                     </td>
-                    <td>1. JAWS allows me to jump from visual heading to visual heading.
-                        <br><br>2. JAWS says the heading level of each visual heading.
-                        <br><br>3. JAWS says how many items there are
+                    <td>1. The screen reader allows me to jump from visual heading to visual heading.
+                        <br><br>2. The screen reader says the heading level of each visual heading.
+                        <br><br>3. The screen reader says how many items there are
                         on a list.
                     </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
@@ -144,7 +155,7 @@
                     <td>Is there a header, a main content area and a footer?
                         <p>If yes, please test. If no, please ignore.</p>
                     </td>
-                    <td>1. JAWS allows me to navigate to the header, main content area and the footer.</td>
+                    <td>1. The screen reader allows me to navigate to the header, the beginning of the main content, the footer and the "search" text box if one exists.</td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
                     <td></td>
 
@@ -166,12 +177,10 @@
                     <td>Are there links?
                         <p>If yes, please test. If no, please ignore.</p>
                     </td>
-                    <td>1. While jumping from link to link, JAWS reads out the text of the link and I can understand the
+                    <td>1. While jumping from link to link, the screen reader says the text of the link and I can clearly understand the
                         destination of the link.</td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
                     <td></td>
-
-
                     <td> A</td>
                 </tr>
                 <tr>
@@ -188,13 +197,15 @@
                     <td>Are there interactive elements such as buttons, form fields or links?
                         <p>If yes, please test. If no, please ignore.</p>
                     </td>
-                    <td>For each interactive element:<br><br>1. I can set keyboard focus to it by pressing the "tab"
-                        key.<br><br>2. I can press the "enter" or "space" key to activate the interactive
-                        element.<br><br>3. I can press any other relevant keys to interact.</td>
+                    <td>For each interactive element:
+                        <ol>
+                            <li>I can set keyboard focus to it by pressing the "tab" key.</li>
+                            <li>I can press the "enter" or "space" key to activate the interactive element.</li>
+                            <li>I can press any other relevant keys to interact with the interactive element.</li>
+                        </ol>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
                     <td></td>
-
-
                     <td> A</td>
                 </tr>
                 <tr>
@@ -208,9 +219,12 @@
                     <td>Are there form fields such as checkboxes, drop-downs, radio buttons or text boxes?
                         <p>If yes, please test. If no, please ignore.</p>
                     </td>
-                    <td>For each form field such as checkboxes, dropdowns, radio buttons and text boxes:<br><br>1. There
-                        is a visual label immediately adjacent to the form field.<br><br>2. JAWS reads out the label of
-                        the form field.</td>
+                    <td>For each form field such as checkboxes, dropdowns, radio buttons and text boxes:
+                        <ol>
+                            <li>There is a visual label immediately adjacent to the form field.</li>
+                            <li>The screen reader reads out the label of the form field.</li>
+                        </ol>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
                     <td></td>
 
@@ -230,11 +244,13 @@
                     <td>Are there form fields such as checkboxes, drop-downs, radio buttons or text boxes?
                         <p>If yes, please test. If no, please ignore.</p>
                     </td>
-                    <td>For each invalid form fields such as checkboxes, dropdowns, radio buttons and text
-                        boxes:<br><br>1. There is an error message immediately below the form field.<br><br>2. JAWS
-                        reads
-                        out the error&nbsp; message automatically.<br><br>3. JAWS says "invalid" when the form field is
-                        set keyboard focus.</td>
+                    <td>For each invalid form field:
+                        <ol>
+                            <li>There is an error message immediately below the form field.</li>
+                            <li>The screen reader reads out the error message when I jump to an invalid form field.</li>
+                            <li>The screen reader says "invalid" when the I jump to the form field.</li>
+                        </ol>
+                    </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
                     <td></td>
 
