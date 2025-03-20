@@ -9,6 +9,25 @@
     <link rel="stylesheet" href="code/table.css">
 
     <style>
+        .list-of-issues {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-inline-start: 1rem;
+        }
+
+        p {
+            .list-of-issues & {
+                margin: 0;
+            }
+        }
+
+        span {
+            .list-of-issues & {
+                font-weight: bold;
+            }
+        }
+
         td:nth-of-type(2) {
             inline-size: 20rem;
             max-inline-size: 20rem;
@@ -40,7 +59,8 @@
     <h1>Accessibility evaluation of {{what}}</h1>
     <p>
         This accessibility evaluation has been prepared by Vision Australia.
-        <img alt="" class="logo" src="https://visionaustralia.org/themes/custom/vision_australia/images/logo/logo-desktop.svg">
+        <img alt="" class="logo"
+            src="https://visionaustralia.org/themes/custom/vision_australia/images/logo/logo-desktop.svg">
     </p>
 
     <div data-ae-evaluation-only="">
@@ -116,7 +136,19 @@
                         1. The screen reader says the name of the web page.
                     </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> A</td>
@@ -138,7 +170,15 @@
                         on a list.
                     </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> A</td>
@@ -155,9 +195,18 @@
                     <td>Is there a header, a main content area and a footer?
                         <p>If yes, please test. If no, please ignore.</p>
                     </td>
-                    <td>1. The screen reader allows me to navigate to the header, the beginning of the main content, the footer and the "search" text box if one exists.</td>
+                    <td>1. The screen reader allows me to navigate to the header, the beginning of the main content, the
+                        footer and the "search" text box if one exists.</td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> A</td>
@@ -177,10 +226,19 @@
                     <td>Are there links?
                         <p>If yes, please test. If no, please ignore.</p>
                     </td>
-                    <td>1. While jumping from link to link, the screen reader says the text of the link and I can clearly understand the
+                    <td>1. While jumping from link to link, the screen reader says the text of the link and I can
+                        clearly understand the
                         destination of the link.</td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
                     <td> A</td>
                 </tr>
                 <tr>
@@ -205,7 +263,15 @@
                         </ol>
                     </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
                     <td> A</td>
                 </tr>
                 <tr>
@@ -226,7 +292,15 @@
                         </ol>
                     </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> A</td>
@@ -252,7 +326,15 @@
                         </ol>
                     </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> A</td>
@@ -282,7 +364,15 @@
                         immediately below the button.<br><br>4. JAWS says "end" when it reaches the end of the
                         associated content immediately below the button.</td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> A</td>
@@ -307,7 +397,15 @@
                         move away when checking a checkbox or a radio button.<br><br>3.&nbsp;&nbsp;Keyboard focus
                         doesn't move away when selecting a value from a dropdown.</td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> A</td>
@@ -328,7 +426,15 @@
                     <td>When an interactive element receives keyboard focus with the "tab" key.<br><br>1. Keyboard focus
                         doesn't automatically move away from the interactive element.</td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> A</td>
@@ -349,7 +455,15 @@
                     <td>1. JAWS first reads out the label that is visible on the screen optionally followed by
                         additional text.</td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> A</td>
@@ -371,7 +485,15 @@
                     <td>1. Keyboard focus moves from top to bottom and from left to right without jumping around
                         randomly.</td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> A</td>
@@ -392,7 +514,15 @@
                     <td>1. I can move into and out of the evaluation subject by pressing the "tab" key.<br><br>2. I can
                         move from the beginning to the end of the evaluation subject by pressing the "tab" key.</td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> A</td>
@@ -414,7 +544,15 @@
                     <td>For each colour identified in the evaluation subject:<br><br>1. The colour isn't the only
                         visual indication to communicate meaning.</td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> A</td>
@@ -433,7 +571,15 @@
                     </td>
                     <td>1. The content associated with a heading always follows the heading.</td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> A</td>
@@ -456,7 +602,15 @@
                     <td>1. There isn't information that relies on the user's ability to perceive shapes, colours, sizes,
                         visual location, orientations or sounds.</td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> A</td>
@@ -478,7 +632,15 @@
                     </td>
                     <td>1. I can find help exactly in the same location on multiple web pages.</td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> A</td>
@@ -498,7 +660,15 @@
                     </td>
                     <td>1. I don't need to manually enter information that I've previously provided.&nbsp;&nbsp;</td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> A</td>
@@ -519,7 +689,15 @@
                     <td>1. As soon as the web page loads, I can press any one-letter or one-number key and there are no
                         unexpected side effects.</td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> A</td>
@@ -540,7 +718,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> A</td>
@@ -559,7 +745,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> A</td>
@@ -585,7 +779,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> A</td>
@@ -604,7 +806,15 @@
                     </td>
                     <td>1. JAWS speaks in the same language specified by the page.</td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> A</td>
@@ -635,7 +845,15 @@
                     <td>1. I can pause or stop any content that automatically moves, blinks, scrolls or auto-updates.
                     </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> A</td>
@@ -655,7 +873,15 @@
                     </td>
                     <td>1. I can extend the time limit by pressing the "enter" or "space" key.</td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> A</td>
@@ -677,7 +903,15 @@
                     </td>
                     <td>1. I can pause or stop the audio by pressing the "&lt;which-key&gt;".</td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> A</td>
@@ -708,7 +942,15 @@
                         unless the key is released.<br><br>3. Pressing down on the touchpad unless the finger is lifted.
                     </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> A</td>
@@ -732,7 +974,15 @@
                         specific path:<br><br>1. There's a button that can be pressed to perform the same functionality.
                     </td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> A</td>
@@ -755,7 +1005,15 @@
                     <td>For every piece of functionality that depends on the user's ability to move their
                         device:<br><br>1. There's a button that can be pressed to perform the same functionality.</td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> A</td>
@@ -774,7 +1032,15 @@
                     </td>
                     <td>1. There isn't anything that flashes more than 3 times in any one second period.</td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> A</td>
@@ -826,7 +1092,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AA</td>
@@ -843,7 +1117,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AA</td>
@@ -865,7 +1147,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AA</td>
@@ -886,7 +1176,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AA</td>
@@ -904,7 +1202,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AA</td>
@@ -926,7 +1232,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AA</td>
@@ -947,7 +1261,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AA</td>
@@ -964,7 +1286,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AA</td>
@@ -981,7 +1311,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AA</td>
@@ -998,7 +1336,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AA</td>
@@ -1018,7 +1364,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AA</td>
@@ -1035,7 +1389,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AA</td>
@@ -1055,7 +1417,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AA</td>
@@ -1074,7 +1444,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AA</td>
@@ -1096,7 +1474,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AA</td>
@@ -1116,7 +1502,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AA</td>
@@ -1135,7 +1529,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AA</td>
@@ -1154,7 +1556,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AA</td>
@@ -1173,7 +1583,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AA</td>
@@ -1193,7 +1611,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AA</td>
@@ -1212,7 +1638,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AA</td>
@@ -1232,7 +1666,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AA</td>
@@ -1249,7 +1691,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AA</td>
@@ -1266,7 +1716,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AA</td>
@@ -1283,7 +1741,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AAA</td>
@@ -1303,7 +1769,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AAA</td>
@@ -1320,7 +1794,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AAA</td>
@@ -1337,7 +1819,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AAA</td>
@@ -1358,7 +1848,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AAA</td>
@@ -1380,7 +1878,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AAA</td>
@@ -1399,7 +1905,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AAA</td>
@@ -1418,7 +1932,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AAA</td>
@@ -1438,7 +1960,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AAA</td>
@@ -1456,7 +1986,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AAA</td>
@@ -1473,7 +2011,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AAA</td>
@@ -1490,7 +2036,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AAA</td>
@@ -1507,7 +2061,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AAA</td>
@@ -1526,7 +2088,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AAA</td>
@@ -1545,7 +2115,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AAA</td>
@@ -1562,7 +2140,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AAA</td>
@@ -1579,7 +2165,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AAA</td>
@@ -1600,7 +2194,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AAA</td>
@@ -1620,7 +2222,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AAA</td>
@@ -1640,7 +2250,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AAA</td>
@@ -1661,7 +2279,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AAA</td>
@@ -1679,7 +2305,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AAA</td>
@@ -1696,7 +2330,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AAA</td>
@@ -1715,7 +2357,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AAA</td>
@@ -1736,7 +2386,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AAA</td>
@@ -1755,7 +2413,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AAA</td>
@@ -1774,7 +2440,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AAA</td>
@@ -1794,7 +2468,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AAA</td>
@@ -1813,7 +2495,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AAA</td>
@@ -1833,7 +2523,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AAA</td>
@@ -1850,7 +2548,15 @@
                     </td>
                     <td></td>
                     <td><span aria-hidden="true" class="fa fa-question-circle"></span>Unverified</td>
-                    <td></td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ul class="list-of-issues">
+                            <li>
+                                <p><span class="term">Category:</span> Unknown</p>
+                                <p><span class="term">Issue:</span> Lorem ipsum</p>
+                            </li>
+                        </ul>
+                    </td>
 
 
                     <td> AAA</td>
@@ -1858,6 +2564,10 @@
             </tbody>
         </table>
     </div>
+
+
+
+
 
 
 </body>
