@@ -56,3 +56,28 @@ const errorMessage = 'Modifications to the file cannot currently be saved. This 
     // Prevent loss of data.
     window.addEventListener('beforeunload', event => event.preventDefault());
 }
+
+// Add blank issue
+{
+    window.addEventListener('click', event => {
+        const target = event.target as HTMLElement;
+        
+        if (target.textContent !== 'Add blank issue') {
+            return;
+        }
+
+        const cell = target.closest('td') as HTMLElement;
+        const list = cell.querySelector('ul') as HTMLElement;
+
+        const template = new DOMParser().parseFromString(`
+        <template>
+            <li>
+                <p><span class="term">Category:</span> Unknown</p>
+                <p><span class="term">Issue:</span> Lorem ipsum</p>
+            </li>
+        </template>    
+        `, 'text/html').querySelector('template')?.content as DocumentFragment;
+
+        list.append(template);
+    });
+}
