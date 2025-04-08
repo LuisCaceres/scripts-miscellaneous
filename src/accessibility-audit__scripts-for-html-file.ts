@@ -61,7 +61,7 @@ const errorMessage = 'Modifications to the file cannot currently be saved. This 
 {
     window.addEventListener('click', event => {
         const target = event.target as HTMLElement;
-        
+
         if (target.textContent !== 'Add blank issue') {
             return;
         }
@@ -72,12 +72,79 @@ const errorMessage = 'Modifications to the file cannot currently be saved. This 
         const template = new DOMParser().parseFromString(`
         <template>
             <li>
-                <p><span class="term">Category:</span> Unknown</p>
+                <p>
+                    <label>
+                        <span>Status:</span>
+                        <select>
+                            <option value="Unverified" selected>Unverified</option>
+                            <option value="Unverified">Failure</option>
+                            <option value="Unverified">Warning</option>
+                            <option value="Unverified">Pass</option>
+                        </select>
+                    </label>
                 <p><span class="term">Issue:</span> Lorem ipsum</p>
             </li>
         </template>    
         `, 'text/html').querySelector('template')?.content as DocumentFragment;
 
         list.append(template);
+    });
+}
+
+// Add or remove the `selected` attributed from `option` according to the currently selected option.
+{
+    window.addEventListener('change', event => {
+        const target = event.target as HTMLSelectElement;
+
+        if (target.nodeName.toUpperCase() !== 'SELECT') {
+            return;
+        }
+
+        const dropdown = target;
+        const options = Array.from(dropdown.options);
+
+        // For each option 'option' in 'options'.
+        for (const option of options) {
+            // Add or remove the `selected` attributed from `option` according to the currently selected option.
+            option.toggleAttribute('selected', option.selected);
+        }
+    });
+}
+
+{
+    window.addEventListener('change', event => {
+        const target = event.target as HTMLSelectElement;
+
+        if (target.nodeName.toUpperCase() !== 'SELECT') {
+            return;
+        }
+
+        const dropdown = target;
+        const selectedOption = (dropdown.selectedOptions[0].textContent || '').trim().toUpperCase();
+
+        const icon = dropdown.closest('td')?.querySelector('.icon');
+
+        if (icon) {
+            icon.removeAttribute('class');
+            icon.classList.add('icon');
+            icon.classList.add('fa');
+
+            switch (true) {
+                case selectedOption === 'FAILURE':
+                    icon.classList.add('fa-exclamation-circle');
+                    break;
+                case selectedOption === 'PASS':
+                    icon.classList.add('fa-check');
+                    break;
+                case selectedOption === 'UNVERIFIED':
+                    icon.classList.add('fa-question-circle');
+                    break;
+                case selectedOption === 'WARNING':
+                    icon.classList.add('fa-exclamation-triangle');
+                    break;
+                default:
+                    break;
+            }
+        }
     });
 }
