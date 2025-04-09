@@ -2,8 +2,8 @@ function generateShortVersion(evaluation: HTMLHtmlElement): HTMLHtmlElement {
     // Let `table` be the table in `evaluation`.
     const table = evaluation.querySelector('table') as HTMLTableElement;
 
-    const selectors = `select, textarea`;
-    const formFields = Array.from(evaluation.querySelectorAll(selectors)) as (HTMLSelectElement|HTMLTextAreaElement)[];
+    const selectors = `input[type=text], select, textarea`;
+    const formFields = Array.from(evaluation.querySelectorAll(selectors)) as (HTMLInputElement|HTMLSelectElement|HTMLTextAreaElement)[];
 
     // For each formField `formField` in `formFields`.
     for (const formField of formFields) {

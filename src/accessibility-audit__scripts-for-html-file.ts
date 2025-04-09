@@ -50,9 +50,6 @@ const errorMessage = 'Modifications to the file cannot currently be saved. This 
         }
     });
 
-    // Allow edition of data.
-    document.designMode = 'on';
-
     // Prevent loss of data.
     window.addEventListener('beforeunload', event => event.preventDefault());
 }
@@ -62,32 +59,21 @@ const errorMessage = 'Modifications to the file cannot currently be saved. This 
     window.addEventListener('click', event => {
         const target = event.target as HTMLElement;
 
-        if (target.textContent !== 'Add blank issue') {
+        if (target.nodeName.toUpperCase() !== "BUTTON") {
+            return;
+        }
+
+        if (target.textContent !== 'Insert issue') {
             return;
         }
 
         const cell = target.closest('td') as HTMLElement;
-        const list = cell.querySelector('ul') as HTMLElement;
+        const list = cell.querySelector('ol') as HTMLElement;
+        const issue = document.querySelector('template#issue') as HTMLTemplateElement;
 
-        const template = new DOMParser().parseFromString(`
-        <template>
-            <li>
-                <p>
-                    <label>
-                        <span>Status:</span>
-                        <select>
-                            <option value="Unverified" selected>Unverified</option>
-                            <option value="Unverified">Failure</option>
-                            <option value="Unverified">Warning</option>
-                            <option value="Unverified">Pass</option>
-                        </select>
-                    </label>
-                <p><span class="term">Issue:</span> Lorem ipsum</p>
-            </li>
-        </template>    
-        `, 'text/html').querySelector('template')?.content as DocumentFragment;
-
-        list.append(template);
+        if (cell && list && issue) {
+            list.append(issue.content.cloneNode(true));
+        }
     });
 }
 

@@ -12,8 +12,31 @@
         .list-of-issues {
             display: flex;
             flex-direction: column;
-            gap: 1rem;
             padding-inline-start: 1rem;
+        }
+
+        button {
+            min-block-size: 2rem;
+            padding: 0.5rem;
+            background-color: var(--blue);
+            border: var(--blue) solid;
+            border-radius: 1.5rem;
+            color: var(--white);
+            font-size: medium;
+            cursor: pointer;
+        }
+
+        label {
+            display: block;
+            margin-block-end: 1rem;
+        }
+
+        li {
+            .list-of-issues & {
+                padding-block: 1rem;
+                border-block-end: dashed 0.25rem;
+                margin-block-end: 2rem;
+            }
         }
 
         p {
@@ -22,8 +45,28 @@
             }
         }
 
+        textarea {
+            min-block-size: 10rem;
+            padding: 0.5rem;
+        }
+
+        input[type=text],
+        select {
+            min-block-size: 2rem;
+            padding: 0.25rem 0.5rem;
+        }
+
+        input[type=text],
+        select,
+        textarea {
+            border: solid;
+            font-size: 1rem;
+        }
+
         span {
-            .list-of-issues & {
+            label & {
+                display: block;
+                margin-block-end: 0.5rem;
                 font-weight: bold;
             }
         }
@@ -150,23 +193,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -203,23 +233,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -254,23 +271,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -309,23 +313,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
                     <td> A</td>
                 </tr>
@@ -365,23 +356,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
                     <td> A</td>
                 </tr>
@@ -417,23 +395,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -474,23 +439,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -535,23 +487,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -591,23 +530,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -643,23 +569,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -695,23 +608,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -748,23 +648,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -800,23 +687,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -853,23 +727,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -903,23 +764,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -957,23 +805,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -1011,23 +846,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -1062,23 +884,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -1114,23 +923,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -1166,23 +962,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -1216,23 +999,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -1275,23 +1045,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -1325,23 +1082,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -1389,23 +1133,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -1440,23 +1171,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -1493,23 +1211,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -1557,23 +1262,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -1612,23 +1304,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -1666,23 +1345,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -1716,23 +1382,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -1799,23 +1452,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -1847,23 +1487,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -1900,23 +1527,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -1952,23 +1566,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -2001,23 +1602,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -2054,23 +1642,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -2106,23 +1681,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -2154,23 +1716,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -2202,23 +1751,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -2250,23 +1786,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -2301,23 +1824,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -2349,23 +1859,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -2400,23 +1897,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -2450,23 +1934,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -2503,23 +1974,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -2554,23 +2012,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -2604,23 +2049,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -2654,23 +2086,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -2704,23 +2123,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -2755,23 +2161,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -2805,23 +2198,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -2856,23 +2236,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -2904,23 +2271,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -2952,23 +2306,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -3000,23 +2341,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -3051,23 +2379,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -3099,23 +2414,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -3147,23 +2449,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -3199,23 +2488,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -3252,23 +2528,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -3302,23 +2565,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -3352,23 +2602,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -3403,23 +2640,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -3452,23 +2676,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -3500,23 +2711,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -3548,23 +2746,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -3596,23 +2781,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -3646,23 +2818,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -3696,23 +2855,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -3744,23 +2890,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -3792,23 +2925,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -3844,23 +2964,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -3895,23 +3002,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -3946,23 +3040,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -3998,23 +3079,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -4047,23 +3115,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -4095,23 +3150,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -4145,23 +3187,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -4197,23 +3226,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -4247,23 +3263,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -4297,23 +3300,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -4348,23 +3338,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -4398,23 +3375,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -4449,23 +3413,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
                     </td>
 
 
@@ -4497,23 +3448,10 @@
                     </td>
                     <td>
                         <h3>Issues</h3>
-                        <ul class="list-of-issues">
-                            <li>
-                                <p>
-                                    <label>
-                                        <span>Status:</span>
-                                        <select>
-                                            <option value="Unverified" selected="">Unverified</option>
-                                            <option value="Unverified">Failure</option>
-                                            <option value="Unverified">Warning</option>
-                                            <option value="Unverified">Pass</option>
-                                        </select>
-                                    </label>
-                                </p>
-                                <p><span class="term">Issue:</span> Lorem ipsum</p>
-                            </li>
-                        </ul>
-                        <p data-ae-evaluation-only=""><button>Add blank issue</button></p>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only><button>Insert issue</button></p>
                     </td>
 
 
@@ -4523,23 +3461,34 @@
         </table>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <template id="issue">
+        <li>
+            <p>
+                <label>
+                    <span>Category:</span>
+                    <select>
+                        <option value="Failure">Failure</option>
+                        <option value="Warning">Warning</option>
+                    </select>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <span class="term">Issue:</span>
+                    <textarea value="Lorem ipsum"></textarea>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <span class="term">Screenshot:</span>
+                    <input type="text" value="1" />
+                </label>
+            </p>
+            <p data-ae-evaluation-only>
+                <button>Remove issue</button>
+            </p>
+        </li>
+    </template>
 </body>
 
 </html>
