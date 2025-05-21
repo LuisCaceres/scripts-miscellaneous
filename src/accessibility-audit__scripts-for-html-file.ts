@@ -77,7 +77,30 @@ const errorMessage = 'Modifications to the file cannot currently be saved. This 
     });
 }
 
-// Add or remove the `selected` attributed from `option` according to the currently selected option.
+// Remove issue
+{
+    window.addEventListener('click', event => {
+        const target = event.target as HTMLElement;
+
+        if (target.nodeName.toUpperCase() !== "BUTTON") {
+            return;
+        }
+
+        if (target.textContent !== 'Remove issue') {
+            return;
+        }
+
+        const issue = target.closest('li') as HTMLElement;
+        const description = ((issue.querySelector('[data-issue-description]') as HTMLTextAreaElement).value).slice(0, 80);
+        const confirmation = confirm(`Are you sure you\'d like to remove this issue?\n\n"${description}..."`);
+
+        if (confirmation) {
+            issue.remove();
+        }
+    });
+}
+
+// Add or remove the `selected` attribute from an `option` element accordingly.
 {
     window.addEventListener('change', event => {
         const target = event.target as HTMLSelectElement;

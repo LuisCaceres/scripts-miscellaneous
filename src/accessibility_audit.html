@@ -407,6 +407,44 @@
                 <tr>
                     <td></td>
                     <td>
+                        <h2>Non-Text Content</h2>
+                        <p data-ae-evaluation-only="">All non-text content that is presented to the user has a text
+                            alternative that
+                            serves the equivalent purpose.</p>
+                    </td>
+
+                    <td>Does the evaluation subject contain images?<p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>
+                        1. For each image, the screen reader reads out its text alternative.
+                    </td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Page Titled">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button>Insert issue</button></p>
+                    </td>
+
+
+                    <td> A</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
                         <h2>Error Identification </h2>
                         <p data-ae-evaluation-only="">If an input error is automatically detected, the item that is in
                             error is
@@ -3474,14 +3512,14 @@
             </p>
             <p>
                 <label>
-                    <span class="term">Issue:</span>
-                    <textarea value="Lorem ipsum"></textarea>
+                    <span class="term">Description:</span>
+                    <textarea data-issue-description value="Lorem ipsum"></textarea>
                 </label>
             </p>
             <p>
                 <label>
                     <span class="term">Screenshot:</span>
-                    <input type="text" value="1" />
+                    <input data-issue-screenshot type="text" inputmode="numeric" value="1" />
                 </label>
             </p>
             <p data-ae-evaluation-only>

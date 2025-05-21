@@ -2,8 +2,8 @@ function generateShortVersion(evaluation: HTMLHtmlElement): HTMLHtmlElement {
     // Let `table` be the table in `evaluation`.
     const table = evaluation.querySelector('table') as HTMLTableElement;
 
-    const selectors = `input[type=text], select, textarea`;
-    const formFields = Array.from(evaluation.querySelectorAll(selectors)) as (HTMLInputElement|HTMLSelectElement|HTMLTextAreaElement)[];
+    const selectors = `select, textarea`;
+    const formFields = Array.from(evaluation.querySelectorAll(selectors)) as (HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement)[];
 
     // For each formField `formField` in `formFields`.
     for (const formField of formFields) {
@@ -26,6 +26,25 @@ function generateShortVersion(evaluation: HTMLHtmlElement): HTMLHtmlElement {
         if (text.match(/(FAILURE|WARNING)/) === null) {
             // Remove `row` from `table`.
             row.remove();
+        }
+    }
+
+    // Generate links to screenshots.
+    {
+        const folder = 'screenshots/';
+        const prefix = 'screenshot-';
+        const extension = '.png';
+
+        const screenshots = Array.from(evaluation.querySelectorAll('[data-issue-screenshot]')) as HTMLInputElement[];
+
+        // For each screenshot 'screenshot' in 'screenshots'.
+        for (const screenshot of screenshots) {
+            const screenshotNumber = screenshot.value.trim();
+            const link = document.createElement('a');
+            link.href = `${folder}${prefix}${screenshotNumber}${extension}`;
+            link.target = '_blank';
+            link.textContent = `${prefix}${screenshotNumber}`;
+            screenshot.replaceWith(link);
         }
     }
 
