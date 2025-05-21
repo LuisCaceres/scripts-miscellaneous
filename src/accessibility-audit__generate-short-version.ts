@@ -3,7 +3,7 @@ function generateShortVersion(evaluation: HTMLHtmlElement): HTMLHtmlElement {
     const table = evaluation.querySelector('table') as HTMLTableElement;
 
     const selectors = `select, textarea`;
-    const formFields = Array.from(evaluation.querySelectorAll(selectors)) as (HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement)[];
+    const formFields = [...evaluation.querySelectorAll(selectors)] as (HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement)[];
 
     // For each formField `formField` in `formFields`.
     for (const formField of formFields) {
@@ -15,7 +15,7 @@ function generateShortVersion(evaluation: HTMLHtmlElement): HTMLHtmlElement {
     }
 
     // Let `rows` be the rows in `table`.
-    const rows = Array.from(table.rows).slice(1) as HTMLTableRowElement[];
+    const rows = [...table.rows].slice(1) as HTMLTableRowElement[];
 
     // For each row 'row' in 'rows'.
     for (const row of rows) {
@@ -35,7 +35,7 @@ function generateShortVersion(evaluation: HTMLHtmlElement): HTMLHtmlElement {
         const prefix = 'screenshot-';
         const extension = '.png';
 
-        const screenshots = Array.from(evaluation.querySelectorAll('[data-issue-screenshot]')) as HTMLInputElement[];
+        const screenshots = [...evaluation.querySelectorAll('[data-issue-screenshot]')] as HTMLInputElement[];
 
         // For each screenshot 'screenshot' in 'screenshots'.
         for (const screenshot of screenshots) {
@@ -49,7 +49,7 @@ function generateShortVersion(evaluation: HTMLHtmlElement): HTMLHtmlElement {
     }
 
     // Let `irrelevantElements` be a list of elements that should be excluded from `evaluation`.
-    const irrelevantElements = Array.from(evaluation.querySelectorAll('[data-ae-evaluation-only], :is(td, th):is(:nth-of-type(3)), :is(td, th):is(:nth-of-type(4))'));
+    const irrelevantElements = [...evaluation.querySelectorAll('[data-ae-evaluation-only], :is(td, th]:is(:nth-of-type(3)), :is(td, th):is(:nth-of-type(4))')];
 
     // For each irrelevantElement `irrelevantElement` in `irrelevantElements`.
     for (const irrelevantElement of irrelevantElements) {

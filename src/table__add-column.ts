@@ -10,7 +10,7 @@
         throw Error(`Elemented selected isn't a \`table\` element.`);
     }
 
-    const rows = Array.from(table.rows);
+    const rows = [...table.rows];
 
     // For each row 'row' in 'rows'.
     for (const row of rows) {

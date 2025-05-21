@@ -45,7 +45,7 @@
         throw Error(`Elemented selected isn't a \`tbody\` element.`);
     }
 
-    const rows = Array.from(tbody.rows);
+    const rows = [...tbody.rows];
     const map = new Map();
 
     rows.forEach(row => {

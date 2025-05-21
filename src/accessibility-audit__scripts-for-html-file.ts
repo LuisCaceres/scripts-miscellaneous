@@ -110,7 +110,7 @@ const errorMessage = 'Modifications to the file cannot currently be saved. This 
         }
 
         const dropdown = target;
-        const options = Array.from(dropdown.options);
+        const options = [...dropdown.options];
 
         // For each option 'option' in 'options'.
         for (const option of options) {

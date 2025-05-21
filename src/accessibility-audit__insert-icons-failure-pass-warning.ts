@@ -9,7 +9,7 @@
         throw Error(`Elemented selected isn't a \`table\` element.`);
     }
 
-    const cells = Array.from(table.querySelectorAll(selector)) as HTMLTableCellElement[];
+    const cells = [...table.querySelectorAll(selector)] as HTMLTableCellElement[];
 
     // For each cell 'cell' in 'cells'.
     for (const cell of cells) {

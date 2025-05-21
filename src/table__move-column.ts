@@ -10,7 +10,7 @@
     }
     
     const selector = `th:nth-of-type(${currentPosition}), td:nth-of-type(${currentPosition})`;
-    const cells = Array.from(table.querySelectorAll(selector)) as HTMLTableCellElement[];
+    const cells = [...table.querySelectorAll(selector)] as HTMLTableCellElement[];
 
     // For each cell 'cell' in 'cells'.
     for (const cell of cells) {

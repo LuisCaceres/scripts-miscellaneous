@@ -2,7 +2,7 @@
 
 {
     const selector = 'td';
-    const elements = Array.from(document.querySelectorAll(selector));
+    const elements = [...document.querySelectorAll(selector)];
 
     // For each element `element` in `elements`.
     for (const element of elements) {

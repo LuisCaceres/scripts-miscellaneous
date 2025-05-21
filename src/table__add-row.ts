@@ -9,7 +9,7 @@
         throw Error(`Elemented selected isn't a \`table\` element.`);
     }
 
-    const row = Array.from(table.rows).at(rowNumber) as HTMLTableRowElement;
+    const row = [...table.rows].at(rowNumber) as HTMLTableRowElement;
     const clones: HTMLTableRowElement[] = [];
 
     while (numberOfNewRows--) {

@@ -11,7 +11,7 @@
     }
     
     const selector = `td:nth-of-type(${column})`;
-    const cells = Array.from(table.querySelectorAll(selector)) as HTMLTableCellElement[];
+    const cells = [...table.querySelectorAll(selector)] as HTMLTableCellElement[];
 
     // For each cell 'cell' in 'cells'.
     for (const cell of cells) {

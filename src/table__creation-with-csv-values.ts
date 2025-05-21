@@ -8,7 +8,7 @@ const headers = [
 const selector = 'h3';
 
 const separator = '|';
-const elements = Array.from(document.querySelectorAll(selector));
+const elements = [...document.querySelectorAll(selector)];
 
 const lines = elements.map(element => {
     const value1 = '';

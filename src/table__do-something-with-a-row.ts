@@ -12,7 +12,7 @@
         throw Error(`Elemented selected isn't a \`table\` element.`);
     }
     
-    const rows = Array.from(table.rows).slice(startRow, endRow) as HTMLTableRowElement[];
+    const rows = [...table.rows].slice(startRow, endRow) as HTMLTableRowElement[];
 
     // For each row 'row' in 'rows'.
     for (const row of rows) {
