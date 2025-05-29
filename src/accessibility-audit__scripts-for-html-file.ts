@@ -100,6 +100,10 @@ const errorMessage = 'Modifications to the file cannot currently be saved. This 
     });
 }
 
+/*
+Functionality:
+Why?
+*/
 // Add or remove the `selected` attribute from an `option` element accordingly.
 {
     window.addEventListener('change', event => {
@@ -118,6 +122,35 @@ const errorMessage = 'Modifications to the file cannot currently be saved. This 
             option.toggleAttribute('selected', option.selected);
         }
     });
+}
+
+/*
+Functionality: Update the value of the `value` attribute from a text box or a text area.
+Why? The HTML of the evaluation doesn't get updated as the user enters text into a text box or text area. The functionality that saves the evaluation only refers to the HTML. For that reason, any text entered into a text box isn't saved resulting in data loss. The easiest way to preserve the text seems to be programmatically updating the `value` property of a text box or text area.
+*/
+{
+    window.addEventListener('blur', event => {
+        const target = event.target as HTMLInputElement | HTMLTextAreaElement;
+        const { nodeName, type } = target;
+
+        // If `target` isn't either a text box or a text area.
+        if ((nodeName !== 'INPUT' && type !== 'text') && nodeName !== 'TEXTAREA') {
+            // Abort.
+            return;
+        }
+
+        // Let `value` be the text currently entered into `target`.
+        const { value } = target;
+
+        // If `target` is a text box.
+        if (nodeName === 'INPUT') {
+            target.setAttribute('value', value);
+        }
+        // Otherwise if `target` is a text area.
+        else {
+            target.textContent = value;
+        }
+    }, true);
 }
 
 {
