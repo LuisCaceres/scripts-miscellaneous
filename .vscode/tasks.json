@@ -1,0 +1,19 @@
+{
+    "tasks": [
+        {
+            "label": "start",
+            "dependsOn": [
+                "typescript",
+            ],
+            "runOptions": {
+                "runOn": "folderOpen"
+            },
+            "type": "shell",
+        },
+        {
+            "label": "typescript",
+            "command": "tsc --watch",
+            "type": "shell"
+        }
+    ]
+}

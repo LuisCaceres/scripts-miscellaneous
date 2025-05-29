@@ -1,4 +1,22 @@
+// Place your settings in this file to overwrite default and user settings.
 {
-    "editor.formatOnPaste": true,
-    "explorer.excludeGitIgnore": true
+    "files.exclude": {
+        "out": false // set this to true to hide the "out" folder with the compiled JS files
+    },
+    "search.exclude": {
+        "out": true // set this to false to include "out" folder in search results
+    },
+    // Turn off tsc task auto detection since we have the necessary tasks as npm scripts
+    "typescript.tsc.autoDetect": "off",
+    "editor.formatOnSave": true,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 80,
+    "explorer.excludeGitIgnore": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "files.autoSave": "afterDelay",
+    "files.trimTrailingWhitespace": true,
+    // Allow command `tsc --watch` when because running scripts is disabled on this system (typically on PowerShell on Windows).
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    // Automatically insert parenthesis immediately after a function call.
+    "typescript.suggest.completeFunctionCalls": true,
 }

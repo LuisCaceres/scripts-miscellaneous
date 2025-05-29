@@ -14,18 +14,29 @@ function generateShortVersion(evaluation: HTMLHtmlElement): HTMLHtmlElement {
         formField.replaceWith(value);
     }
 
-    // Let `rows` be the rows in `table`.
-    const rows = [...table.rows].slice(1) as HTMLTableRowElement[];
+    /*
+    Functionality: Remove "unverified" and "pass" test cases from `evaluation`.
+    Why? Because typically `evaluation` is a lenghty document. The accessibility evaluation report should be concise to make it reader-friendly.
+    */
+    {
+        // Let `headers` be a list of table headers from `table`.
+        const headers = [...table.querySelectorAll('th')];
+        //  Let `relevantColumn` be the number of the column that contains test cases.
+        const relevantColumn = headers.findIndex(row => row?.matches('[data-test-status]'));
+        // Let `rows` be the rows in `table`.
+        const rows = [...table.rows].slice(1) as HTMLTableRowElement[];
 
-    // For each row 'row' in 'rows'.
-    for (const row of rows) {
-        const relevantCell = row.cells[4];
-        const text = (relevantCell.textContent || '').trim().toUpperCase();
+        // For each row 'row' in 'rows'.
+        for (const row of rows) {
+            // Let `relevantCell` be the cell that contains test cases.
+            const relevantCell = row.cells[relevantColumn];
+            const text = (relevantCell.textContent || '').trim().toUpperCase();
 
-        // If the text content of `row` doesn't contain the words `FAILURE` or `WARNING`.
-        if (text.match(/(FAILURE|WARNING)/) === null) {
-            // Remove `row` from `table`.
-            row.remove();
+            // If the text content of `relevantCell` doesn't contain the words `FAILURE` or `WARNING`.
+            if (text.match(/(FAILURE|WARNING)/) === null) {
+                // Remove `row` from `evaluation`.
+                row.remove();
+            }
         }
     }
 
@@ -48,13 +59,28 @@ function generateShortVersion(evaluation: HTMLHtmlElement): HTMLHtmlElement {
         }
     }
 
-    // Let `irrelevantElements` be a list of elements that should be excluded from `evaluation`.
-    const irrelevantElements = [...evaluation.querySelectorAll('[data-ae-evaluation-only], :is(td, th]:is(:nth-of-type(3)), :is(td, th):is(:nth-of-type(4))')];
+    /*
+    Functionality: Remove other irrelevant elements from `evaluation`.
+    Why? Because typically `evaluation` is a lenghty document. The accessibility evaluation report should be concise to make it reader-friendly.
+    */
+    {
+        //  Let `irrelevantColumns` be which columns to remove from `table`.
+        const irrelevantColumns: number[] = [3, 4];
+        // Let `selector` be a CSS selector that matches `irrelevantColumns`.
+        let selector = '';
 
-    // For each irrelevantElement `irrelevantElement` in `irrelevantElements`.
-    for (const irrelevantElement of irrelevantElements) {
-        // Remove `irrelevantElement` from `evaluation`.
-        irrelevantElement.remove();
+        for (const irrelevantColumn of irrelevantColumns) {
+            selector += `:nth-of-type(${irrelevantColumn}),`;
+        }
+
+        // Let `irrelevantElements` be a list of elements that should be excluded from `evaluation` including `irrelevantColumns`.
+        const irrelevantElements = [...evaluation.querySelectorAll(`[data-ae-evaluation-only], :is(td, th):is(${selector})`)];
+
+        // For each irrelevantElement `irrelevantElement` in `irrelevantElements`.
+        for (const irrelevantElement of irrelevantElements) {
+            // Remove `irrelevantElement` from `evaluation`.
+            irrelevantElement.remove();
+        }
     }
 
     return evaluation;
@@ -62,4 +88,4 @@ function generateShortVersion(evaluation: HTMLHtmlElement): HTMLHtmlElement {
 
 export {
     generateShortVersion
-}   
+}
