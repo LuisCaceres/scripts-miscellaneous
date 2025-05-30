@@ -1,3 +1,4 @@
+// Place this file in `<rootFolder>/.vscode` where `<rootFolder>` is the root folder of a repository.
 // Place your settings in this file to overwrite default and user settings.
 {
     "files.exclude": {
@@ -9,14 +10,47 @@
     // Turn off tsc task auto detection since we have the necessary tasks as npm scripts
     "typescript.tsc.autoDetect": "off",
     "editor.formatOnSave": true,
+    "editor.suggest.insertMode": "replace",
+    // Sort Intellisense suggestions by their distance to the cursor.
+    "editor.suggest.localityBonus": true,
     "editor.wordWrap": "wordWrapColumn",
     "editor.wordWrapColumn": 80,
     "explorer.excludeGitIgnore": true,
     "diffEditor.ignoreTrimWhitespace": false,
     "files.autoSave": "afterDelay",
     "files.trimTrailingWhitespace": true,
-    // Allow command `tsc --watch` when because running scripts is disabled on this system (typically on PowerShell on Windows).
+    // Execute command `tsc --watch` using Git Bash because PowerShell running won't execute that command. It throws an error.
     "terminal.integrated.defaultProfile.windows": "Git Bash",
     // Automatically insert parenthesis immediately after a function call.
     "typescript.suggest.completeFunctionCalls": true,
+    // TO DO: I'M NOT SURE WHAT THE FOLLOWING SETTINGS ARE FOR EXACTLY.
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "debug.onTaskErrors": "debugAnyway",
+    "editor.quickSuggestions": {
+        "strings": "on"
+    },
+    "editor.accessibilitySupport": "off",
+    "workbench.editor.editorActionsLocation": "titleBar",
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "prettier.tabWidth": 4,
+    "diffEditor.renderSideBySide": true,
+    "diffEditor.useInlineViewWhenSpaceIsLimited": false,
+    "window.menuBarVisibility": "compact",
+    "window.newWindowProfile": "Default",
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "typescript": false
+    },
 }
