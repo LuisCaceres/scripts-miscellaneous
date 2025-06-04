@@ -1,0 +1,38 @@
+[
+    {
+        // Delete a single line of text
+        "key": "ctrl+delete",
+        "command": "editor.action.deleteLines",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+left",
+        "command": "cursorWordPartLeft",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+right",
+        "command": "cursorWordPartRight",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "delete",
+        "command": "deleteInsideWord",
+        "when": "editorTextFocus && hasWordHighlights"
+    },
+    {
+        "key": "delete",
+        "command": "editor.emmet.action.removeTag",
+        "when": "editorTextFocus && hasWordHighlights && editorLangId == html"
+    },
+    {
+        "key": "delete",
+        "command": "editor.action.removeBrackets",
+        "when": "editorTextFocus && !hasWordHighlights && editorLangId == typescript"
+    },
+    {
+        "key": "insert",
+        "command": "editor.emmet.action.wrapWithAbbreviation",
+        "when": "editorTextFocus && hasWordHighlights && editorLangId == html"
+    }
+]
