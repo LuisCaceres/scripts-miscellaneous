@@ -10,13 +10,17 @@
     // Turn off tsc task auto detection since we have the necessary tasks as npm scripts
     "typescript.tsc.autoDetect": "off",
     "editor.formatOnSave": true,
+    // Get Intellisense to show snippet suggestions first.
+    "editor.snippetSuggestions": "top",
     "editor.suggest.insertMode": "replace",
     // Sort Intellisense suggestions by their distance to the cursor.
     "editor.suggest.localityBonus": true,
+    // Match first character on a word start. For example, `c` matches `Console` or `WebContext` but not `description`.
+    "editor.suggest.matchOnWordStartOnly": true,
     "editor.wordWrap": "wordWrapColumn",
     "editor.wordWrapColumn": 80,
     "explorer.excludeGitIgnore": true,
-    "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.ignoreTrimWhitespace": true,
     "files.autoSave": "afterDelay",
     "files.trimTrailingWhitespace": true,
     // Execute command `tsc --watch` using Git Bash because PowerShell running won't execute that command. It throws an error.
