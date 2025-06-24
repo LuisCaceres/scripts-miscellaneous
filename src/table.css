@@ -21,14 +21,20 @@ body {
     font-family: "Verdana";
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     inline-size: fit-content;
     padding: 0.25em;
     background: var(--yellow);
     color: var(--blue);
 }
 
-p {
+p,
+li {
     max-inline-size: 44rem;
 }
 
@@ -36,7 +42,8 @@ table {
     border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
     padding: 1rem;
     border: solid;
     text-align: start;
@@ -61,12 +68,13 @@ td:nth-of-type(1)::before {
     counter-increment: section;
     content: counter(section);
 }
+
 /* CSS COUNTERS END */
 
 /* FONT AWESOME ICONS START */
 /* These icons are added via JavaScript. */
-/* Ensure that the HTML document contains the following: 
-   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> 
+/* Ensure that the HTML document contains the following:
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 */
 .fa {
     display: block;
