@@ -74,7 +74,7 @@ function generateShortVersion(evaluation: HTMLHtmlElement): HTMLHtmlElement {
         }
 
         // Let `irrelevantElements` be a list of elements that should be excluded from `evaluation` including `irrelevantColumns`.
-        const irrelevantElements = [...evaluation.querySelectorAll(`[data-ae-evaluation-only], :is(td, th):is(${selector})`)];
+        const irrelevantElements = evaluation.querySelectorAll(`[data-ae-evaluation-only], :is(td, th):is(${selector})`);
 
         // For each irrelevantElement `irrelevantElement` in `irrelevantElements`.
         for (const irrelevantElement of irrelevantElements) {

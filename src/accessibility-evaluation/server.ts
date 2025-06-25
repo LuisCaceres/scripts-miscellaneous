@@ -5,6 +5,8 @@ import * as http from 'http';
 import * as path from 'path';
 import * as url from 'url';
 
+import { getIssues } from './code/accessibility-audit__get-issues.js';
+
 const port = 8001;
 
 const mimeTypes = {
@@ -24,11 +26,13 @@ const toBoolean = [() => true, () => false];
 
 // Let `rootPath` be the path of the current folder.
 const rootPath = process.cwd();
+console.log(rootPath);
+
 
 /**
- * 
- * @param url 
- * @returns 
+ *
+ * @param url
+ * @returns
  */
 async function getFile(url: string) {
     const paths = [rootPath, url];
@@ -36,7 +40,7 @@ async function getFile(url: string) {
     if (url.endsWith('/')) {
         paths.push('index.html');
     }
-    // Let `filePath` be 
+    // Let `filePath` be
     const filePath = path.join(...paths);
     const pathTraversal = !filePath.startsWith(rootPath);
     const exists = await fs.promises.access(filePath).then(...toBoolean);
@@ -58,17 +62,22 @@ http.createServer(async (request, response) => {
     const file = await getFile(request.url as string);
     const statusCode = file.found ? 200 : 404;
     const mimeType = mimeTypes[file.ext] || mimeTypes.default;
-    response.writeHead(statusCode, {'access-control-allow-origin': '*', 'content-type': mimeType});
+
+    if (request.url?.endsWith('/get-issues')) {
+        await getIssues(response);
+        return;
+    }
+
+    response.writeHead(statusCode, { 'access-control-allow-origin': '*', 'content-type': mimeType });
 
     if (request.method === 'POST') {
         let pathName: string;
 
-        if (request.url === '/foo') {
+        if (request.url?.endsWith('/foo')) {
             pathName = url.parse(request.headers.referer as string).pathname;
         }
-        else if (request.url === '/bar') {
-            console.log('Hello world!');
-            pathName = '/accessibility_evaluation_report.html';
+        else if (request.url?.endsWith('/accessibility-evaluation__summary')) {
+            pathName = `${request.url}.html`;
         }
 
         let data = '';
@@ -76,7 +85,7 @@ http.createServer(async (request, response) => {
             data += chunk.toString();
         });
 
-        request.on('end', async() => {
+        request.on('end', async () => {
             response.end('Data received');
 
             await fs.promises.writeFile(rootPath + pathName, data, 'utf8').catch(error => console.log(error));

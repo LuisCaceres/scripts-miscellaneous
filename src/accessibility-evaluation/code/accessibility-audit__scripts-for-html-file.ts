@@ -40,7 +40,7 @@ const errorMessage = 'Modifications to the file cannot currently be saved. This 
             const shortVersion = generateShortVersion(htmlElement.cloneNode(true) as HTMLHtmlElement);
 
             // Save short version of evaluation.
-            await fetch('bar', {
+            await fetch('accessibility-evaluation__summary', {
                 body: shortVersion.outerHTML,
                 method: 'POST',
             });
@@ -189,4 +189,25 @@ Why? The HTML of the evaluation doesn't get updated as the user enters text into
             }
         }
     });
+}
+
+// The following piece of code gets a list issues from existing accessibility evaluations. This list is presented to the user in a separate browser tab. The evaluator can copy an issue from the list and modify it so that it can be included in the accessibility evaluation they're currently working on.
+// Why? Because sometimes the evaluator documents an issue that's already been documented in the past. This results in unnecessary repetition. It's very unlikely the evaluator remembers which accessibility evaluation the issue was first documented.
+{
+    const separator = '+-+-+';
+    // Let `issues` be a list of accessibility issues previously documented.
+    const issues = (await (await fetch('get-issues')).text()).split(separator);
+
+    const string = `
+    <ul>
+    ${issues.map(issue => `<li>${issue}</li>`)}
+    </ul>
+    `;
+
+    // Let `list` be `issues` transformed to a snippet of HTML.
+    const list = new DOMParser().parseFromString(string, 'text/html');
+    // Open a new browser tab.
+    const tab = window.open();
+    // Add `list` to that tab.
+    tab?.document.body.append(...list.children);
 }
