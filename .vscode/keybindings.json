@@ -48,7 +48,7 @@
             // Comment out currently selected text surrounding it with a forward slash and an asterisk (/*).
             "key": "ctrl+/",
             "command": "editor.action.insertSnippet",
-            "when": "editorTextFocus && handyman.editorHasSingleLineSelection && (editorLangId ==  javascript || editorLangId ==  typescript)",
+            "when": "editorTextFocus && editorHasSelection && handyman.editorHasSingleLineSelection && (editorLangId ==  javascript || editorLangId ==  typescript)",
             "args": {
                 "snippet": "/* $TM_SELECTED_TEXT */"
             }
