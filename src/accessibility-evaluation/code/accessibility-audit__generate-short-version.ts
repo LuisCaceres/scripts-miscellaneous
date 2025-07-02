@@ -1,7 +1,6 @@
-function generateShortVersion(evaluation: HTMLHtmlElement): HTMLHtmlElement {
-    // Let `table` be the table in `evaluation`.
-    const table = evaluation.querySelector('table') as HTMLTableElement;
+// TO DO: WORK WITH EVALUATIONS THAT CONTAIN MORE THAN 1 TABLE
 
+function generateShortVersion(evaluation: HTMLHtmlElement): HTMLHtmlElement {
     const selectors = `select, textarea`;
     const formFields = [...evaluation.querySelectorAll(selectors)] as (HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement)[];
 
@@ -13,6 +12,9 @@ function generateShortVersion(evaluation: HTMLHtmlElement): HTMLHtmlElement {
         // Replace `formField` with `value`.
         formField.replaceWith(value);
     }
+
+    // Let `table` be the table in `evaluation`.
+    const table = evaluation.querySelector('table') as HTMLTableElement;
 
     /*
     Functionality: Remove "unverified" and "pass" test cases from `evaluation`.
@@ -64,8 +66,17 @@ function generateShortVersion(evaluation: HTMLHtmlElement): HTMLHtmlElement {
     Why? Because typically `evaluation` is a lenghty document. The accessibility evaluation report should be concise to make it reader-friendly.
     */
     {
-        //  Let `irrelevantColumns` be which columns to remove from `table`.
-        const irrelevantColumns: number[] = [3, 4];
+        // Let `irrelevantColumns` be an initially empty list of the columns in `table` to be removed.
+        const irrelevantColumns: number[] = [];
+
+        // Find which columns from `table` to be removed and add them to `irrelevantColumns`.
+        [...table.rows[0].cells].forEach((tableHeader, index) => {
+
+            if (tableHeader.matches(`[data-ae-evaluation-only]`)) {
+                irrelevantColumns.push(index + 1);
+            }
+        });
+
         // Let `selector` be a CSS selector that matches `irrelevantColumns`.
         let selector = '';
 
