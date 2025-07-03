@@ -5,6 +5,7 @@ import * as http from 'http';
 import * as path from 'path';
 import * as url from 'url';
 
+import { getAccessibilityEvaluations } from './code/get-list-of-accessibility-evaluations.js';
 import { getIssues } from './code/accessibility-audit__get-issues.js';
 
 const port = 8001;
@@ -65,6 +66,11 @@ http.createServer(async (request, response) => {
 
     if (request.url?.endsWith('/get-issues')) {
         await getIssues(response);
+        return;
+    }
+
+    if (request.url?.endsWith('/index')) {
+        await getAccessibilityEvaluations(response);
         return;
     }
 
