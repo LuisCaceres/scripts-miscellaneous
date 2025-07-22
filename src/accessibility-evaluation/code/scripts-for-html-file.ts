@@ -1,4 +1,4 @@
-import { generateShortVersion } from "./accessibility-audit__generate-short-version.js";
+import { generateShortVersion } from "./generate-short-version.js";
 
 /* The HTML file that contains an accessibility audit should reference this file with a `script` tag to include the functionality below. */
 

@@ -5,8 +5,8 @@ import * as http from 'http';
 import * as path from 'path';
 import * as url from 'url';
 
-import { getAccessibilityEvaluations } from './code/get-list-of-accessibility-evaluations.js';
-import { getIssues } from './code/accessibility-audit__get-issues.js';
+import { getAccessibilityEvaluations } from './get-list-of-accessibility-evaluations.js';
+import { getIssues } from './get-issues.js';
 
 const port = 8001;
 
@@ -26,9 +26,7 @@ const mimeTypes = {
 const toBoolean = [() => true, () => false];
 
 // Let `rootPath` be the path of the current folder.
-const rootPath = process.cwd();
-console.log(rootPath);
-
+const rootPath = process.cwd().replace(`${path.sep}code`, '');
 
 /**
  *
@@ -99,7 +97,6 @@ http.createServer(async (request, response) => {
     }
     else if (statusCode === 404) {
         console.log(request.url);
-        response.write('Hello world');
     }
     if (file.stream) {
         file.stream.pipe(response);
