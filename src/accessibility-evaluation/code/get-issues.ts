@@ -15,18 +15,22 @@ async function getIssues(response: http.ServerResponse) {
     const issues: string[] = [];
     const paths = await fs.promises.glob(globPattern);
 
-        // For each path 'path' in 'paths'.
-        for await (const path of paths) {
-            // fs.watch(path, async () => {
-            const file = await fs.promises.readFile(path, { encoding: "utf-8" });
-            issues.push(...file.match(regex) || '');
-            // });
+    // For each path 'path' in 'paths'.
+    for await (const path of paths) {
+        const file = await fs.promises.readFile(path, { encoding: "utf-8" });
+        issues.push(...file.match(regex) || '');
     }
+
+    const html = `
+        <ul>
+            ${issues.map(issue => `<li>${issue}</li>`).join('')}
+        </ul>
+    `;
 
     response.writeHead(200, {
         'content-type': 'text/html; charset=UTF-8'
     });
-    response.write(issues.join('+-+-+'));
+    response.write(html);
     response.end();
 }
 
