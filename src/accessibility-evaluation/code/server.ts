@@ -3,7 +3,7 @@
 import * as fs from 'fs';
 import * as http from 'http';
 import * as path from 'path';
-import * as url from 'url';
+import * as foo from 'url';
 
 import { getAccessibilityEvaluations } from './get-list-of-accessibility-evaluations.js';
 import { getIssues } from './get-issues.js';
@@ -26,7 +26,7 @@ const mimeTypes = {
 const toBoolean = [() => true, () => false];
 
 // Let `rootPath` be the path of the current folder.
-const rootPath = process.cwd().replace(`${path.sep}code`, '');
+const rootPath = process.cwd();
 
 /**
  *
@@ -34,21 +34,14 @@ const rootPath = process.cwd().replace(`${path.sep}code`, '');
  * @returns
  */
 async function getFile(url: string) {
-    const paths = [rootPath, url];
-
-    if (url.endsWith('/')) {
-        paths.push('index.html');
-    }
     // Let `filePath` be
-    const filePath = path.join(...paths);
-    const pathTraversal = !filePath.startsWith(rootPath);
-    const exists = await fs.promises.access(filePath).then(...toBoolean);
-    const found = !pathTraversal && exists;
+    const filePath = path.join(rootPath, url);
+    const found = await fs.promises.access(filePath).then(...toBoolean);
 
     let streamPath, ext, stream;
 
     if (found) {
-        streamPath = found ? filePath : rootPath + '/index.html';
+        streamPath = filePath;
         ext = path.extname(streamPath).substring(1).toLowerCase();
         stream = fs.createReadStream(streamPath);
     }
@@ -57,33 +50,18 @@ async function getFile(url: string) {
 };
 
 http.createServer(async (request, response) => {
-    console.log(request.url, request.method);
-    const file = await getFile(request.url as string);
-    const statusCode = file.found ? 200 : 404;
-    const mimeType = mimeTypes[file.ext] || mimeTypes.default;
+    const url = request.url;
 
-    if (request.url?.endsWith('/get-issues')) {
+    if (url?.endsWith('/get-issues')) {
         await getIssues(response);
-        return;
     }
 
-    if (request.url?.endsWith('/index')) {
+    else if (url?.endsWith('/index')) {
         await getAccessibilityEvaluations(response);
-        return;
     }
 
-    response.writeHead(statusCode, { 'access-control-allow-origin': '*', 'content-type': mimeType });
-
-    if (request.method === 'POST') {
-        let pathName: string;
-
-        if (request.url?.endsWith('/foo')) {
-            pathName = url.parse(request.headers.referer as string).pathname;
-        }
-        else if (request.url?.endsWith('/accessibility-evaluation__summary')) {
-            pathName = `${request.url}.html`;
-        }
-
+    else if (url?.endsWith('/foo') && request.method === 'POST') {
+        let pathName = foo.parse(request.headers.referer as string).pathname;
         let data = '';
         request.on('data', chunk => {
             data += chunk.toString();
@@ -95,11 +73,29 @@ http.createServer(async (request, response) => {
             await fs.promises.writeFile(rootPath + pathName, data, 'utf8').catch(error => console.log(error));
         });
     }
-    else if (statusCode === 404) {
-        console.log(request.url);
-    }
-    if (file.stream) {
-        file.stream.pipe(response);
+
+    // Otherwise get a file from within the root folder.
+    else {
+        console.log(url);
+
+        const file = await getFile(url as string);
+        const statusCode = file.found ? 200 : 404;
+        const mimeType = mimeTypes[file.ext] || mimeTypes.default;
+
+        response.writeHead(statusCode, {
+            'access-control-allow-origin': '*',
+            'content-type': mimeType,
+        });
+
+        if (statusCode === 404) {
+            response.write('Not found!');
+            response.end();
+        }
+        else {
+            if (file.stream) {
+                file.stream.pipe(response);
+            }
+        }
     }
 }).listen(port);
 

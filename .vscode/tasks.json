@@ -18,7 +18,7 @@
         },
         {
             "label": "accessibility evaluation",
-            "command": "node dist/accessibility-evaluation/server",
+            "command": "cd dist/accessibility-evaluation && node code/server",
             "type": "shell",
         }
     ]
