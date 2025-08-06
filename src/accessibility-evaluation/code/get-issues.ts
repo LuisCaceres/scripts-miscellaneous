@@ -12,18 +12,19 @@ async function getIssues(response: http.ServerResponse) {
     const regex = /(?<=>)([^><]+?)(?=<\/textarea)/g;
 
     //  Let `issues` be an initially empty list of issues.
-    const issues: string[] = [];
-    const paths = await fs.promises.glob(globPattern);
+    const issues: Set<string> = new Set();
+    const evaluations = await fs.promises.glob(globPattern);
 
     // For each path 'path' in 'paths'.
-    for await (const path of paths) {
-        const file = await fs.promises.readFile(path, { encoding: "utf-8" });
-        issues.push(...file.match(regex) || '');
+    for await (const evaluation of evaluations) {
+        const html = await fs.promises.readFile(evaluation, { encoding: "utf-8" });
+        //
+        ([...html.match(regex) || '']).forEach(issues.add, issues);
     }
 
     const html = `
         <ul>
-            ${issues.map(issue => `<li>${issue}</li>`).join('')}
+            ${[...issues].map(issue => `<li>${issue}</li>`).join('')}
         </ul>
     `;
 
