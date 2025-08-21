@@ -39,6 +39,8 @@ searchButton.addEventListener('click', event => {
             if (words.includes(keyword)) {
                 // Increment the counter by one.
                 issues.set(issue, ++counter);
+                // Ignore any subsequent occurrences of `keyword` in the text of `issue`.
+                continue;
             }
         }
     };
@@ -55,6 +57,14 @@ searchButton.addEventListener('click', event => {
     // Sort `relevantIssues` by the number of times the text of an issue contains a keyword.
     relevantIssues.sort((relevantIssueA, relevantIssueB) => relevantIssueA[1] - relevantIssueB[1]);
     relevantIssues.reverse();
+
+    const list = document.querySelector('.js-list-issues');
+
+    // Present `relevantIssues` on the web page according to the sorting order.
+    for (const relevantIssue of relevantIssues) {
+        list?.append(relevantIssue[0]);
+    }
+
 });
 
 export { }

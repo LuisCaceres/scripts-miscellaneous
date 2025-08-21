@@ -33,7 +33,7 @@ async function getIssues(response: http.ServerResponse) {
         <p>
             <button class="js-search-issues" type="search">Search for issues</button>
         </p>
-        <ul>
+        <ul class="js-list-issues">
             ${[...issues].map(issue => `<li class="js-issues">${issue}</li>`).join('')}
         </ul>
     `;
