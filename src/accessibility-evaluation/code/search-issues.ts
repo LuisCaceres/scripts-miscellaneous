@@ -3,7 +3,7 @@
 
 const regexes = {
     // Matches a comma or a period or any number of white space characters.
-    keywords: /,|\.|\s+/,
+    keywords: /,|\.|`|\s+/,
 };
 
 // Let `searchBox` be the text box the user can type keywords to search issues
@@ -65,17 +65,16 @@ searchButton.addEventListener('click', event => {
         list?.append(relevantIssue[0]);
     }
 
-    const ranges: Range[] = [];
+    // Highlight visually keywords within the text of issues from `relevantIssues`.
+    {
+        const ranges: Range[] = [];
 
-    // Highlight keywords in the text of the page.
-    for (const relevantIssue of relevantIssues) {
-        const textNode = relevantIssue[0].firstChild as Text;
-        // For each keyword 'keyword' in 'keywords'.
-        for (const keyword of keywords) {
-            const regex = new RegExp(keyword, 'gid');
-            const matches = textNode.textContent.matchAll(regex);
-
-            if (matches) {
+        for (const relevantIssue of relevantIssues) {
+            const textNode = relevantIssue[0].firstChild as Text;
+            // For each keyword 'keyword' in 'keywords'.
+            for (const keyword of keywords) {
+                const regex = new RegExp(keyword, 'gid');
+                const matches = textNode.textContent.matchAll(regex);
 
                 // For each match 'match' in 'matches'.
                 for (const match of matches) {
@@ -87,10 +86,10 @@ searchButton.addEventListener('click', event => {
                 }
             }
         }
-    }
 
-    const highlighter = new Highlight(...ranges);
-    CSS.highlights.set('my-custom-highlight', highlighter);
+        const highlighter = new Highlight(...ranges);
+        CSS.highlights.set('keywords', highlighter);
+    }
 });
 
 export { }
