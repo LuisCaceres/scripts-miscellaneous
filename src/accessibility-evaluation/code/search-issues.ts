@@ -65,6 +65,32 @@ searchButton.addEventListener('click', event => {
         list?.append(relevantIssue[0]);
     }
 
+    const ranges: Range[] = [];
+
+    // Highlight keywords in the text of the page.
+    for (const relevantIssue of relevantIssues) {
+        const textNode = relevantIssue[0].firstChild as Text;
+        // For each keyword 'keyword' in 'keywords'.
+        for (const keyword of keywords) {
+            const regex = new RegExp(keyword, 'gid');
+            const matches = textNode.textContent.matchAll(regex);
+
+            if (matches) {
+
+                // For each match 'match' in 'matches'.
+                for (const match of matches) {
+                    const index = match.index;
+                    const range = new Range();
+                    range.setStart(textNode, index);
+                    range.setEnd(textNode, index + keyword.length);
+                    ranges.push(range);
+                }
+            }
+        }
+    }
+
+    const highlighter = new Highlight(...ranges);
+    CSS.highlights.set('my-custom-highlight', highlighter);
 });
 
 export { }

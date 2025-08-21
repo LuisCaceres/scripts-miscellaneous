@@ -25,6 +25,12 @@ async function getIssues(response: http.ServerResponse) {
     const html = `
         <link href="code/table.css" rel="stylesheet"/>
         <script src="code/search-issues.js" type="module"/></script>
+        <style>
+            ::highlight(my-custom-highlight) {
+                color: white;
+                background-color: black;
+            }
+        </style>
         <p>
             <label>Keywords:</label>
             </br>
