@@ -23,8 +23,18 @@ async function getIssues(response: http.ServerResponse) {
     }
 
     const html = `
+        <link href="code/table.css" rel="stylesheet"/>
+        <script src="code/search-issues.js" type="module"/></script>
+        <p>
+            <label>Keywords:</label>
+            </br>
+            <input type="search" class="js-search-box">
+        </p>
+        <p>
+            <button class="js-search-issues" type="search">Search for issues</button>
+        </p>
         <ul>
-            ${[...issues].map(issue => `<li>${issue}</li>`).join('')}
+            ${[...issues].map(issue => `<li class="js-issues">${issue}</li>`).join('')}
         </ul>
     `;
 
