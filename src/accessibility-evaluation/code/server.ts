@@ -60,8 +60,22 @@ http.createServer(async (request, response) => {
         await getAccessibilityEvaluations(response);
     }
 
-    else if (url?.endsWith('/foo') && request.method === 'POST') {
+    else if (url?.endsWith('/foo')) {
         let pathName = foo.parse(request.headers.referer as string).pathname;
+        let data = '';
+        request.on('data', chunk => {
+            data += chunk.toString();
+        });
+
+        request.on('end', async () => {
+            response.end('Data received');
+
+            await fs.promises.writeFile(rootPath + pathName, data, 'utf8').catch(error => console.log(error));
+        });
+    }
+    else if (url?.endsWith('/accessibility-evaluation__summary')) {
+        console.log('Hello world!');
+        let pathName = `${request.url}.html`;
         let data = '';
         request.on('data', chunk => {
             data += chunk.toString();

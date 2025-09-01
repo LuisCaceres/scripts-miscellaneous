@@ -32,10 +32,10 @@ function generateShortVersion(evaluation: HTMLHtmlElement): HTMLHtmlElement {
         for (const row of rows) {
             // Let `relevantCell` be the cell that contains test cases.
             const relevantCell = row.cells[relevantColumn];
-            const text = (relevantCell.textContent || '').trim().toUpperCase();
+            const text = relevantCell.textContent.trim().toUpperCase();
 
             // If the text content of `relevantCell` doesn't contain the words `FAILURE` or `WARNING`.
-            if (text.match(/(FAILURE|WARNING)/) === null) {
+            if (text.match(/(UNVERIFIED|PASS)/)) {
                 // Remove `row` from `evaluation`.
                 row.remove();
             }

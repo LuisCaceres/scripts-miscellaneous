@@ -14,6 +14,7 @@ const errorMessage = 'Modifications to the file cannot currently be saved. This 
             await fetch('foo');
         } catch (error) {
             alert(errorMessage);
+
         }
     })();
 
@@ -162,7 +163,7 @@ Why? The HTML of the evaluation doesn't get updated as the user enters text into
         }
 
         const dropdown = target;
-        const selectedOption = (dropdown.selectedOptions[0].textContent || '').trim().toUpperCase();
+        const selectedOption = dropdown.selectedOptions[0].textContent.trim().toUpperCase();
 
         const icon = dropdown.closest('td')?.querySelector('.icon');
 
@@ -190,3 +191,21 @@ Why? The HTML of the evaluation doesn't get updated as the user enters text into
         }
     });
 }
+
+/*
+Functionality: Insert a row immediately below a specific row.
+Why? Because during an accessibility evaluation it may be necessary to insert another row.
+*/
+Object.defineProperty(window, 'insertRow', {
+    value: function (rowNumber: number) {
+        const table = document.querySelector('table');
+
+        if (table) {
+            const row = table.rows[rowNumber];
+            const newRow = document.querySelector('#table-row') as HTMLTemplateElement;
+            row.after(newRow.content.cloneNode(true));
+
+            document.designMode = 'on';
+        }
+    }
+});

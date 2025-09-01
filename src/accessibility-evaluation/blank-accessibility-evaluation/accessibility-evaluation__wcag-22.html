@@ -1,0 +1,3565 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Evaluation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"
+        type="text/css">
+    <link rel="stylesheet" href="http://127.0.0.1:8001/code/table.css">
+
+    <style>
+        .list-of-issues {
+            display: flex;
+            flex-direction: column;
+            padding-inline-start: 1rem;
+        }
+
+        button {
+            min-block-size: 2rem;
+            padding: 0.5rem;
+            background-color: var(--blue);
+            border: var(--blue) solid;
+            border-radius: 1.5rem;
+            color: var(--white);
+            font-size: medium;
+            cursor: pointer;
+        }
+
+        label {
+            display: block;
+            margin-block-end: 1rem;
+        }
+
+        li {
+            .list-of-issues & {
+                padding-block: 1rem;
+                border-block-end: dashed 0.25rem;
+                margin-block-end: 2rem;
+            }
+        }
+
+        p {
+            .list-of-issues & {
+                margin: 0;
+            }
+        }
+
+        textarea {
+            min-block-size: 10rem;
+            padding: 0.5rem;
+        }
+
+        input[type=text],
+        select {
+            min-block-size: 2rem;
+            padding: 0.25rem 0.5rem;
+        }
+
+        input[type=text],
+        select,
+        textarea {
+            border: solid;
+            font-size: 1rem;
+        }
+
+        span {
+            label & {
+                display: block;
+                margin-block-end: 0.5rem;
+                font-weight: bold;
+            }
+        }
+
+        td:nth-of-type(2) {
+            inline-size: 20rem;
+            max-inline-size: 20rem;
+        }
+
+        td:nth-of-type(4) {
+            inline-size: 40rem;
+            max-inline-size: 40rem;
+        }
+
+        td:nth-of-type(5) {
+            inline-size: 40rem;
+            max-inline-size: 40rem;
+        }
+
+        td:nth-of-type(6) {
+            inline-size: 40rem;
+            max-inline-size: 40rem;
+        }
+
+        .logo {
+            margin-block-start: 1rem;
+        }
+    </style>
+    <script src="http://127.0.0.1:8001/code/scripts-for-html-file.js" type="module"></script>
+</head>
+
+<body>
+    <h1>Accessibility evaluation of {{what}}</h1>
+    <p>
+        This accessibility evaluation has been prepared by Vision Australia.
+        <img alt="" class="logo"
+            src="https://visionaustralia.org/themes/custom/vision_australia/images/logo/logo-desktop.svg">
+    </p>
+
+    <div data-ae-evaluation-only="">
+        <p>Please read the instructions on how to conduct this accessibility evaluation before proceeding with the
+            evaluation.</p>
+        <ol>
+            <li>Make sure Node is installed on your computer.</li>
+            <li>On Windows, open the "File Explorer" application</li>
+            <li>Locate the folder that contains this HTML file.</li>
+            <li>On Windows, right click on the folder to show the context menu and select the option called "Open in
+                Terminal". On a Mac, select the option called "{{WHAT}}". A new application window will open.</li>
+            <li>Type node server in the application window. </li>
+            <li>Copy the following URL {{WHAT}} and paste it in the address bar of your Internet browser. Press enter.
+            </li>
+            <li>Start the accessibility evaluation. You can edit the evaluation right on the Internet browser. On
+                Windows, you can press "ctrl" + "s" to save your progress.</li>
+        </ol>
+        <h2>About this accessibility evaluation</h2>
+    </div>
+    <p>The following is an accessibility evaluation of &lt;what&gt;.</p>
+    <div hidden="">
+        <h2>Questionnaire</h2>
+        <p>Answer the following questions to get a list of relevant test cases.</p>
+        <form action="">
+            <fieldset>
+                <legend>Which one of these is the evaluation subject?</legend>
+                <p><label for="">
+                        <input type="radio" name="a" id="1"> Web page
+                    </label></p>
+                <p><label for="">
+                        <input type="radio" name="a" id="1"> User interface component
+                    </label></p>
+                <p><label for="">
+                        <input type="radio" name="a" id="1"> Word document
+                    </label></p>
+                <p><label for="">
+                        <input type="radio" name="a" id="1"> PDF document
+                    </label></p>
+                <p><label for="">
+                        <input type="radio" name="a" id="1"> Other
+                    </label></p>
+            </fieldset>
+        </form>
+    </div>
+    <div class="table__container">
+        <table>
+            <tbody>
+                <tr>
+                    <th>ID</th>
+                    <th>Success Criterion</th>
+
+                    <th>Is this success criterion relevant?</th>
+                    <th>Test cases</th>
+                    <th data-test-status="">Result of test (unverified, pass, warning, failure)</th>
+                    <th>Issues</th>
+
+
+                    <th>Level</th>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Page Titled </h2>
+                        <p data-ae-evaluation-only="">Web pages have titles that describe topic or purpose.</p>
+                    </td>
+
+                    <td>Is the evaluation subject an entire web page, Word document or PDF document?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>
+                        1. The screen reader says the name of the web page.
+                    </td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Page Titled" fdprocessedid="ken632">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="c9ddd">Insert issue</button></p>
+                    </td>
+
+
+                    <td> A</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Info and Relationships </h2>
+                        <p data-ae-evaluation-only="">Information, structure, and relationships conveyed through
+                            presentation can be programmatically determined or are available in text.</p>
+                    </td>
+
+                    <td>Are there headings and lists?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>1. The screen reader allows me to jump from visual heading to visual heading.
+                        <br><br>2. The screen reader says the heading level of each visual heading.
+                        <br><br>3. The screen reader says how many items there are
+                        on a list.
+                    </td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Info and Relationships" fdprocessedid="vxl7vt">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="xduy5u">Insert issue</button></p>
+                    </td>
+
+
+                    <td> A</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Bypass Blocks </h2>
+                        <p data-ae-evaluation-only="">A mechanism is available to bypass blocks of content that are
+                            repeated on
+                            multiple web pages.</p>
+                    </td>
+
+                    <td>Is there a header, a main content area and a footer?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>1. The screen reader allows me to navigate to the header, the beginning of the main content, the
+                        footer and the "search" text box if one exists.</td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Bypass Blocks" fdprocessedid="6sl3nk">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="jekewd">Insert issue</button></p>
+                    </td>
+
+
+                    <td> A</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Link Purpose (In Context) </h2>
+                        <p data-ae-evaluation-only="">The purpose of each link can be determined from the link text
+                            alone
+                            or from the link text together with its
+                            programmatically determined link context, except where the purpose of the link would be
+                            ambiguous to
+                            users in general.</p>
+                    </td>
+
+                    <td>Are there links?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>1. While jumping from link to link, the screen reader says the text of the link and I can
+                        clearly understand the
+                        destination of the link.</td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Link Purpose (In Context)" fdprocessedid="8n4orq">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="l2wl1">Insert issue</button></p>
+                    </td>
+                    <td> A</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Keyboard </h2>
+                        <p data-ae-evaluation-only="">All functionality of the content is operable through a keyboard
+                            interface without
+                            requiring specific timings for individual keystrokes, except where the underlying
+                            function requires input that depends on the path of the user's movement and not just
+                            the endpoints.</p>
+                    </td>
+
+                    <td>Are there interactive elements such as buttons, form fields or links?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>For each interactive element:
+                        <ol>
+                            <li>I can set keyboard focus to it by pressing the "tab" key.</li>
+                            <li>I can press the "enter" or "space" key to activate the interactive element.</li>
+                            <li>I can press any other relevant keys to interact with the interactive element.</li>
+                        </ol>
+                    </td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Keyboard" fdprocessedid="136y0i">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="dn7wtu">Insert issue</button></p>
+                    </td>
+                    <td> A</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Labels or Instructions </h2>
+                        <p data-ae-evaluation-only="">Labels or instructions are provided when content requires user
+                            input.</p>
+                    </td>
+
+                    <td>Are there form fields such as checkboxes, drop-downs, radio buttons or text boxes?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>For each form field such as checkboxes, dropdowns, radio buttons and text boxes:
+                        <ol>
+                            <li>There is a visual label immediately adjacent to the form field.</li>
+                            <li>The screen reader reads out the label of the form field.</li>
+                        </ol>
+                    </td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Labels or Instructions" fdprocessedid="ivmn4">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="rqterc">Insert issue</button></p>
+                    </td>
+
+
+                    <td> A</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Non-Text Content</h2>
+                        <p data-ae-evaluation-only="">All non-text content that is presented to the user has a text
+                            alternative that
+                            serves the equivalent purpose.</p>
+                    </td>
+
+                    <td>Does the evaluation subject contain images?<p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>
+                        1. For each image, the screen reader reads out its text alternative.
+                    </td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Page Titled" fdprocessedid="szdes5">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="mvukj">Insert issue</button></p>
+                    </td>
+
+
+                    <td> A</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Error Identification </h2>
+                        <p data-ae-evaluation-only="">If an input error is automatically detected, the item that is in
+                            error is
+                            identified and the error
+                            is described to the user in text.</p>
+                    </td>
+
+                    <td>Are there form fields such as checkboxes, drop-downs, radio buttons or text boxes?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>For each invalid form field:
+                        <ol>
+                            <li>There is an error message immediately below the form field.</li>
+                            <li>The screen reader reads out the error message when I jump to an invalid form field.</li>
+                            <li>The screen reader says "invalid" when the I jump to the form field.</li>
+                        </ol>
+                    </td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Error Identification" fdprocessedid="zop7ps">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="69dj02h">Insert issue</button></p>
+                    </td>
+
+
+                    <td> A</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Name, Role, Value </h2>
+                        <p data-ae-evaluation-only="">For all user interface components (including but not limited to:
+                            form
+                            elements, links and components generated by scripts),
+                            the name and role can be programmatically determined; states, properties, and values that
+                            can be
+                            set
+                            by the user can be programmatically set; and notification of changes to these items is
+                            available
+                            to
+                            user agents, including assistive technologies.</p>
+                    </td>
+
+                    <td>Are there interactive elements such as buttons, form fields or links?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>For each button that expands and collapses content:<br><br>1. JAWS says "collapsed" when the
+                        associated content isn't visible.<br><br>2. JAWS says "expanded" when the associated content is
+                        visible.<br><br>3. JAWS says "start" when it reaches the start of the associated content
+                        immediately below the button.<br><br>4. JAWS says "end" when it reaches the end of the
+                        associated content immediately below the button.</td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Name, Role, Value" fdprocessedid="s8r9g4">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="17s3x">Insert issue</button></p>
+                    </td>
+
+
+                    <td> A</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>On Input </h2>
+                        <p data-ae-evaluation-only="">Changing the setting of any user interface component does not
+                            automatically cause
+                            a
+                            change of context unless the user has been advised of the behavior before using the
+                            component.
+                        </p>
+                    </td>
+
+                    <td>Are there form fields such as checkboxes, drop-downs, radio buttons or text boxes?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>For each form field such as checkboxes, dropdowns, radio buttons and text boxes:<br><br>1.
+                        Keyboard focus doesn't move away when typing into a text box.<br><br>2. Keyboard focus doesn't
+                        move away when checking a checkbox or a radio button.<br><br>3.&nbsp;&nbsp;Keyboard focus
+                        doesn't move away when selecting a value from a dropdown.</td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, On Input" fdprocessedid="rtnn34">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="su3uz3">Insert issue</button></p>
+                    </td>
+
+
+                    <td> A</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>On Focus </h2>
+                        <p data-ae-evaluation-only="">When any user interface component receives focus, it does not
+                            initiate a change
+                            of
+                            context.</p>
+                    </td>
+
+                    <td>Are there interactive elements such as buttons, form fields or links?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>When an interactive element receives keyboard focus with the "tab" key.<br><br>1. Keyboard focus
+                        doesn't automatically move away from the interactive element.</td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, On Focus" fdprocessedid="9lyptm">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="t94e1f">Insert issue</button></p>
+                    </td>
+
+
+                    <td> A</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Label in Name </h2>
+                        <p data-ae-evaluation-only="">For user interface components with labels that include text or
+                            images of
+                            text,
+                            the name contains the text that is presented visually.</p>
+                    </td>
+
+                    <td>Are there interactive elements such as buttons, form fields or links?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>1. JAWS first reads out the label that is visible on the screen optionally followed by
+                        additional text.</td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Label in Name" fdprocessedid="r1cc68">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="pm0xqo">Insert issue</button></p>
+                    </td>
+
+
+                    <td> A</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Focus Order </h2>
+                        <p data-ae-evaluation-only="">If a web page can be navigated sequentially and the navigation
+                            sequences
+                            affect
+                            meaning or operation, focusable components receive
+                            focus in an order that preserves meaning and operability.</p>
+                    </td>
+
+                    <td>Are there interactive elements such as buttons, form fields or links?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>1. Keyboard focus moves from top to bottom and from left to right without jumping around
+                        randomly.</td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Focus Order" fdprocessedid="26em2">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="egzfhh">Insert issue</button></p>
+                    </td>
+
+
+                    <td> A</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>No Keyboard Trap </h2>
+                        <p data-ae-evaluation-only="">If keyboard focus can be moved to a component of the page using a
+                            keyboard
+                            interface, then focus can be moved away from that component using only a keyboard interface.
+                        </p>
+                    </td>
+
+                    <td>Is the evaluation subject a web page or embedded in a web page?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>1. I can move into and out of the evaluation subject by pressing the "tab" key.<br><br>2. I can
+                        move from the beginning to the end of the evaluation subject by pressing the "tab" key.</td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, No Keyboard Trap" fdprocessedid="yk0yl">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="rr9b4l">Insert issue</button></p>
+                    </td>
+
+
+                    <td> A</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Use of Color </h2>
+                        <p data-ae-evaluation-only="">Color is not used as the only visual means of conveying
+                            information,
+                            indicating
+                            an
+                            action, prompting a response, or distinguishing a visual element.</p>
+                    </td>
+
+                    <td>Is there colours?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>For each colour identified in the evaluation subject:<br><br>1. The colour isn't the only
+                        visual indication to communicate meaning.</td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Use of Color" fdprocessedid="fnxdyq">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="ilzbzc">Insert issue</button></p>
+                    </td>
+
+
+                    <td> A</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Meaningful Sequence </h2>
+                        <p data-ae-evaluation-only="">When the sequence in which content is presented affects its
+                            meaning, a
+                            correct reading sequence can be programmatically determined.</p>
+                    </td>
+
+                    <td>Is there text?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>1. The content associated with a heading always follows the heading.</td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Meaningful Sequence" fdprocessedid="h8ualh">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="md3rah">Insert issue</button></p>
+                    </td>
+
+
+                    <td> A</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Sensory Characteristics </h2>
+                        <p data-ae-evaluation-only="">Instructions provided for understanding and operating content do
+                            not
+                            rely solely on
+                            sensory characteristics of components such as shape, color, size, visual location,
+                            orientation,
+                            or sound.</p>
+                    </td>
+
+                    <td>Is there text?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>1. There isn't information that relies on the user's ability to perceive shapes, colours, sizes,
+                        visual location, orientations or sounds.</td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Sensory Characteristics" fdprocessedid="xe7ueg">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="xaa7an">Insert issue</button></p>
+                    </td>
+
+
+                    <td> A</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Consistent Help </h2>
+                        <p data-ae-evaluation-only="">If a web page contains any of the following help mechanisms, and
+                            those mechanisms are
+                            repeated on multiple web pages within a set of web pages, they occur in the same order
+                            relative to other page content, unless a change is initiated by the user:</p>
+                        <p data-ae-evaluation-only="">* Human contact details;<br>* Human contact mechanism;<br>*
+                            Self-help option;<br>* A fully
+                            automated contact mechanism.</p>
+                    </td>
+
+                    <td>Is the evaluation subject a web page or embedded in a web page?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>1. I can find help exactly in the same location on multiple web pages.</td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Consistent Help" fdprocessedid="zalklt">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="nqzwu">Insert issue</button></p>
+                    </td>
+
+
+                    <td> A</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Redundant Entry </h2>
+                        <p data-ae-evaluation-only="">Information previously entered by or provided to the user that is
+                            required to be entered
+                            again in the same process is either:</p>
+                        <p data-ae-evaluation-only="">* auto-populated, or<br>* available for the user to select.</p>
+                    </td>
+
+                    <td>Are there form fields such as drop-downs or text boxes?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>1. I don't need to manually enter information that I've previously provided.&nbsp;&nbsp;</td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Redundant Entry" fdprocessedid="gtj86c">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="8klfhg">Insert issue</button></p>
+                    </td>
+
+
+                    <td> A</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Character Key Shortcuts </h2>
+                        <p data-ae-evaluation-only="">If a keyboard shortcut is implemented in content using only letter
+                            (including upper- and lower-case letters), punctuation, number, or symbol characters, then
+                            the keyboard shortcut for a user interface component is only active when that component has
+                            focus.</p>
+                    </td>
+
+                    <td>Is the evaluation subject a web page or embedded in a web page?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>1. As soon as the web page loads, I can press any one-letter or one-number key and there are no
+                        unexpected side effects.</td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Character Key Shortcuts" fdprocessedid="3uq0gq">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="7i74mb">Insert issue</button></p>
+                    </td>
+
+
+                    <td> A</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Audio Description or Media Alternative (Prerecorded) </h2>
+                        <p data-ae-evaluation-only="">An alternative for time-based media
+                            or audio description of the prerecorded
+                            video content is provided for synchronized media, except when the media is a media
+                            alternative
+                            for text and is clearly labeled as such.</p>
+                    </td>
+
+                    <td>Is there audio or video?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td></td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Audio Description or Media Alternative (Prerecorded)"
+                                    fdprocessedid="19137">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="0fddkk">Insert issue</button></p>
+                    </td>
+
+
+                    <td> A</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Captions (Prerecorded) </h2>
+                        <p data-ae-evaluation-only="">Captions are provided for all prerecorded audio content in
+                            synchronized media, except when
+                            the media is a media alternative for text and is clearly labeled as such.</p>
+                    </td>
+
+                    <td>Is there audio or video?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td></td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Captions (Prerecorded)" fdprocessedid="r2a0wk">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="6mvdu">Insert issue</button></p>
+                    </td>
+
+
+                    <td> A</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Audio-only and Video-only (Prerecorded) </h2>
+                        <p data-ae-evaluation-only="">For prerecorded
+                            audio-only and prerecorded video-only media, the following are true, except when the audio
+                            or
+                            video is a media alternative for text and is clearly labeled as such:<br><br>Prerecorded
+                            Audio-only</p>
+                        <p data-ae-evaluation-only="">An alternative for time-based media is provided that presents
+                            equivalent information for
+                            prerecorded audio-only content.</p>
+                        <p data-ae-evaluation-only="">Prerecorded Video-only</p>
+                        <p data-ae-evaluation-only="">Either an alternative for time-based media or an audio track is
+                            provided that presents
+                            equivalent information for prerecorded video-only content.</p>
+                    </td>
+
+                    <td>Is there audio or video?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td></td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Audio-only and Video-only (Prerecorded)"
+                                    fdprocessedid="safrav">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="3f6u8u">Insert issue</button></p>
+                    </td>
+
+
+                    <td> A</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Language of Page </h2>
+                        <p data-ae-evaluation-only="">The default human language of each web page can be
+                            programmatically
+                            determined.</p>
+                    </td>
+
+                    <td>Is the evaluation subject a web page or embedded in a web page?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>1. JAWS speaks in the same language specified by the page.</td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Language of Page" fdprocessedid="1ohupl">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="fg3a98">Insert issue</button></p>
+                    </td>
+
+
+                    <td> A</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Pause, Stop, Hide </h2>
+                        <p data-ae-evaluation-only="">For moving, blinking, scrolling, or auto-updating information, all
+                            of the following are true:
+                        </p>
+                        <p data-ae-evaluation-only="">Moving, blinking, scrolling</p>
+                        <p data-ae-evaluation-only="">For any moving, blinking or scrolling information that (1) starts
+                            automatically, (2) lasts
+                            more than five seconds, and (3) is presented in parallel with other content, there is a
+                            mechanism for the user to pause, stop, or hide it unless the movement, blinking, or
+                            scrolling is part of an activity where it is essential; and</p>
+                        <p data-ae-evaluation-only="">Auto-updating</p>
+                        <p data-ae-evaluation-only="">For any auto-updating information that (1) starts automatically
+                            and (2) is presented in
+                            parallel with other content, there is a mechanism for the user to pause, stop, or hide it or
+                            to control the frequency of the update unless the auto-updating is part of an activity where
+                            it is essential.</p>
+                    </td>
+
+                    <td>Is there content that moves, blinks, scrolls or updates automatically without user
+                        intervention?&nbsp;
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>1. I can pause or stop any content that automatically moves, blinks, scrolls or auto-updates.
+                    </td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Pause, Stop, Hide" fdprocessedid="icjjpp">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="xfz686">Insert issue</button></p>
+                    </td>
+
+
+                    <td> A</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Timing Adjustable </h2>
+                        <p data-ae-evaluation-only="">For each time limit that is set by the content, the user is warned
+                            before time expires and
+                            given at least 20 seconds to extend the time limit with a simple action (for example, "press
+                            the space bar"), and the user is allowed to extend the time limit at least ten times.</p>
+                    </td>
+
+                    <td>Are there time limits imposed on the user?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>1. I can extend the time limit by pressing the "enter" or "space" key.</td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Timing Adjustable" fdprocessedid="2sj7un">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="lczvhc">Insert issue</button></p>
+                    </td>
+
+
+                    <td> A</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Audio Control </h2>
+                        <p data-ae-evaluation-only="">If any audio on a web page plays automatically for more than 3
+                            seconds,
+                            either a
+                            mechanism is available to pause or stop the audio, or a mechanism is available to control
+                            audio
+                            volume independently from the overall system volume level.</p>
+                    </td>
+
+                    <td>Is there audio or video?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>1. I can pause or stop the audio by pressing the "&lt;which-key&gt;".</td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Audio Control" fdprocessedid="5giaib">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="yta5sj">Insert issue</button></p>
+                    </td>
+
+
+                    <td> A</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Pointer Cancellation </h2>
+                        <p data-ae-evaluation-only="">For functionality that can be operated using a single pointer, at
+                            least one of the following
+                            is true:</p>
+                        <p data-ae-evaluation-only="">No Down-Event</p>
+                        <p data-ae-evaluation-only="">The down-event of the pointer is not used to execute any part of
+                            the function;</p>
+                        <p data-ae-evaluation-only="">Abort or Undo</p>
+                        <p data-ae-evaluation-only="">Completion of the function is on the up-event, and a mechanism is
+                            available to abort the
+                            function before completion or to undo the function after completion;</p>
+                        <p data-ae-evaluation-only="">Up Reversal</p>
+                        <p data-ae-evaluation-only="">The up-event reverses any outcome of the preceding down-event;</p>
+                        <p data-ae-evaluation-only="">Essential</p>
+                        <p data-ae-evaluation-only="">Completing the function on the down-event is essential.</p>
+                    </td>
+
+                    <td>Are there interactive elements such as buttons, form fields or links?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>The following doesn't activate an interactive element:<br><br>1. Pressing down with a finger on
+                        a touch screen unless the finger is lifted.<br><br>2. Pressing down the "enter" or "space" key
+                        unless the key is released.<br><br>3. Pressing down on the touchpad unless the finger is lifted.
+                    </td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Pointer Cancellation" fdprocessedid="qov6xo">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="frfnyc">Insert issue</button></p>
+                    </td>
+
+
+                    <td> A</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Pointer Gestures </h2>
+                        <p data-ae-evaluation-only="">All functionality that uses multipoint or path-based gestures for
+                            operation
+                            can be operated with a single pointer without a path-based gesture, unless a multipoint or
+                            path-based gesture is essential.</p>
+                    </td>
+
+                    <td>Is there any functionality that depends on the user's ability to move their pointer in a
+                        specific path? For example, swiping left or right to move through pictures in an interactive
+                        album.
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>For every piece of functionality that depends on the user's ability to move their pointer on a
+                        specific path:<br><br>1. There's a button that can be pressed to perform the same functionality.
+                    </td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Pointer Gestures" fdprocessedid="kdl1lr">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="gkxkop">Insert issue</button></p>
+                    </td>
+
+
+                    <td> A</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Motion Actuation </h2>
+                        <p data-ae-evaluation-only="">Functionality that can be operated by device motion or user motion
+                            can also be operated by
+                            user interface components and responding to the motion can be disabled to prevent accidental
+                            actuation.</p>
+                    </td>
+
+                    <td>Is there any functionality that can be controlled by the user's ability to move their
+                        device?&nbsp;&nbsp;For example, tilting their device left or right to move through pictures in
+                        an interactive album.
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>For every piece of functionality that depends on the user's ability to move their
+                        device:<br><br>1. There's a button that can be pressed to perform the same functionality.</td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Motion Actuation" fdprocessedid="8oi3qp">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="r64gio">Insert issue</button></p>
+                    </td>
+
+
+                    <td> A</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Three Flashes or Below Threshold </h2>
+                        <p data-ae-evaluation-only="">Web pages do not contain anything that flashes more than three
+                            times in any one second
+                            period, or the flash is below the general flash and red flash thresholds.</p>
+                    </td>
+
+                    <td>Are there any videos or animations?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>1. There isn't anything that flashes more than 3 times in any one second period.</td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Three Flashes or Below Threshold" fdprocessedid="insn3">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="oy2ye4">Insert issue</button></p>
+                    </td>
+
+
+                    <td> A</td>
+                </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Status Messages </h2>
+                        <p data-ae-evaluation-only="">If an important status message is presented and focus is not set
+                            to that message, the message must be announced to screen reader users, typically via an ARIA
+                            alert or live region.</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>For every alert, confirmation, notification that appears on the web page:<br><br>1. The screen
+                        reader automatically reads out its content.</td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Status Messages" fdprocessedid="t0kah">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="5tpre">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Accessible Authentication (Minimum) </h2>
+                        <p data-ae-evaluation-only="">A cognitive function test (such as remembering a password or
+                            solving a puzzle) is not required for any step in an authentication process unless the
+                            cognitive function test can be bypassed in some way, can be completed with assistance by
+                            some other mechanism, uses object recognition (such as "click on the photo of a flower"), or
+                            uses identification of non-text content provided by the user (such as a user-provided
+                            image).</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>Every time the user has to log into an existing account:<br><br>1. Remembering their username
+                        and password isn't the only way with which the user can log in.</td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Accessible Authentication (Minimum)" fdprocessedid="vf29ti">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="37sugi">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Error Prevention (Legal, Financial, Data) </h2>
+                        <p data-ae-evaluation-only="">Submissions, changes, and deletions of legal, financial, or test
+                            data can be reversed, verified, or confirmed.</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>The user always has an opportunity to review, confirm and accept a financial transaction on the
+                        web page before the financial transaction takes place.</td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Error Prevention (Legal, Financial, Data)"
+                                    fdprocessedid="b499cb">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="k3aec">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Error Suggestion </h2>
+                        <p data-ae-evaluation-only="">If an input error is detected (via client-side or server-side
+                            validation), suggestions are provided for fixing the input in a timely and accessible
+                            manner.</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>An error message clearly explains what has gone wrong and what the user needs to do to correct
+                        the error.</td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Error Suggestion" fdprocessedid="xk61lk">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="685ojj">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Consistent Identification </h2>
+                        <p data-ae-evaluation-only="">Elements that have the same functionality across multiple web
+                            pages are consistently identified. For example, a search box at the top of the site should
+                            always be labeled the same way.</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>Interactive elements that have the same functionality also have the same name.</td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Consistent Identification" fdprocessedid="g446ol">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="yyuf9">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Consistent Navigation </h2>
+                        <p data-ae-evaluation-only="">Navigation links that are repeated on web pages do not change
+                            order when navigating through the site.</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>The header of the web page is always located at the top of the page.</td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Consistent Navigation" fdprocessedid="67lhz">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="4twy5e">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Language of Parts </h2>
+                        <p data-ae-evaluation-only="">The language of page content that is in a different language is
+                            identified using the lang attribute (e.g., &lt;blockquote lang="es"&gt;).</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>For every piece of text written in a language other than English:<br><br>1. The screen reader
+                        reads out the piece of text in that other language.</td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Language of Parts" fdprocessedid="ti4gzq">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="vre6xn">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Target Size (Minimum) </h2>
+                        <p data-ae-evaluation-only="">Pointer input target sizes are at least 24 by 24 pixels unless:
+                        </p>
+                        <p data-ae-evaluation-only="">* A 24 pixel diameter circle centered on the target element does
+                            not intersect with any other target or a 24 pixel circle centered on an adjacent target.</p>
+                        <p data-ae-evaluation-only="">* The functionality can be achieved in some other conformant
+                            manner.</p>
+                        <p data-ae-evaluation-only="">* The target is in a sentence or list.</p>
+                        <p data-ae-evaluation-only="">* The target size can't be modified or is essential to the
+                            functionality.</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>The "pressable" or "clickable" area of interactive elements is at least 24 pixels by 24 pixels.
+                    </td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Target Size (Minimum)" fdprocessedid="2e4hil">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="znjslj">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Dragging Movements </h2>
+                        <p data-ae-evaluation-only="">Functionality that uses pointer dragging can also be achieved
+                            using a single pointer without dragging (unless dragging is essential). Example of this type
+                            of functionality is signing a digital document with the user's finger on a touch screen.</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>Dragging functionality can also be achieved in other ways other than requiring the use of the
+                        user's finger.</td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Dragging Movements" fdprocessedid="jwjimk">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="02pflg">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Focus Not Obscured (Minimum) </h2>
+                        <p data-ae-evaluation-only="">When elements have keyboard focus, they are not entirely covered
+                            or hidden by page content.</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>Interactive elements that receive keyboard focus are always visible.</td>
+                    <td>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Focus Not Obscured (Minimum)" fdprocessedid="qqdffa">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="rptby9">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Focus Visible </h2>
+                        <p data-ae-evaluation-only="">There is a visible indicator for page elements when they receive
+                            keyboard focus.</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>Interactive elements that receive keyboard always have a visible focus indicator.</td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Focus Visible" fdprocessedid="cedkn">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="0mg7ve">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Headings and Labels </h2>
+                        <p data-ae-evaluation-only="">Page headings and labels for form and interactive controls are
+                            informative. Avoid duplicating heading and label text unless the structure provides adequate
+                            differentiation between them.</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>Headings and form field labels are always descriptive and explanatory.</td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Headings and Labels" fdprocessedid="sgpbli">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="oh254i">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Multiple Ways </h2>
+                        <p data-ae-evaluation-only="">Multiple ways are available to find other web pages on the site -
+                            at least two of: a list of related pages, table of contents, site map, site search, or list
+                            of all available web pages.</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>A web page has multiple mechanisms to find other web pages on the same website.</td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Multiple Ways" fdprocessedid="0dwh3q">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="glq5ji">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Content on Hover or Focus </h2>
+                        <p data-ae-evaluation-only="">When additional content is presented on hover or keyboard focus:
+                        </p>
+                        <p data-ae-evaluation-only="">* The newly revealed content can be dismissed (generally via the
+                            Esc key) without moving the pointer or keyboard focus, unless the content presents an input
+                            error or does not obscure or interfere with other page content.</p>
+                        <p data-ae-evaluation-only="">* The pointer can be moved to the new content without the content
+                            disappearing.</p>
+                        <p data-ae-evaluation-only="">* The new content must remain visible until the pointer or
+                            keyboard focus is moved away from the triggering control, the new content is dismissed, or
+                            the new content is no longer relevant.</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>For each interactive element on a web page:<br><br>1. Additional content never appears as a
+                        result setting keyboad focus.<br><br>2.&nbsp;Additional content never appears as a result
+                        hovering over the interactive element.</td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Content on Hover or Focus" fdprocessedid="qw52xq">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="2f6nt">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Text Spacing </h2>
+                        <p data-ae-evaluation-only="">No loss of content or functionality occurs when the user adapts
+                            paragraph spacing to 2 times the font size, text line height/spacing to 1.5 times the font
+                            size, word spacing to .16 times the font size, and letter spacing to .12 times the font
+                            size.</p>
+                        <p data-ae-evaluation-only="">This is best supported by avoiding pixel height definitions for
+                            elements that contain text.</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>The user can increase the amount of paragraph spacing, letter spacing, word spacing and font
+                        size without zooming into the web page and without the web page becoming harder to read or
+                        interact with.</td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Text Spacing" fdprocessedid="6xoefy">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="ic51j">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Non-text Contrast </h2>
+                        <p data-ae-evaluation-only="">A contrast ratio of at least 3:1 is present for differentiating
+                            graphical objects (such as icons and components of charts or graphs) and author-customized
+                            interface components (such as buttons, form controls, and focus indicators/outlines).</p>
+                        <p data-ae-evaluation-only="">At least 3:1 contrast is maintained in the various states (focus,
+                            hover, active, etc.) of author-customized interactive components.</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>Interactive elements are clearly visible because, for example, the outline has a 3:1 colour
+                        contrast ratio against surrounding colours.</td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Non-text Contrast" fdprocessedid="k49fbl">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="70k9x8">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Reflow </h2>
+                        <p data-ae-evaluation-only="">No loss of content or functionality occurs, and horizontal
+                            scrolling is avoided when content is presented at a width of 320 pixels.</p>
+                        <p data-ae-evaluation-only="">This requires responsive design for most web sites. This is best
+                            tested by setting the browser window to 1280 pixels wide and then zooming the page content
+                            to 400%.</p>
+                        <p data-ae-evaluation-only="">Content that requires horizontal scrolling, such as data tables,
+                            complex images (such as maps and charts), toolbars, etc. are exempted.</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>The web page remains functional even if the user zooms in up to 400%.</td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Reflow" fdprocessedid="84ndqh">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="bfhpr">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Images of Text </h2>
+                        <p data-ae-evaluation-only="">If the same visual presentation can be made using text alone, an
+                            image is not used to present that text.</p>
+                    </td>
+
+                    <td>Are there any images of text?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>There are never any images of text.</td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Images of Text" fdprocessedid="4dn4un">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="jywkbg">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Resize Text </h2>
+                        <p data-ae-evaluation-only="">The page is readable and functional when the page is zoomed to
+                            200%.</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>The web page remains functional even if the user zooms in up to 200%.</td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Resize Text" fdprocessedid="sbqtsj">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="tpukua">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Contrast (Minimum) </h2>
+                        <p data-ae-evaluation-only="">Text and images of text have a contrast ratio of at least 4.5:1.
+                        </p>
+                        <p data-ae-evaluation-only="">Large text - at least 18 point (typically 24px) or 14 point
+                            (typically 18.66px) and bold - has a contrast ratio of at least 3:1.</p>
+                    </td>
+
+                    <td>Is there text?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>Text always has a contrast ratio of at least 4.5:1.</td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Contrast (Minimum)" fdprocessedid="w2nt9n">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="zm15dp">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Identify Input Purpose </h2>
+                        <p data-ae-evaluation-only="">Input fields that collect certain types of user information have
+                            an appropriate autocomplete attribute defined.</p>
+                    </td>
+
+                    <td>Are there any form fields?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>A form field that collects personal information can be autocompleted by the browser. In the
+                        HTML, the form field has an autocomplete attribute with a relevant value.</td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Identify Input Purpose" fdprocessedid="rmza6">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="2uysmb">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Orientation </h2>
+                        <p data-ae-evaluation-only="">Orientation of web content is not restricted to only portrait or
+                            landscape, unless a specific orientation is necessary.</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>The web page can be viewed in both portrait and landscape modes.</td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Orientation" fdprocessedid="cxzx4">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="uvo2f">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Audio Description (Prerecorded) </h2>
+                        <p data-ae-evaluation-only="">A descriptive transcript or audio description is provided for
+                            non-live video.</p>
+                        <p data-ae-evaluation-only="">NOTE: Only required if there is relevant visual content that is
+                            not presented in the audio.</p>
+                    </td>
+
+                    <td><br>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>For each non-live video on the web page:<br><br>1. A descriptive transcript or audio description
+                        exists, unless there isn't relevant visual content that isn't already presented in the audio.
+                    </td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Audio Description (Prerecorded)" fdprocessedid="51f1bn">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="uu3bua">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Captions (Live) </h2>
+                        <p data-ae-evaluation-only="">Synchronized captions are provided for live media that contains
+                            audio (audio-only broadcasts, web casts, video conferences, etc.)</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td>For each live video on the web page:<br><br>1. Synchronized captions are provided.</td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Captions (Live)" fdprocessedid="ia4u2">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="qotz9l">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Accessible Authentication (Enhanced) </h2>
+                        <p data-ae-evaluation-only="">New</p>
+                    </td>
+
+                    <td>Is there a login form?
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td></td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Accessible Authentication (Enhanced)"
+                                    fdprocessedid="8ti3b6">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="5b2918">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AAA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Error Prevention (All) </h2>
+                        <p data-ae-evaluation-only="">For web pages that require the user to submit information, at
+                            least
+                            one
+                            of the following is true:</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td></td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Error Prevention (All)" fdprocessedid="16p6xg">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="hj10ij">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AAA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Help </h2>
+                        <p data-ae-evaluation-only="">Context-sensitive help</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td></td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Help" fdprocessedid="tqa2hk">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="7wtl8s">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AAA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Change on Request </h2>
+                        <p data-ae-evaluation-only="">Changes of context</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td></td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Change on Request" fdprocessedid="bg86">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="hn82l">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AAA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Pronunciation </h2>
+                        <p data-ae-evaluation-only="">A mechanism is available for identifying specific pronunciation of
+                            words
+                            where
+                            meaning of the
+                            words, in context, is ambiguous without knowing the pronunciation.</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td></td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Pronunciation" fdprocessedid="nwdnrr">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="4vfhu">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AAA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Reading </h2>
+                        <p data-ae-evaluation-only="">When text requires reading ability more advanced than the lower
+                            secondary
+                            education level after removal of proper names and titles, supplemental content, or a version
+                            that
+                            does not require reading ability more advanced than the lower
+                            secondary education level, is available.</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td></td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Reading" fdprocessedid="72fylr">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="nayuaj">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AAA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Abbreviations </h2>
+                        <p data-ae-evaluation-only="">A mechanism for identifying the expanded form or meaning of
+                            abbreviations is
+                            available.</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td></td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Abbreviations" fdprocessedid="tnr5qs">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="vb0mtx">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AAA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Unusual Words </h2>
+                        <p data-ae-evaluation-only="">A mechanism is available for identifying specific definitions of
+                            words or
+                            phrases used in an unusual or restricted way, including idioms and jargon.</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td></td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Unusual Words" fdprocessedid="5jttqu">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="ctw86">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AAA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Concurrent Input Mechanisms </h2>
+                        <p data-ae-evaluation-only="">Web content does not restrict use of input modalities
+                            available on
+                            a platform except where the restriction is essential, required to ensure the security of the
+                            content, or required to respect user settings.</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td></td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Concurrent Input Mechanisms" fdprocessedid="ickwcg">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="161ygj">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AAA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Target Size (Enhanced) </h2>
+                        <p data-ae-evaluation-only="">The size of the target for pointer inputs is at least 44 by 44 CSS
+                            pixels except when:</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td></td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Target Size (Enhanced)" fdprocessedid="mzpcr8">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="wj1xip">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AAA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Focus Appearance </h2>
+                        <p data-ae-evaluation-only="">New</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td></td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Focus Appearance" fdprocessedid="aaqrk9">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="c6m3g8">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AAA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Focus Not Obscured (Enhanced) </h2>
+                        <p data-ae-evaluation-only="">New</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td></td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Focus Not Obscured (Enhanced)" fdprocessedid="m2pmj">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="xq3yep">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AAA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Section Headings </h2>
+                        <p data-ae-evaluation-only="">Section</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td></td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Section Headings" fdprocessedid="rcb28">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="n62m4r">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AAA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Link Purpose (Link Only) </h2>
+                        <p data-ae-evaluation-only="">A mechanism is available to allow the purpose of each link to be
+                            identified from link text alone,
+                            except where the purpose of the link would be ambiguous to users in general.</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td></td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Link Purpose (Link Only)" fdprocessedid="03eob">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="n8jb7">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AAA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Location </h2>
+                        <p data-ae-evaluation-only="">Information about the user's location within a set of web pages is
+                            available.
+                        </p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td></td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Location" fdprocessedid="cjvgc">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="84y63d">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AAA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Animation from Interactions </h2>
+                        <p data-ae-evaluation-only="">Motion animation</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td></td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Animation from Interactions" fdprocessedid="gaq02">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="co6zbo">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AAA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Three Flashes </h2>
+                        <p data-ae-evaluation-only="">Web pages</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td></td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Three Flashes" fdprocessedid="wp3tqn">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="lw9mts">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AAA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Timeouts </h2>
+                        <p data-ae-evaluation-only="">Users are warned of the duration of any user inactivity that could
+                            cause data
+                            loss,
+                            unless the data is preserved for more than 20 hours when the user does not take any actions.
+                        </p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td></td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Timeouts" fdprocessedid="5zerzr">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="lt0ch">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AAA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Re-authenticating </h2>
+                        <p data-ae-evaluation-only="">When an authenticated session expires, the user can continue the
+                            activity
+                            without
+                            loss of data after re-authenticating.</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td></td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Re-authenticating" fdprocessedid="epddz6">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="xexp1e">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AAA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Interruptions </h2>
+                        <p data-ae-evaluation-only="">Interruptions can be postponed or suppressed by the user, except
+                            interruptions
+                            involving
+                            an emergency.</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td></td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Interruptions" fdprocessedid="ugnqi">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="9ja82q">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AAA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>No Timing </h2>
+                        <p data-ae-evaluation-only="">Timing is not an essential part of the event or activity presented
+                            by the
+                            content,
+                            except for non-interactive
+                            synchronized media and real-time events.</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td></td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, No Timing" fdprocessedid="p5odi">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="mc1ypr">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AAA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Keyboard (No Exception) </h2>
+                        <p data-ae-evaluation-only="">All functionality of the content is operable through a keyboard
+                            interface without requiring specific timings for individual keystrokes.</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td></td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Keyboard (No Exception)" fdprocessedid="9cjvlb">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="tcwxh">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AAA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Images of Text (No Exception) </h2>
+                        <p data-ae-evaluation-only="">Images of text</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td></td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Images of Text (No Exception)" fdprocessedid="es1bj">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="052o36">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AAA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Visual Presentation </h2>
+                        <p data-ae-evaluation-only="">For the visual presentation of blocks of text, a mechanism is
+                            available to
+                            achieve the following:</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td></td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Visual Presentation" fdprocessedid="5rdl">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="6lvjoc">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AAA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Low or No Background Audio </h2>
+                        <p data-ae-evaluation-only="">For prerecorded
+                            audio-only content that (1) contains primarily speech in the foreground, (2) is not an audio
+                            CAPTCHA or audio logo, and (3) is not vocalization intended to be primarily musical
+                            expression
+                            such as singing or rapping, at least one of the following is true:</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td></td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Low or No Background Audio" fdprocessedid="8hfhg">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="p7btp5">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AAA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Contrast (Enhanced) </h2>
+                        <p data-ae-evaluation-only="">The visual presentation of text and images of text has a contrast
+                            ratio of
+                            at least 7:1, except for the following:</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td></td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Contrast (Enhanced)" fdprocessedid="20648n">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="w7boj">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AAA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Identify Purpose </h2>
+                        <p data-ae-evaluation-only="">In content implemented using markup languages, the purpose of user
+                            interface
+                            components, icons, and regions can be programmatically determined.</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td></td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Identify Purpose" fdprocessedid="r21vr">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="21z0rf">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AAA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Audio-only (Live) </h2>
+                        <p data-ae-evaluation-only="">An alternative for time-based media that presents equivalent
+                            information
+                            for live
+                            audio-only content is provided.</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td></td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Audio-only (Live)" fdprocessedid="rkehcc">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="tuqhgh">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AAA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Media Alternative (Prerecorded) </h2>
+                        <p data-ae-evaluation-only="">An alternative for time-based media is provided for all
+                            prerecorded
+                            synchronized media and for all prerecorded video-only media.</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td></td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Media Alternative (Prerecorded)" fdprocessedid="g4jsz5">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="u6n4xv">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AAA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Extended Audio Description (Prerecorded) </h2>
+                        <p data-ae-evaluation-only="">Where pauses in foreground audio are insufficient
+                            to allow audio descriptions to convey the sense of the video, extended audio description is
+                            provided for all prerecorded
+                            video content in synchronized media.</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td></td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Extended Audio Description (Prerecorded)"
+                                    fdprocessedid="djf4j">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="qqojh5">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AAA</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2>Sign Language (Prerecorded) </h2>
+                        <p data-ae-evaluation-only="">Sign language interpretation</p>
+                    </td>
+
+                    <td>
+                        <p>If yes, please test. If no, please ignore.</p>
+                    </td>
+                    <td></td>
+                    <td><span aria-hidden="true" class="icon fa fa-question-circle"></span>
+                        <p>
+                            <label>
+                                <span>Status:</span>
+                                <select aria-label="Status, Sign Language (Prerecorded)" fdprocessedid="zlz35">
+                                    <option value="Unverified" selected="">Unverified</option>
+                                    <option value="Unverified">Failure</option>
+                                    <option value="Unverified">Warning</option>
+                                    <option value="Unverified">Pass</option>
+                                </select>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <h3>Issues</h3>
+                        <ol class="list-of-issues">
+
+                        </ol>
+                        <p data-ae-evaluation-only=""><button fdprocessedid="rw28mo">Insert issue</button></p>
+                    </td>
+
+
+                    <td> AAA</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <template id="issue">
+        <li>
+            <p>
+                <label>
+                    <span>Category:</span>
+                    <select>
+                        <option value="Failure">Failure</option>
+                        <option value="Warning">Warning</option>
+                    </select>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <span class="term">Description:</span>
+                    <textarea data-issue-description="" value="Lorem ipsum"></textarea>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <span class="term">Screenshot:</span>
+                    <input data-issue-screenshot="" type="text" inputmode="numeric" value="1">
+                </label>
+            </p>
+            <p data-ae-evaluation-only="">
+                <button>Remove issue</button>
+            </p>
+        </li>
+    </template>
+</body>
+
+</html>
