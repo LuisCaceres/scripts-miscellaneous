@@ -33,7 +33,7 @@
         {
             "key": "insert",
             "command": "editor.emmet.action.wrapWithAbbreviation",
-            "when": "editorTextFocus && hasWordHighlights && editorLangId == html"
+            "when": "editorTextFocus && (editorHasSelection || hasWordHighlights) && editorLangId == html"
         },
         {
             // Surround currently selected text with a back tick (`). Insert the dollar sign and curly braces around the currently selected text. This is related to template literals.
