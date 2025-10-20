@@ -3,7 +3,7 @@
 // TO DO: Use mutation observer to detect elements with problematic css declarations applied to them.
 {
     // Setting a root node helps filter out unrelated or irrelevant CSS rules. This is to give the developer the ability to concentrate on a component or user interface element rather than an entire page. For example, the developer may not need to know that there are problematic declarations that apply to the header of the page when the developer is building a tabbed interface component.
-    const root = document;
+    const root = document.documentElement;
 
     const relevantProperties = new Map([
         [
@@ -41,7 +41,7 @@
             }
         ],
         [
-            'border', function (value: CSSStyleValue) {
+            'border-bottom-color', function (value: CSSStyleValue) {
                 let result = null;
                 const message = 'Error message!';
 
@@ -88,7 +88,9 @@
                 continue;
             }
 
-            const element = root.querySelector(rule.selectorText);
+            const elements = [root, ...root.querySelectorAll('*')];
+
+            const element = elements.find(element => element.matches(rule.selectorText));
 
             if (!element) {
                 continue;
