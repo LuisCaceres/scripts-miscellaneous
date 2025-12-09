@@ -2,7 +2,7 @@
     // Let `position` be the column number of the new column to be inserted.
     const position = 4;
     const textContent = 'Hello world!';
-    
+
     const table = $0 as HTMLTableElement;
 
     if (table.nodeName.toUpperCase() !== 'TABLE') {
@@ -19,4 +19,21 @@
         newCell.textContent = textContent;
         relevantCell.before(newCell);
     }
+}
+
+{
+    const values: string[] = [];
+    const selector = `td:nth-child(n+2):nth-child(-n+4)`;
+    const cells = document.querySelectorAll(selector);
+
+    // For each cell 'cell' in 'cells'.
+    for (const cell of cells) {
+        values.push(cell.textContent.trim());
+    }
+
+
+    // function printSteps() {
+        // TO DO: Eliminate any duplicates that are adjacent to each other.
+        console.log(`\`${values.join('`,\n`')}\`,`);
+    // }
 }

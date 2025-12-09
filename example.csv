@@ -1,0 +1,31 @@
+        description ñ parent ñ priority ñ reporter ñ summary ñ workType
+        "*Details:*
+        The ""alert"" component starts with a heading, however, the text of the heading is ""Note:. This text isn't meaninful enough to let the user know there's an alert that should be read.
+
+        *Impacted sites*:
+         https://shop.visionaustralia.org/
+
+        *Impacted devices*:
+         all
+
+        *Current behaviour*:
+        When the user jumps from heading to heading, the screen reader says ""Note:""
+
+        *Expected behaviour*:
+        When the user jumps from heading to heading, the screen reader should say ""Important information:""
+        " ñ MF26-70 ñ low ñ luis.cacerescastillo@visionaustralia.org ñ Screen reader user unlikely to know there's an alert on the web page. ñ bug
+"*Details:*
+        The user can specify the number of products to buy. Instead of using the word ""quantity"", the code uses the abbreviation ""qty"". The screen reader pronounces that as ""thai"".
+
+        *Impacted sites*:
+         https://shop.visionaustralia.org/
+
+        *Impacted devices*:
+         all
+
+        *Current behaviour*:
+        Screen reader says ""5 Thai"" when the user specifies product quantity.
+
+        *Expected behaviour*:
+        Screen reader says ""5 quantity"" when the user specifies product quantity"".
+        " ñ MF26-70 ñ low ñ luis.cacerescastillo@visionaustralia.org ñ Screen reader says ""5 Thai"" when the user specifies product quantity  ñ bug
