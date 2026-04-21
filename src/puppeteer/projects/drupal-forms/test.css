@@ -1,0 +1,478 @@
+/* TO DO:: */
+/* 1. Remove the `wFormFooter` element. This seems to be inserted by FormAssembly. */
+/* 2. Specify values for the `margin-block-end` property. Avoid using and combining with `margin-block-start`. */
+/* 3. Replace `px` values with `rem` values. */
+/* 4. Modify CSS for search icon for a comobox */
+
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&amp;display=swap);
+
+@font-face {
+    font-family: "BrownStd";
+    src: url(https://www.visionaustralia.org/form-assembly/BrownStd-Regular.ttf);
+}
+
+:root {
+    --black: #000000;
+    --blue: #086FC7;
+    --blue-light: #D9E7EB;
+    --blue-dark: #264173;
+    --blue-darkest: #00205B;
+    --purple: #6C4387;
+    --red: #AC201E;
+    --red-light: #F3DDDD;
+    --white: #FFFFFF;
+    --yellow: #FAE110;
+
+    font-family: 'Roboto';
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.webform-submission-form {
+
+    *,
+    ::after,
+    ::before {
+        box-sizing: border-box;
+    }
+
+    ::placeholder {
+        color: currentColor;
+    }
+
+    a,
+    input,
+    label,
+    select,
+    textarea,
+    button,
+    [role=button],
+    ::file-selector-button {
+        cursor: pointer;
+
+        @media (forced-colors: none) {
+            outline: none;
+        }
+    }
+
+    /* This selector aims to select text-only links. It may need further tweaking.  */
+    a:not(:has(img)) {
+        border-block-end: solid 0.1rem;
+        color: var(--blue-darkest);
+        text-decoration: none;
+
+        /* This a link that looks like a button. */
+        &.button {
+            display: inline-block;
+
+            /* `div.wForm` has been added to the selector to increase specificity. Unfortunately FormAssembly inserts their own styles. */
+            div.wForm p:has(&) {
+                margin-block-end: 72px;
+            }
+        }
+
+        &:focus,
+        &:hover {
+            color: var(--white);
+            background-color: var(--blue-darkest);
+
+            &:visited {
+                background-color: var(--purple);
+                color: var(--white);
+            }
+        }
+
+        &:visited {
+            color: var(--purple);
+        }
+    }
+
+    h1 {
+        font-size: 4.8rem;
+        line-height: 1.25;
+    }
+
+    h2 {
+        margin-block-start: 74px !important;
+        margin-block-end: 1.5rem;
+        font-size: 4rem;
+        line-height: 1.23;
+    }
+
+    h3 {
+        margin-block-start: 64px;
+        margin-block-end: 16px;
+        font-size: 3.2rem;
+        line-height: 1.25;
+    }
+
+    h1,
+    h2,
+    h3 {
+        color: var(--blue-darkest);
+        font-family: 'BrownStd';
+        font-weight: 700 !important;
+    }
+
+    :is(h1, h2)::after {
+        content: "";
+        display: block;
+        inline-size: 8rem;
+        block-size: 0.5rem;
+        background: var(--yellow);
+        margin-block-start: 8px;
+    }
+
+    input[type=checkbox] {
+        inline-size: 26px;
+        block-size: 26px;
+        border: 1px solid var(--blue-darkest);
+        border-radius: 4px;
+        flex-shrink: 0;
+
+        @media (forced-colors: none) {
+            appearance: none;
+
+            &:checked {
+                border: 2px solid var(--blue);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 16px;
+                background-image: url("data:image/svg+xml,%3Csvg width='14' height='10' viewBox='0 0 16 9' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14 1C14 1.28125 13.875 1.53125 13.6875 1.71875L5.6875 9.71875C5.5 9.90625 5.25 10 5 10C4.71875 10 4.46875 9.90625 4.28125 9.71875L0.28125 5.71875C0.09375 5.53125 0 5.28125 0 5C0 4.4375 0.4375 4 1 4C1.25 4 1.5 4.125 1.6875 4.3125L5 7.59375L12.2812 0.3125C12.4688 0.125 12.7188 0 13 0C13.5312 0 14 0.4375 14 1Z' fill='%23086FC7' /%3E%3C/svg%3E");
+
+                &:hover {
+                    background-image: url("data:image/svg+xml,%3Csvg width='14' height='10' viewBox='0 0 16 9' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14 1C14 1.28125 13.875 1.53125 13.6875 1.71875L5.6875 9.71875C5.5 9.90625 5.25 10 5 10C4.71875 10 4.46875 9.90625 4.28125 9.71875L0.28125 5.71875C0.09375 5.53125 0 5.28125 0 5C0 4.4375 0.4375 4 1 4C1.25 4 1.5 4.125 1.6875 4.3125L5 7.59375L12.2812 0.3125C12.4688 0.125 12.7188 0 13 0C13.5312 0 14 0.4375 14 1Z' fill='%23FFFFFF' /%3E%3C/svg%3E");
+                }
+            }
+        }
+    }
+
+    input[type=file]::file-selector-button,
+    /* This is a button that removes the currently selected file associated with an `input[type=file]` */
+    span[data-remove-file] {
+        display: inline-block;
+        padding: 16px 8px 16px 0;
+        background-color: transparent;
+        border: none;
+        color: var(--blue-darkest);
+
+        @media (forced-colors: active) {
+            border: solid;
+        }
+    }
+
+    input[type=file]:is(:focus, :hover)::file-selector-button,
+    /* This is a button that removes the currently selected file associated with an `input[type=file]` */
+    span[data-remove-file]:is(:focus, :hover) {
+        color: var(--white);
+        background-color: var(--blue-dark);
+    }
+
+    input[type=file]:active::file-selector-button,
+    /* This is a button that removes the currently selected file associated with an `input[type=file]` */
+    span[data-remove-file]:active {
+        background-color: var(--blue-dark);
+    }
+
+    /* This is a button that removes the currently selected file associated with an `input[type=file]` */
+    span[data-remove-file] {
+        display: flex;
+        inline-size: fit-content;
+    }
+
+    input[type=radio] {
+        @media (forced-colors: none) {
+            appearance: none;
+        }
+
+        display: inline-grid;
+        inline-size: 24px;
+        min-inline-size: 24px;
+        block-size: 24px;
+        max-block-size: 24px;
+        border: 1px solid var(--blue-darkest);
+        border-radius: 50%;
+        margin-block-end: 1px;
+        vertical-align: text-top;
+        place-content: center;
+
+        &::before {
+            content: "";
+            display: block;
+            inline-size: 12px;
+            block-size: 12px;
+            border-radius: 50%;
+            transform: scale(0);
+            transition: 120ms transform ease-in-out;
+            box-shadow: inset 1em 1em var(--blue);
+        }
+
+        &:checked {
+            border-color: var(--blue);
+            border-width: 2px;
+        }
+
+        &:checked::before {
+            transform: scale(1);
+        }
+    }
+
+    a.button,
+    input:is([type=button], [type=submit]) {
+        min-inline-size: 56px;
+        padding-inline: 24px;
+        padding-block: 16px;
+        background: none;
+        border: var(--blue-darkest) solid 2px;
+        border-radius: 100px;
+        margin-block-start: 35px;
+        /* Without the `!important` rule FormAssembly inserts an inline style which overrides this declaration. */
+        color: var(--blue-darkest) !important;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.33;
+
+        &:focus,
+        &:hover {
+            background-color: var(--blue-dark);
+            /* Without the `!important` rule FormAssembly inserts an inline style which overrides this declaration. */
+            color: var(--white) !important;
+            ;
+            border-color: var(--yellow);
+        }
+
+        /* Ensure that this rule is located after pseudo classes such as `:focus` and `:hover` */
+        &:active {
+            background-color: var(--blue-darkest);
+        }
+    }
+
+    input[type=email],
+    input[type=number],
+    input[type=text],
+    select,
+    textarea {
+        inline-size: 100%;
+        min-block-size: 46px;
+        padding-inline: 1.6rem;
+        border-radius: 0.4rem;
+        border: solid 1px;
+        font: inherit;
+    }
+
+    label:not(.option),
+    legend {
+        display: inline-block;
+        padding-bottom: 0 !important;
+        margin-block-end: 8px;
+        font-weight: 500;
+    }
+
+    option {
+        background-color: var(--white);
+        color: var(--black);
+    }
+
+    p {
+        &:has(.asterisk) {
+            font-family: "BrownSTD";
+            font-weight: 700;
+        }
+
+        margin-block-end: 16px;
+
+        .list-of-links &:not(:last-child) {
+            margin-block-end: 8px;
+        }
+    }
+
+    select {
+        @media (forced-colors: none) {
+            appearance: none;
+            padding-inline-end: 4rem;
+            background-image: url("data:image/svg+xml,%3Csvg width='16' height='9' viewBox='0 0 16 9' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 9C7.71875 9 7.46875 8.90625 7.28125 8.71875L1.28125 2.71875C0.875 2.34375 0.875 1.6875 1.28125 1.3125C1.65625 0.90625 2.3125 0.90625 2.6875 1.3125L8 6.59375L13.2812 1.3125C13.6562 0.90625 14.3125 0.90625 14.6875 1.3125C15.0938 1.6875 15.0938 2.34375 14.6875 2.71875L8.6875 8.71875C8.5 8.90625 8.25 9 8 9Z' fill='currentcolor' /%3E%3C/svg%3E");
+            background-position-x: calc(100% - 1.2rem);
+            background-position-y: center;
+            background-repeat: no-repeat;
+            background-size: 1.6rem;
+
+            &:hover {
+                background-image: url("data:image/svg+xml,%3Csvg width='16' height='9' viewBox='0 0 16 9' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 9C7.71875 9 7.46875 8.90625 7.28125 8.71875L1.28125 2.71875C0.875 2.34375 0.875 1.6875 1.28125 1.3125C1.65625 0.90625 2.3125 0.90625 2.6875 1.3125L8 6.59375L13.2812 1.3125C13.6562 0.90625 14.3125 0.90625 14.6875 1.3125C15.0938 1.6875 15.0938 2.34375 14.6875 2.71875L8.6875 8.71875C8.5 8.90625 8.25 9 8 9Z' fill='%23FFFFFF' /%3E%3C/svg%3E");
+            }
+        }
+    }
+
+    textarea {
+        min-block-size: 136px;
+        padding: 16px !important;
+    }
+
+    input:not([type=button], [type=file], [type=submit]),
+    select,
+    textarea {
+        &:hover {
+            background-color: var(--blue);
+            color: var(--white);
+        }
+
+        &:focus {
+            border-color: var(--blue);
+            border-width: 2px;
+            outline: var(--blue) solid 2px;
+            outline-offset: 2px;
+
+            &[aria-invalid=true] {
+                outline-color: var(--red);
+            }
+        }
+
+        &[aria-invalid=true] {
+            border-width: 2px;
+            border-color: var(--red);
+        }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        /* .htmlSection { */
+        max-width: 777px;
+    }
+
+    div.wForm :is(.inline div.oneField, .wForm .inputWrapper) {
+        display: block;
+    }
+
+    .asterisk,
+    /* Specific to FormAssembly */
+    .wForm .reqMark::after {
+        color: var(--red) !important;
+        font-family: "BrownSTD";
+        font-size: 20px !important;
+        font-weight: 700;
+        line-height: 0;
+    }
+
+    /* Specific to Drupal. Group of radio buttons or check boxes. */
+    .webform-options-display-one-column {
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+    }
+
+    /* Specific to Drupal. */
+    label.error,
+    /* Specific to Drupal. */
+    .description {
+        display: inline-block;
+        max-inline-size: 476px;
+        padding-inline-start: 3.6rem;
+        padding-inline-end: 0.8rem !important;
+        padding-block: 0.8rem !important;
+        border-radius: 0.4rem;
+        margin-block-start: 0.8rem;
+
+        background-position-x: 10px;
+        background-position-y: 8px;
+        background-repeat: no-repeat;
+
+        grid-column: 1 / -1;
+
+        font-weight: 500 !important;
+        line-height: 1.25;
+
+
+
+    }
+
+    /* Specific to Drupal. */
+    label.error {
+        background-color: var(--red-light);
+        color: inherit !important;
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="%23AC201E"><path d="M10.5 5.46875C10.8125 5.78125 10.8125 6.25 10.5 6.53125L9.03125 8L10.5 9.46875C10.8125 9.78125 10.8125 10.25 10.5 10.5312C10.2188 10.8438 9.75 10.8438 9.46875 10.5312L8 9.0625L6.5 10.5312C6.21875 10.8438 5.75 10.8438 5.46875 10.5312C5.15625 10.25 5.15625 9.78125 5.46875 9.46875L6.90625 8L5.4375 6.53125C5.125 6.25 5.125 5.78125 5.4375 5.46875C5.71875 5.1875 6.1875 5.1875 6.5 5.46875L8 6.96875L9.4375 5.46875C9.71875 5.1875 10.1875 5.1875 10.5 5.46875ZM8 0C12.4062 0 16 3.59375 16 8C16 12.4375 12.4062 16 8 16C3.5625 16 0 12.4375 0 8C0 3.59375 3.5625 0 8 0ZM8 14.5C11.5625 14.5 14.5 11.5938 14.5 8C14.5 4.4375 11.5625 1.5 8 1.5C4.40625 1.5 1.5 4.4375 1.5 8C1.5 11.5938 4.40625 14.5 8 14.5Z"/></svg>');
+        order: 1;
+    }
+
+    /* Specific to Drupal. */
+    .description {
+        background-color: var(--blue-light);
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="2 2 16 16" fill="%2302607A"><path d="M10 2C14.4062 2 18 5.59375 18 10C18 14.4375 14.4062 18 10 18C5.5625 18 2 14.4375 2 10C2 5.59375 5.5625 2 10 2ZM10 16.5C13.5625 16.5 16.5 13.5938 16.5 10C16.5 6.4375 13.5625 3.5 10 3.5C6.40625 3.5 3.5 6.4375 3.5 10C3.5 13.5938 6.40625 16.5 10 16.5ZM11.25 12.5C11.6562 12.5 12 12.8438 12 13.25C12 13.6875 11.6562 14 11.25 14H8.75C8.3125 14 8 13.6875 8 13.25C8 12.8438 8.3125 12.5 8.75 12.5H9.25V10.5H9C8.5625 10.5 8.25 10.1875 8.25 9.75C8.25 9.34375 8.5625 9 9 9H10C10.4062 9 10.75 9.34375 10.75 9.75V12.5H11.25ZM10 8C9.4375 8 9 7.5625 9 7C9 6.46875 9.4375 6 10 6C10.5312 6 11 6.46875 11 7C11 7.5625 10.5312 8 10 8Z"/></svg>');
+    }
+
+    /* Specific to Drupal */
+    /* It matches a single and isolated checkbox. This is contrast to a checkbox in a checkbox group. */
+    >div.form-type-checkbox {
+        margin-block-end: 2.4rem !important;
+    }
+
+    .list-of-links {
+        margin-block-end: 32px !important;
+    }
+
+    :is(.actions, .htmlSection, .oneField) {
+        .wForm & {
+            padding: 0 !important;
+            border: none !important;
+            /* If removed, it draws unwanted borders in high contrast mode. */
+            overflow: visible !important;
+        }
+    }
+
+    /* A container for a radio button or check box. */
+    .form-type-checkbox,
+    .form-type-radio {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        margin: 0 !important;
+        align-items: start;
+        column-gap: 16px;
+    }
+
+    /* Specific to FormAssembly.
+A container for a form field including hint text and validation error message. */
+    .form-item {
+        max-inline-size: 500px !important;
+        padding: 0 !important;
+        margin-block-start: 0 !important;
+        margin-block-end: 2.4rem;
+    }
+
+    .step {
+        display: inline-block;
+        padding: 3px 8px !important;
+        border-radius: 4px;
+        background-color: var(--blue-light);
+        margin-block-end: 24px !important;
+        font-family: "BrownSTD";
+        font-weight: 700;
+    }
+
+    .textarea {
+        /* This is a p element that replaces a textarea element with JavaScript. White space and line breaks must be preserved. This only applies to a "volunteering vacancy details" web page.  */
+        white-space: pre-wrap;
+    }
+
+    /* Overrides style declarations from FormAssembly CSS */
+    /* FormAssembly should remove these declarations entirely. */
+    .wFormContainer {
+        max-width: none !important;
+        margin: 0 !important;
+    }
+
+    /* Specific to FormAssembly. */
+    .wfPagingButtons {
+        .wForm form & {
+            float: none !important;
+        }
+    }
+
+    /* ++++++  Specific styles for Drupal ++++++ */
+
+    ol {
+        padding: revert;
+    }
+}
