@@ -126,12 +126,13 @@
     input[type=checkbox] {
         inline-size: 26px;
         block-size: 26px;
-        border: 1px solid var(--blue-darkest);
+        border: 1px solid;
         border-radius: 4px;
         flex-shrink: 0;
 
         @media (forced-colors: none) {
             appearance: none;
+            background-color: var(--white);
 
             &:checked {
                 border: 2px solid var(--blue);
@@ -183,6 +184,7 @@
     input[type=radio] {
         @media (forced-colors: none) {
             appearance: none;
+            background-color: var(--white);
         }
 
         display: inline-grid;
@@ -190,7 +192,7 @@
         min-inline-size: 24px;
         block-size: 24px;
         max-block-size: 24px;
-        border: 1px solid var(--blue-darkest);
+        border: 1px solid;
         border-radius: 50%;
         margin-block-end: 1px;
         vertical-align: text-top;
