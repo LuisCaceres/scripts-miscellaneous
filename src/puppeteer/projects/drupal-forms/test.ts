@@ -1,8 +1,8 @@
-{
+
     // The following code removes the default styles applied to the section that has a web form in Drupal. An example of this is https://www.visionaustralia.org/form/school-holiday-therapy-groups.
     // Why do we do this? Because overriding default styles is very complicated and the developer has to deal with specificity of selectors. For that reason, style rules get removed so that we can get to a clean slate as much as possible. Then another stylesheet should be loaded that contains the desired styles. The intention is that the stylesheet has selectors with low specificity.
 
-    // Let `domain` be the domain that this web page belong to. Please note that CSS rules can only be removed if the URL of the CSS file belongs to the same domain (otherwise a JS error is thrown). For example, CSS rules from a CSS file loaded from Google cannot be removed unless the entire CSS file is removed. This may not be ideal.
+    // Let `domain` be the domain that this web page belongs to. Please note that CSS rules can only be removed from a stylesheet if the URL of the stylesheet (CSS file) belongs to the same domain (otherwise a JS error is thrown). For example, CSS rules from a stylesheet loaded from www.google.com cannot be removed unless the entire stylesheet is removed. This may not be ideal in all cases.
     const domain = 'https://www.visionaustralia.org/';
 
     // Let `stylesheets` be a list of stylesheets that load from `domain`.
@@ -96,4 +96,3 @@
         const index = list.findIndex(rule => rule === relevantRule);
         (relevantRule.parentRule || relevantRule.parentStyleSheet).deleteRule(index);
     }
-}

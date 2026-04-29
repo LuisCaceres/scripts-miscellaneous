@@ -364,6 +364,11 @@
         display: flex;
         flex-direction: column;
         gap: 13px;
+
+        /* Specific to Drupal. This is a text box that appears immediately below a group of radio buttons or check boxes. The text box appears when the last radio button or check box in the group is checked. */
+        &+.form-item {
+            margin-block-start: 2.4rem !important;
+        }
     }
 
     /* Specific to Drupal. */
