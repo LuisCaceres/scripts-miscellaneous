@@ -29,6 +29,9 @@ browser.on('targetcreated', async target => {
         return;
     }
 
+    // Force the browser to clear the cache.
+    page.setCacheEnabled(false);
+
     // Intercept requests from `page`.
     await page.setRequestInterception(true);
 
@@ -160,17 +163,22 @@ reloadFiles(browser, files);
 
 {
     // Update settings if the developer's updated `settings.ts` file. This is useful because the developer doesn't need to restart Puppeteer every time the settings are updated.
-
-    // TO DO: Get Puppeteer to clear the browser's cache.
     const delay = 10; // seconds
 
-    for await (const change of watchFile(`dist/puppeteer${path}`, 10)) {
+    for await (const change of watchFile(`dist/puppeteer${path}`, delay)) {
+        let error: unknown;
+
         // Stop Puppeteer from crashing if there are syntax errors in `settings.ts` file.
         try {
             // The `?imported=${Date.now()}` part invalidates the cache which forces Node to retrieve the updated version of the `settings.ts`. file.
             settings = await import(`./projects/drupal-forms/settings.js?imported=${Date.now()}`);
-        } catch (error) {
-            console.log(`Settings couldn't be successfully updated. Please try again.`);
+        } catch (err) {
+            console.log(`Error: Settings couldn't be updated.`);
+            error = err;
+        }
+
+        if (!error) {
+            console.log(`Settings have been successfully updated`);
         }
     }
 }
