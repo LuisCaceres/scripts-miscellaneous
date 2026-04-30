@@ -2,12 +2,17 @@
 
 import * as fs from "fs/promises";
 import { URL } from "url";
-import puppeteer, { Page } from 'puppeteer';
+import puppeteer from 'puppeteer';
+import { watchFile } from "./watch-file.js";
 import { reloadFiles } from "./reload-files.js";
-import * as settings from "./projects/drupal-forms/settings.js";
+
+const path = '/projects/drupal-forms/settings.js';
+// Line of code below is commented out because TypeScript complaints. It'd be good to store the path to `settings.ts` as a constant.
+// let settings = await import(`.${path}`);
+let settings = await import(`./projects/drupal-forms/settings.js`);
 
 // Let `interceptedUrls` be a list of intercepted urls.
-const interceptedUrls = settings.interceptions;
+settings.interceptions;
 
 // Launch the browser.
 const browser = await puppeteer.launch({
@@ -35,13 +40,13 @@ browser.on('targetcreated', async target => {
         //  Let `url` be the url of `request`.
         const url = request.url();
         // Abort if the developer hasn't asked to override `url`.
-        if (!interceptedUrls.has(url)) {
+        if (!settings.interceptions.has(url)) {
             request.continue();
         }
         // Otherwise:
         else {
             // Let `replacement` be what `request` is replaced with.
-            const replacement = interceptedUrls.get(url) as string;
+            const replacement = settings.interceptions.get(url) as string;
 
             // If `replacement` is a another url then replace `request` with whatever loads from the other url.
             if (replacement.startsWith('http')) {
@@ -142,7 +147,7 @@ for (const url of settings.urls) {
 // await Promise.all(pages);
 
 //  Let `files` be a list of CSS and JS files in this repository that intercept some urls from `interceptedUrls`.
-const files = new Map([...interceptedUrls]
+const files = new Map([...settings.interceptions]
     .filter(([interceptedUrl]) =>
         interceptedUrl.includes('.css') ||
         interceptedUrl.includes('.js')
@@ -152,6 +157,26 @@ const files = new Map([...interceptedUrls]
 );
 
 reloadFiles(browser, files);
+
+{
+    // Update settings if the developer's updated `settings.ts` file. This is useful because the developer doesn't need to restart Puppeteer every time the settings are updated.
+
+    // TO DO: Get Puppeteer to clear the browser's cache.
+    const delay = 10; // seconds
+
+    for await (const change of watchFile(`dist/puppeteer${path}`, 10)) {
+        // Stop Puppeteer from crashing if there are syntax errors in `settings.ts` file.
+        try {
+            // The `?imported=${Date.now()}` part invalidates the cache which forces Node to retrieve the updated version of the `settings.ts`. file.
+            settings = await import(`./projects/drupal-forms/settings.js?imported=${Date.now()}`);
+        } catch (error) {
+            console.log(`Settings couldn't be successfully updated. Please try again.`);
+        }
+    }
+}
+
+
+
 
 /**
  *
