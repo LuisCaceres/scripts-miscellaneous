@@ -92,7 +92,7 @@ browser.on('targetcreated', async target => {
 
         // If `url` is on the list of urls that Puppeteer has to load.
         // Execute the following code directly on the page.
-        await page.evaluate(() => {
+        await page.evaluate((origin: string) => {
             // const script = document.createElement('script');
             // script.defer = true;
             // script.src = `https://www.visionaustralia.org/script.js`;
@@ -101,13 +101,13 @@ browser.on('targetcreated', async target => {
             const link = document.createElement('link')
             link.type = 'text/css';
             link.rel = 'stylesheet';
-            link.href = `https://www.visionaustralia.org/test.css`;
+            link.href = `${origin}/test.css`;
             document.head.append(link);
 
             {
                 const script = document.createElement('script');
                 script.type = 'module';
-                script.src = `https://www.visionaustralia.org/test.js`;
+                script.src = `${origin}/test.js`;
                 document.head.append(script);
             }
 
@@ -117,7 +117,7 @@ browser.on('targetcreated', async target => {
                 script.src = `https://www.visionaustralia.org/foo.js`;
                 document.head.append(script);
             }
-        });
+        }, new URL(url).origin);
 
         await new Promise(resolve => setTimeout(resolve, 5000));
 
@@ -178,7 +178,7 @@ reloadFiles(browser, files);
         }
 
         if (!error) {
-            console.log(`Settings have been successfully updated`);
+            console.log(`Settings have been updated at ${Date.now()}`);
         }
     }
 }

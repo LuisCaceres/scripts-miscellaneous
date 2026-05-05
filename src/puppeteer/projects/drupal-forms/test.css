@@ -28,7 +28,7 @@
     line-height: 1.5;
 }
 
-.webform-submission-form {
+form.webform-submission-form {
 
     *,
     ::after,
@@ -249,9 +249,7 @@
         }
     }
 
-    input[type=email],
-    input[type=number],
-    input[type=text],
+    input:is([type=email], [type=number], [type=tel], [type=text], [type=url]),
     select,
     textarea {
         inline-size: 100%;
@@ -264,7 +262,8 @@
 
     label:not(.option),
     legend {
-        display: inline-block;
+        display: block;
+        inline-size: fit-content;
         padding-bottom: 0 !important;
         margin-block-end: 8px;
         font-weight: 500;
@@ -375,7 +374,8 @@
     label.error,
     /* Specific to Drupal. */
     .description {
-        display: inline-block;
+        display: block;
+        inline-size: fit-content;
         max-inline-size: 476px;
         padding-inline-start: 3.6rem;
         padding-inline-end: 0.8rem !important;
