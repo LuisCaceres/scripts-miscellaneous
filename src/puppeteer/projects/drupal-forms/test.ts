@@ -84,6 +84,8 @@
         `legend`,
         `.form-control`,
         `.news-detail-page .region.region-content`,
+        `.path-node input.error`,
+        `.path-node .webform .form-item`,
         `button, input, optgroup, select, textarea`,
         `textarea`,
         `textarea.form-control`,

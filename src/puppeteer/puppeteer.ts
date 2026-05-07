@@ -90,34 +90,44 @@ browser.on('targetcreated', async target => {
             return;
         }
 
+        //  Let `files` be a list of CSS and JS files currently in this project's folder. Remove any files that `settings.interceptions` includes.
+        // TO DO: Use `fs` to get a list of those files.
+        const files = [
+            'test.css',
+            'test.js',
+        ];
+
         // If `url` is on the list of urls that Puppeteer has to load.
         // Execute the following code directly on the page.
-        await page.evaluate((origin: string) => {
-            // const script = document.createElement('script');
-            // script.defer = true;
-            // script.src = `https://www.visionaustralia.org/script.js`;
-            // document.head.append(script);
+        await page.evaluate((origin: string, files: string[]) => {
+            // Let `files` be  a list of CSS and JS files.
+            const groups = Object.groupBy(files, file =>
+                file.endsWith('.css') ? 'cssFiles' : 'jsFiles'
+            );
 
-            const link = document.createElement('link')
-            link.type = 'text/css';
-            link.rel = 'stylesheet';
-            link.href = `${origin}/test.css`;
-            document.head.append(link);
+            // Let `cssFiles` be a list of CSS files.
+            // Let `jsFiles` be a list of JS files.
+            const { cssFiles, jsFiles } = groups;
 
-            {
-                const script = document.createElement('script');
-                script.type = 'module';
-                script.src = `${origin}/test.js`;
-                document.head.append(script);
+            // For each CSS file `cssFile` in `cssFiles`.
+            for (const cssFile of (cssFiles || [])) {
+                // Add a new `link` element to `page` that loads `cssFile`.
+                const link = document.createElement('link')
+                link.type = 'text/css';
+                link.rel = 'stylesheet';
+                link.href = `${origin}/${cssFile}`;
+                document.head.append(link);
             }
 
-            {
+            // For each JS file `jsFile` in `jsFiles`.
+            for (const jsFile of (jsFiles || [])) {
+                // Add a new `script` element to `page` that loads `jsFile`.
                 const script = document.createElement('script');
                 script.type = 'module';
-                script.src = `https://www.visionaustralia.org/foo.js`;
+                script.src = `${origin}/${jsFile}`;
                 document.head.append(script);
             }
-        }, new URL(url).origin);
+        }, new URL(url).origin, files);
 
         await new Promise(resolve => setTimeout(resolve, 5000));
 
@@ -178,7 +188,13 @@ reloadFiles(browser, files);
         }
 
         if (!error) {
-            console.log(`Settings have been updated at ${Date.now()}`);
+            const date = new Date();
+            const hours = date.getHours();
+            const minutes = date.getMinutes();
+            const seconds = date.getSeconds();
+            const time = `${hours}:${minutes}:${seconds}`;
+
+            console.log(`Settings have been updated at ${time}`);
         }
     }
 }
