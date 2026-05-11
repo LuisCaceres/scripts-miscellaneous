@@ -249,7 +249,7 @@ form.webform-submission-form {
         }
     }
 
-    input:is([type=email], [type=number], [type=tel], [type=text], [type=url]),
+    input:is([type=date], [type=email], [type=number], [type=tel], [type=text], [type=url]),
     select,
     textarea {
         inline-size: 100%;
