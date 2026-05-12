@@ -252,7 +252,7 @@ form.webform-submission-form {
     input:is([type=date], [type=email], [type=number], [type=tel], [type=text], [type=url]),
     select,
     textarea {
-        /* Specific to Drupal. There are many forms with text fields, multiline text fields and dropdowns that have a fixed width. That comes from the HTML `style` attribute. Example is https://www.visionaustralia.org/form/self-referral. Those fixed heights should be removed before deleting the 2 declarations below with the !important keyword. */
+        /* Specific to Drupal. There are many forms with text fields, multiline text fields and dropdowns that have a fixed width or a maximum fixed width. That comes from the HTML `style` attribute. Example is https://www.visionaustralia.org/form/self-referral. Those fixed heights should be removed before deleting the 2 declarations below with the !important keyword. */
         inline-size: 100% !important;
         min-block-size: 46px;
         max-inline-size: 100% !important;
