@@ -90,6 +90,7 @@
         `.form-textarea-wrapper .form-textarea`,
         `.news-detail-page .region.region-content`,
         `.path-node input.error`,
+        `.path-node input.error:focus`,
         `.path-node .webform .form-item`,
         `.webform-flex--container`,
         `.webform-options-display-three-columns`,
