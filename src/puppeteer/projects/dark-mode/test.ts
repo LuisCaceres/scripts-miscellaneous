@@ -161,58 +161,63 @@ import { getClosestColor, getColour, getColourDistance, regexes } from "./utils.
     // Let `strings` be a list of CSS rules as they would appear in a CSS file.
     const strings: string[] = [];
 
-    const values: string[] = [];
+    // Let `colors` be a list of all color values that occur in `rules`.
+    const colors: Set<string> = new Set();
 
-    // For each rule `rule` of `relevantRules`.
+    // For each rule `rule` in `rules`.
     for (const rule of rules) {
+        // Let `rule` be the current rule. A rule is a selector and a declaration block with a list of declarations.
+
+        // Let `selector` be the CSS selector associated with `rule`. For example, `h1 > p + div`.
         let selector = rule.selectorText;
 
-        if (rule.selectorText.startsWith('button.btn.btn-default.des-search-button:hover')) {
-            debugger;
-        }
+        // if (rule.selectorText.startsWith('button.btn.btn-default.des-search-button:hover')) {
+        //     debugger;
+        // }
 
+        // Modify `selector`, if necessary, for better compatibility with dark mode. For example, `h1 > p + div` can be changed to `h1`.
         if (config.selectors.has(selector)) {
             const newSelector = config.selectors.get(selector)!;
             selector = newSelector;
 
+            // Remove `rule` and declarations within from the dark mode stylesheet, if necessary.
             if (!selector) {
-                debugger;
                 continue;
             }
         }
 
-        // Let `rule` be the current rule. A rule is a selector and a declaration block with a list of declarations.
-        let cssText = rule.cssText
+        // Let `declarationBlock` be the part of `rule` that has the list of declarations.
+        const declarationBlock = rule.cssText
             // Remove the selector from `rule`.
             .replace(rule.selectorText, '')
             .trim()
-            // Remove the first { character and last } character.
+            // Remove the first { character and last } characters from `rule`.
             .replace(/^{|}$/g, '');
 
-        // Let `declarations` be a list of `rule`'s CSS declarations (property-value pairs).
-        let declarations = [...cssText.matchAll(regexes.declaration)]
-            // For each declaration `declaration` from `declarations`.
+        // Let `declarations` be each property-value pair in `declarationBlock`.
+        let declarations = [...declarationBlock.matchAll(regexes.declaration)]
+            // For each declaration `declaration` in `declarations`.
             .map(([, property, value]) => [property, value])
             // Remove `declaration` if its property is unrelated to colour manipulation. For example, `text-align: center`.
             .filter(([property]) => colourProperties.has(property))
-            // Remove `declaration` if every component in its value are unrelated to colour manipulation. For example, it removes `border: solid 100px`. If the value contains at least a component related to colour manipulation, `declaration` isn't removed. For example, `border: red solid 100px`. IMPORTANT: Please note that the browser exposes colours only as `rgb` or `rgba` values even though `hex` values may be specified in a stylesheet.
+            // Remove `declaration` if every component in its value are unrelated to colour manipulation. For example, it removes declaration `border: solid 100px`. If the value contains at least 1 component related to colour manipulation, `declaration` isn't removed. For example, declaration `border: red solid 100px`. IMPORTANT: Please note that the browser exposes colours only as `rgb` or `rgba` values even though `hex` values appear in the source stylesheet.
             .filter(([, value]) => {
 
                 for (const [, regex] of valueComponents) {
                     value = value.replace(regex, '').trim();
                 };
 
-                values.push(value);
+                // Let `color` be the component in `value` that defines a colour.
+                const color = value;
+                // Add `color` to `colors`.
+                colors.add(color);
 
                 return value.length;
             })
 
-        if (rule.selectorText.startsWith('button.btn.btn-default.des-search-button:hover')) {
-            debugger;
-        }
-
         // Let `backgroundColor` be the background color, if any, that `rule` defines.
         let backgroundColor = getColour('background', declarations);
+        // Let `isDarkBackgroundColor` be a flag that indicates whether `backgroundColor` is dark or light.
         let isDarkBackgroundColor = false;
 
         if (backgroundColor) {
@@ -249,7 +254,7 @@ import { getClosestColor, getColour, getColourDistance, regexes } from "./utils.
         }
 
         declarations = declarations
-            // Remove `declaration` if `rule` defines a dark background colour. It's assumed `rule` defines colours that are already compatible with dark mode. For example, a rule that defines a black background and white text colour.
+            // Remove `declaration` if `rule` defines a dark background colour or a light text colour. It's assumed `rule` defines colours that are already compatible with dark mode. For example, a rule that defines a black background and white text colour.
             .filter(([, value]) => {
 
                 if ((isDarkBackgroundColor || isLightTextColor) &&
@@ -290,12 +295,12 @@ import { getClosestColor, getColour, getColourDistance, regexes } from "./utils.
         strings.push(string);
     }
 
-    let colours1 = new Set(values.map(value => {
-        const colours = value.match(regexes.rgba);
+    let colours1 = [...colors].map(value => {
+        const colours = value.match(regexes.rgb);
         // debugger;
-        const rest = value.replace(regexes.rgba, '').trim();
+        const rest = value.replace(regexes.rgb, '').trim();
         return [colours, rest];
-    }).flat(2));
+    }).flat(2);
 
     console.log([...colours1].join('`, \n`'));
 
