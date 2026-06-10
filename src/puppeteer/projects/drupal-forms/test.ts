@@ -26,7 +26,7 @@
                 rules.push(rule);
             }
             else {
-                const ruleList = rule;
+                const ruleList = rule as CSSGroupingRule;
                 rules.push(...getRules(ruleList));
             }
         }

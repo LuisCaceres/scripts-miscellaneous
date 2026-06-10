@@ -16,7 +16,7 @@
     --colour-7: rgb(250, 225, 16);
     --colour-8: rgb(52, 152, 219);
     /* --colour-9: rgb(242, 244, 245); */
-    --colour-9: #00205b;
+    --colour-9: #00102D;
     /* Don't modify colour below */
     --colour-10: rgb(38, 65, 116);
     /* --colour-11: rgb(204, 212, 216); */
@@ -737,7 +737,7 @@ a {
 }
 
 .breadcrumbs.web-device {
-    background-color: var(--colour-6);
+    background-color: var(--colour-9);
 }
 
 .breadcrumbs.web-device a {
@@ -889,10 +889,6 @@ footer.page-footer .footer-social {
     border-bottom: 0.1rem solid var(--colour-10);
 }
 
-footer.page-footer .footer-social .social-f-logo a svg path {
-    fill: var(--colour-4);
-}
-
 footer.page-footer .footer-menu .menu-column .f-title {
     color: var(--colour-7);
 }
@@ -926,10 +922,6 @@ footer.page-footer .footer-menu .menu-column ul.showlink {
 
 footer.page-footer .footer-bottom {
     color: var(--colour-2);
-}
-
-.social-f-logo .s-link {
-    border: 0.1rem solid var(--colour-4);
 }
 
 .s-link:hover,
@@ -1131,7 +1123,9 @@ section.our-service.blocks-contents .section-link {
 .news-detail-page .region-sidebar-first .accordion ul li a {
     background: var(--colour-4);
     color: var(--colour-14);
-    border-left: 0.4rem solid var(--colour-11);
+
+    &:hover,
+    &:focus {}
 }
 
 .odd-even-section .component-item:nth-of-type(2n+1) {
@@ -1139,7 +1133,7 @@ section.our-service.blocks-contents .section-link {
 }
 
 .odd-even-section .component-item:nth-of-type(2n) {
-    background: var(--colour-4) !important;
+    background: var(--colour-9) !important;
 }
 
 .event-component-item:nth-of-type(2n+1) {
@@ -1152,8 +1146,6 @@ section.our-service.blocks-contents .section-link {
 
 .cta_banner {
     background: var(--colour-4);
-    border-top: 0.1rem solid var(--colour-11);
-    border-bottom: 0.1rem solid var(--colour-11);
 }
 
 .cta_banner .footer-bottom .mobile-hide a {
@@ -2048,12 +2040,8 @@ label.error {
     border-left: 0.4rem solid var(--colour-3) !important;
 }
 
-ul.sub-menulist li {
-    border-bottom: 0.1rem solid var(--colour-11);
-}
-
-ul.sub-menulist li:first-child {
-    border-bottom: 0.1rem solid var(--colour-11);
+.desktop-sidebar li.nav-item.u-header__nav-item.active a.nav-link.fu-header__nav-link.active.is-active {
+    border-left: 0.4rem solid var(--colour-0) !important;
 }
 
 .event-back {
@@ -2195,11 +2183,6 @@ button.btn.btn-default.des-search-button {
 
 .set .acc-content a:focus {
     border-bottom: 0.2rem solid var(--colour-3);
-}
-
-.region.region-sidebar-first #accordian ul ul li a:hover,
-.region.region-sidebar-first #accordian ul ul li a:focus {
-    color: var(--colour-2);
 }
 
 h2#block-mainnavigation-6-menu a:focus {
@@ -2345,7 +2328,7 @@ th {
 }
 
 .filter-box h3 a {
-    color: var(--colour-10);
+    color: var(--colour-0);
 }
 
 .filter-box p {
@@ -2353,7 +2336,7 @@ th {
 }
 
 .filter-box h3 a:visited {
-    color: var(--colour-30);
+    color: var(--colour-0);
     border-bottom: 0.2rem solid var(--colour-30);
 }
 
@@ -2576,21 +2559,13 @@ section.task-card .container h4 {
     color: var(--colour-3);
 }
 
-#accordian ul li a {
-    border-left: 0.4rem solid var(--colour-11);
-}
-
-.breadcrumbs.web-device {
-    background-color: var(--colour-4);
-}
-
 .col-md-4.mobile-sidebar a:hover {
     color: var(--colour-3);
 }
 
 .mobile_breadcrumb ul.list-breadcrumb {
     color: var(--colour-3);
-    background: var(--colour-27);
+    background: var(--colour-9);
 }
 
 .mobile_breadcrumb .event-back {
@@ -2676,10 +2651,6 @@ p.event_location span.Location {
 p.event_datetime span.Date,
 p.event_datetime span.Time {
     color: var(--colour-14);
-}
-
-.content-banner.pattern-banner .banner-title h1 span {
-    color: var(--colour-3);
 }
 
 .filter_wraper .form--inline.form-inline.clearfix summary:focus {

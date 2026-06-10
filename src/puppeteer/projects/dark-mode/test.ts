@@ -380,8 +380,8 @@ import { getClosestColor, getColour, getColourDistance, regexes } from "./utils.
     `;
 
     // Open `cssFile` in a new tab.
-    const tab = window.open() as Window;
-    tab.document.body.append(cssFile, style);
+    // const tab = window.open() as Window;
+    // tab.document.body.append(cssFile, style);
 }
 
 
