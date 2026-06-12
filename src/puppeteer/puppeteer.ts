@@ -1,3 +1,5 @@
+// Current folder assigned to Puppeteer is accessibility-evaluation.
+
 // To execute the following code, open the command line, type `node dist/puppeteer/puppeteer.js` and press the "enter" key.
 
 import * as fs from "fs/promises";
@@ -6,10 +8,10 @@ import puppeteer from 'puppeteer';
 import { watchFile } from "./watch-file.js";
 import { reloadFiles } from "./reload-files.js";
 
-const path = '/projects/drupal-forms/settings.js';
+const path = '/projects/accessibility-evaluation/settings.js';
 // Line of code below is commented out because TypeScript complaints. It'd be good to store the path to `settings.ts` as a constant.
 // let settings = await import(`.${path}`);
-let settings = await import(`./projects/drupal-forms/settings.js`);
+let settings = await import(`./projects/accessibility-evaluation/settings.js`);
 
 // Let `interceptedUrls` be a list of intercepted urls.
 settings.interceptions;
@@ -90,12 +92,6 @@ browser.on('targetcreated', async target => {
             return;
         }
 
-        //  Let `files` be a list of CSS and JS files currently in this project's folder. Remove any files that `settings.interceptions` includes.
-        // TO DO: Use `fs` to get a list of those files.
-        const files = [
-            'test.css',
-            'test.js',
-        ];
 
         // If `url` is on the list of urls that Puppeteer has to load.
         // Execute the following code directly on the page.
@@ -127,7 +123,7 @@ browser.on('targetcreated', async target => {
                 script.src = `${origin}/${jsFile}`;
                 document.head.append(script);
             }
-        }, new URL(url).origin, files);
+        }, new URL(url).origin, settings.files);
 
         await new Promise(resolve => setTimeout(resolve, 5000));
 
@@ -181,7 +177,7 @@ reloadFiles(browser, files);
         // Stop Puppeteer from crashing if there are syntax errors in `settings.ts` file.
         try {
             // The `?imported=${Date.now()}` part invalidates the cache which forces Node to retrieve the updated version of the `settings.ts`. file.
-            settings = await import(`./projects/drupal-forms/settings.js?imported=${Date.now()}`);
+            settings = await import(`./projects/accessibility-evaluation/settings.js?imported=${Date.now()}`);
         } catch (err) {
             console.log(`Error: Settings couldn't be updated.`);
             error = err;

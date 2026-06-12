@@ -1,0 +1,4542 @@
+:root {
+    /* --colour-0: rgba(0, 0, 0, 0.063); */
+    --colour-0: #FFF;
+    /* --colour-1: rgb(204, 204, 204); */
+    --colour-1: #00205b;
+    /* --colour-2: rgb(255, 244, 244); */
+    --colour-2: #00205b;
+    /* --colour-3: rgb(0, 32, 91); */
+    --colour-3: #fff;
+    /* --colour-4: rgb(255, 255, 255); */
+    --colour-4: #00205b;
+    /* --colour-5: rgba(35, 23, 5, 0.26); */
+    --colour-5: #fff;
+    /* --colour-6: rgb(230, 233, 235); */
+    --colour-6: #00205b;
+    --colour-7: rgb(250, 225, 16);
+    --colour-8: rgb(52, 152, 219);
+    /* --colour-9: rgb(242, 244, 245); */
+    --colour-9: #00205b;
+    /* Don't modify colour below */
+    --colour-10: rgb(38, 65, 116);
+    /* --colour-11: rgb(204, 212, 216); */
+    --colour-11: #00205b;
+    /* --colour-12: rgb(53, 65, 75); */
+    --colour-12: #fff;
+    /* --colour-13: rgb(0, 0, 0); */
+    --colour-13: #fff;
+    /* --colour-14: rgb(31, 40, 51); */
+    --colour-14: #fff;
+    /* --colour-15: rgba(0, 0, 0, 0.4); */
+    --colour-15: #fff;
+    --colour-16: rgb(153, 167, 176);
+    /* --colour-17: rgb(108, 133, 168); */
+    --colour-17: #fff;
+    --colour-18: rgb(14, 99, 98);
+    /* --colour-19: rgb(76, 99, 140); */
+    --colour-19: #fff;
+    --colour-20: rgb(149, 167, 191);
+    --colour-21: rgb(113, 178, 178);
+    --colour-22: rgb(172, 32, 30);
+    --colour-23: rgb(151, 60, 0);
+    --colour-24: rgb(2, 96, 122);
+    /* --colour-25: rgba(0, 0, 0, 0.2); */
+    --colour-25: #fff;
+    /* --colour-26: rgba(0, 0, 0, 0.5); */
+    --colour-26: #fff;
+    /* --colour-27: rgb(229, 233, 239); */
+    --colour-27: #00205b;
+    --colour-28: rgb(84, 101, 112);
+    /* --colour-29: rgba(0, 0, 0, 0.04); */
+    --colour-29: #fff;
+    --colour-30: rgb(108, 67, 135);
+    --colour-31: rgba(218, 217, 217, 0.5);
+    --colour-32: rgb(148, 0, 18);
+    --colour-33: rgba(255, 255, 255, 0.7);
+    --colour-34: rgb(243, 221, 221);
+    /* --colour-35: rgb(217, 231, 235); */
+    --colour-35: #00205b;
+    /* --colour-36: rgb(253, 244, 242); */
+    --colour-36: #00205b;
+    /* --colour-37: rgb(184, 184, 184); */
+    --colour-37: #00205b;
+    /* --colour-38: rgb(252, 244, 242); */
+    --colour-38: #00205b;
+    /* --colour-39: rgb(239, 226, 217); */
+    --colour-39: #00205b;
+    /* --colour-40: rgb(219, 232, 231); */
+    --colour-40: #00205b;
+    /* --colour-41: rgba(0, 0, 0, 0.075); */
+    --colour-41: #fff;
+    /* --colour-42: rgba(0, 0, 0, 0.125); */
+    --colour-42: #fff;
+    --colour-43: rgb(132, 53, 52);
+    --colour-44: rgb(77, 144, 254);
+}
+
+
+.system-status-report-counters__item {
+    background-color: var(--colour-0);
+}
+
+.system-status-general-info__item {
+    border: 1px solid var(--colour-1);
+}
+
+.system-status-general-info__item-title {
+    border-bottom: 1px solid var(--colour-1);
+}
+
+.paragraph--unpublished {
+    background-color: var(--colour-2);
+}
+
+.fa-border {
+    border-color: var(--fa-border-color, #eee);
+}
+
+.fa-inverse {
+    color: var(--fa-inverse, #fff);
+}
+
+body a {
+    color: var(--colour-3);
+}
+
+iframe {
+    box-shadow: var(--colour-5) 0px 1.6rem 3.2rem 0px;
+}
+
+.skip-link:focus {
+    background-color: var(--colour-6);
+    color: var(--colour-3);
+}
+
+.skip-link:focus span {
+    color: var(--colour-3);
+}
+
+.skip-link:hover {
+    color: var(--colour-3);
+}
+
+.section-title {
+    color: var(--colour-3);
+}
+
+.section-title::after {
+    color: var(--colour-2);
+}
+
+body .box-processing>.processing {
+    color: var(--colour-2);
+}
+
+body .box-processing>.loader-icon {
+    border-color: var(--colour-8) var(--colour-9) var(--colour-9);
+}
+
+.primary-outline-btn,
+.btn-primary.btn.btn-grey {
+    color: var(--colour-3);
+    border: 0.2rem solid var(--colour-3);
+    background: var(--colour-4);
+}
+
+.primary-outline-btn:focus,
+.btn-primary.btn.btn-grey:focus {
+    color: var(--colour-3);
+}
+
+.primary-white-btn:hover,
+.primary-white-btn:focus {
+    color: var(--colour-3);
+    background-color: var(--colour-4);
+    border-color: var(--colour-7);
+}
+
+.primary-white-btn:active {
+    color: var(--colour-3);
+    background-color: var(--colour-11);
+    border-color: var(--colour-7);
+}
+
+.primary-disabled-btn {
+    color: var(--colour-12);
+    background-color: var(--colour-6);
+    border: 0.2rem solid var(--colour-6);
+}
+
+.section-link,
+.secondary-btn {
+    color: var(--colour-3);
+}
+
+.secondary-white-btn:hover,
+.secondary-white-btn:focus {
+    color: var(--colour-3);
+    background-color: var(--colour-4);
+}
+
+.secondary-white-btn:active {
+    color: var(--colour-3);
+    background-color: var(--colour-11);
+}
+
+.secondary-disabled-btn {
+    color: var(--colour-12);
+}
+
+.modal-overlay {
+    background: var(--colour-13);
+}
+
+.modal-dialog .share-link-modal .modal-header .close {
+    color: var(--colour-3);
+    border: 0.1rem solid var(--colour-4);
+    background: var(--colour-4);
+}
+
+.share-link-modal .form-control {
+    color: var(--colour-14);
+    border: 0.1rem solid var(--colour-14) !important;
+}
+
+.share-link-modal .form-control:focus {
+    border-color: var(--colour-13) !important;
+}
+
+.share-link-modal h5.sharelinkModalLabel::after,
+.share-link-modal h5#sharelinkModalLabel::after {
+    color: var(--colour-2);
+}
+
+.share-link-modal .modal-title {
+    color: var(--colour-3);
+}
+
+.share-link-modal label {
+    color: var(--colour-12);
+}
+
+.share-link-modal button.btn.btn-secondary:focus {
+    color: var(--colour-2);
+}
+
+.share-link-modal button.btn.btn-primary {
+    color: var(--colour-3);
+}
+
+.share-link-modal button.btn.btn-focus {
+    border-bottom: 0.1rem solid var(--colour-3);
+}
+
+.share-link-modal .modal-header .close {
+    color: var(--colour-3);
+    background-color: var(--colour-4);
+    text-shadow: var(--colour-4) 0px 0.1rem 0px;
+}
+
+.share-link-modal button.btn.btn-secondary {
+    color: var(--colour-3);
+    border: 0.2rem solid var(--colour-3);
+}
+
+.share-link-modal button.btn.btn-secondary:hover {
+    border-color: var(--colour-7);
+    background-color: var(--colour-10) !important;
+}
+
+.share-link-modal button.btn.btn-secondary:focus {
+    border-color: var(--colour-7);
+}
+
+.modal {
+    background-color: var(--colour-15);
+}
+
+.modal .close {
+    color: var(--colour-16);
+}
+
+.modal .close:hover {
+    color: var(--colour-3);
+}
+
+.modal .close:active {
+    color: var(--colour-2);
+}
+
+.modal-content {
+    background-color: var(--colour-4);
+    border-color: var(--colour-17) var(--colour-16) var(--colour-16);
+}
+
+.modal-dialog div.modal-content {
+    border-color: var(--colour-17) !important;
+}
+
+.badge.date {
+    background-color: var(--colour-9);
+    color: var(--colour-12);
+}
+
+.login-form .block-title strong {
+    color: var(--colour-3);
+}
+
+.login-form [role="tab"] {
+    border: 0.1rem solid var(--colour-14);
+    background: var(--colour-4);
+    color: var(--colour-3);
+}
+
+.login-form [role="tab"][aria-selected="true"]:hover,
+.login-form [role="tab"][aria-selected="true"]:focus {
+    color: var(--colour-2);
+}
+
+.card {
+    border: 0.1rem solid var(--colour-16);
+    background-color: var(--colour-4);
+}
+
+.card.boxs-card {
+    background: var(--colour-4);
+    border: 0.1rem solid var(--colour-16);
+}
+
+.card.boxs-card:hover,
+.card.boxs-card:focus {
+    color: var(--colour-2);
+}
+
+.card.link-card.active svg {
+    color: var(--colour-20);
+}
+
+.card.link-card a {
+    border-top: 0.6rem solid var(--colour-17);
+}
+
+.card.link-card svg {
+    color: var(--colour-19);
+}
+
+.card.link-card .text-left svg {
+    color: var(--colour-13);
+}
+
+.card.image-card a:focus .badge,
+.card.image-card a:hover .badge {
+    background-color: var(--colour-21);
+    color: var(--colour-13);
+}
+
+.card.image-card .image {
+    background-color: var(--colour-17);
+}
+
+.card.image-card .content {
+    border-top: 0.6rem solid var(--colour-17);
+}
+
+.card.next-step-content {
+    border-color: var(--colour-16) var(--colour-16) var(--colour-16) var(--colour-19);
+}
+
+.card.next-step-content:hover,
+.card.next-step-content:focus {
+    color: var(--colour-2);
+}
+
+.card.next-step-content .next-content p {
+    color: var(--colour-14);
+}
+
+.next-step svg {
+    color: var(--colour-3);
+}
+
+.group .group-page-title::after {
+    color: var(--colour-2);
+}
+
+.group .group-title {
+    color: var(--colour-3);
+}
+
+.group .group-desc {
+    color: var(--colour-14);
+}
+
+.group .card {
+    border: 0.1rem solid var(--colour-16);
+}
+
+.group .card:hover,
+.group .card:focus {
+    color: var(--colour-2);
+}
+
+.group .card:hover .icon-half-rightarrow::before,
+.group .card:focus .icon-half-rightarrow::before {
+    color: var(--colour-20);
+}
+
+.group .g-box .card-title {
+    color: var(--colour-3);
+}
+
+.group .g-box p {
+    color: var(--colour-14);
+}
+
+.group .g-box:hover,
+.group .g-box:focus {
+    color: var(--colour-2);
+}
+
+.group .g-box:hover .icon-half-rightarrow::before,
+.group .g-box:focus .icon-half-rightarrow::before {
+    color: var(--colour-20);
+}
+
+.group a {
+    color: var(--colour-3);
+}
+
+.group a:hover {
+    color: var(--colour-3);
+}
+
+.navi-card .card {
+    border: 0.1rem solid var(--colour-16);
+    background-color: var(--colour-4);
+}
+
+.navi-card .card .n-box:hover {
+    color: var(--colour-2);
+}
+
+.navi-card a {
+    color: var(--colour-3);
+}
+
+.media-block h5 {
+    color: var(--colour-14);
+}
+
+.media-block .content h5 {
+    color: var(--colour-14);
+}
+
+.media-block .mediablock-card {
+    border: 0.1rem solid var(--colour-16) !important;
+}
+
+.media-block .mediablock-card .content .media_block_summary p {
+    color: var(--colour-14);
+}
+
+.media-block .icon-download::before {
+    color: var(--colour-3);
+}
+
+.group-image .field--type-image {
+    background-color: var(--colour-6);
+}
+
+.main-title .card {
+    border: 0.1rem solid var(--colour-16);
+}
+
+.main-title .card h5 {
+    color: var(--colour-14);
+}
+
+.media-block a.link {
+    border: 0.2rem solid var(--colour-3);
+    background: var(--colour-4);
+    color: var(--colour-3) !important;
+}
+
+.media-block a.link:focus {
+    color: var(--colour-2);
+}
+
+.media-block .card p {
+    color: var(--colour-14);
+}
+
+.callout-section .callout-wrapper .callout-card {
+    background: var(--colour-9);
+    border-left: 0.6rem solid var(--colour-19);
+}
+
+.callout-section .callout-wrapper .callout-card .card-title {
+    color: var(--colour-3);
+}
+
+.callout-section .callout-wrapper .callout-card p {
+    color: var(--colour-14);
+}
+
+.head-nodi1 {
+    background-color: var(--colour-22);
+}
+
+.head-nodi2 {
+    background-color: var(--colour-23);
+}
+
+.head-nodi3 {
+    background-color: var(--colour-18);
+}
+
+.head-nodi4 {
+    background-color: var(--colour-24);
+}
+
+.header-left a {
+    color: var(--colour-3);
+}
+
+a.header-hover h3.show {
+    color: var(--colour-2);
+}
+
+.header-right a,
+.header-left a.header-hover {
+    color: var(--colour-3);
+}
+
+#block-mobilenumber h3 {
+    color: var(--colour-3);
+}
+
+#block-mobilenumber h3 a {
+    color: var(--colour-3);
+}
+
+.header-right a.header-btn {
+    border: 0.2rem solid var(--colour-3);
+    color: var(--colour-3);
+}
+
+.header-right a.header-btn:focus {
+    color: var(--colour-2);
+}
+
+.overlay-content .navbar-nav .dropdown-item:hover span,
+.overlay-content .navbar-nav .dropdown-item:focus span {
+    border-bottom: 0.2rem solid var(--colour-3);
+}
+
+.overlay-content .navbar-nav .dropdown-item:hover span,
+.overlay-content .navbar-nav .dropdown-item:focus span {
+    border-bottom: 0.2rem solid var(--colour-3) !important;
+}
+
+.overlay-content .navbar-nav li a:hover,
+.overlay-content .navbar-nav li a:focus,
+.overlay-content .navbar-nav li button:hover,
+.overlay-content .navbar-nav li button:focus {
+    color: var(--colour-3);
+}
+
+.overlay-content .navbar-nav .nav-item.heading-mobile span.menu-sub-title {
+    color: var(--colour-2);
+}
+
+.overlay-content .navbar-nav .nav-item button {
+    color: var(--colour-3);
+}
+
+.overlay-content .navbar-nav .nav-item button:hover,
+.overlay-content .navbar-nav .nav-item button:focus {
+    color: var(--colour-2);
+}
+
+.overlay-content .navbar-nav .active .dropdown-menu a span {
+    color: var(--colour-14);
+}
+
+.overlay-content .navbar-nav .dropdown-menu .dropdown-item:focus span,
+.overlay-content .navbar-nav .dropdown-menu .dropdown-item:hover span {
+    border-bottom: 0.1rem solid var(--colour-14) !important;
+}
+
+.overlay-content .navbar-nav .dropdown-menu.active li a:hover,
+.overlay-content .navbar-nav .dropdown-menu.active li button:hover {
+    color: var(--colour-3);
+}
+
+.overlay-content .navbar-nav .dropdown-menu.active {
+    background-color: var(--colour-4);
+}
+
+#myNav .overlay-content .navbar-nav .nav-item.active.heading-mobile {
+    background-color: var(--colour-4);
+}
+
+#myNav .overlay-content .navbar-nav .nav-item.active.heading-mobile a:focus,
+#myNav .overlay-content .navbar-nav .nav-item.active.heading-mobile a:hover,
+#myNav .overlay-content .navbar-nav .nav-item.active.heading-mobile button:focus,
+#myNav .overlay-content .navbar-nav .nav-item.active.heading-mobile button:hover {
+    background-color: var(--colour-4);
+}
+
+.overlay {
+    background-color: var(--colour-4);
+}
+
+.overlay-content .navbar-nav .nav-item .nav-link {
+    color: var(--colour-3);
+}
+
+.close-btn-div {
+    color: var(--colour-2);
+}
+
+.menu-custom-border {
+    background: var(--colour-11);
+}
+
+.menu-header {
+    color: var(--colour-2);
+}
+
+.menu-back-btn {
+    color: var(--colour-3);
+}
+
+.menu-back-btn:hover {
+    color: var(--colour-3);
+}
+
+.menu-list li a {
+    color: var(--colour-3);
+}
+
+.nav-item.show .nav-link {
+    color: var(--colour-2);
+}
+
+.button:hover {
+    background-color: var(--colour-4);
+    color: var(--colour-13);
+}
+
+.search:focus+.searchbutton {
+    background-color: var(--colour-4);
+    color: var(--colour-13);
+}
+
+.search {
+    background-color: var(--colour-4);
+}
+
+.header-left button.header-hover {
+    color: var(--colour-3);
+}
+
+.header-left button.header-hover:hover,
+.header-left button.header-hover:focus {
+    color: var(--colour-2);
+}
+
+.header-inner .dropdown-menu.show {
+    box-shadow: var(--colour-16) 0rem 0.3rem 0.5rem 0.2rem;
+}
+
+.display-section1 {
+    background: var(--colour-6);
+}
+
+.display-section1 p {
+    color: var(--colour-14);
+}
+
+.display-section2 h5 {
+    color: var(--colour-3);
+}
+
+.display-section2 ul {
+    border-bottom: 0.1rem solid var(--colour-11);
+}
+
+.devider-section {
+    color: var(--colour-2);
+}
+
+ul.text-size li a {
+    color: var(--colour-14);
+}
+
+.display-section2.display-section5 .reset-all {
+    border-top: 0.1rem solid var(--colour-11);
+}
+
+.display-section2.display-section5 .reset-all a {
+    color: var(--colour-3);
+}
+
+.reset-border-btn {
+    border: 0.2rem solid var(--colour-3);
+}
+
+.search-menu .help-link-div .section-link span:hover {
+    border-bottom: 0.2rem solid var(--colour-3);
+}
+
+section.task-card h2 {
+    color: var(--colour-14);
+}
+
+a:hover {
+    color: var(--colour-3);
+}
+
+a {
+    color: var(--colour-3);
+}
+
+.search-menu .help-link-div.search-div-m .section-link {
+    border-bottom: 0.1rem solid var(--colour-6);
+}
+
+.mobile-display-icon.header-hover:hover,
+.mobile-display-icon.header-hover:focus {
+    color: var(--colour-2);
+}
+
+.display-cross,
+.mobile-search {
+    color: var(--colour-2);
+}
+
+.text-fields .input-group {
+    border: 0.1rem solid var(--colour-13);
+}
+
+.text-fields .input-group input {
+    border-right: 0.1rem solid var(--colour-13) !important;
+}
+
+.mobile-menu-div ul {
+    background-color: var(--colour-4);
+}
+
+.mobile-menu-div a {
+    color: var(--colour-3);
+}
+
+.mobile-menu-div .side-menu {
+    background-color: var(--colour-4);
+}
+
+.breadcrumbs.web-device {
+    background-color: var(--colour-6);
+}
+
+.breadcrumbs.web-device a {
+    color: var(--colour-3);
+}
+
+.breadcrumbs.web-device a:hover,
+.breadcrumbs.web-device a:focus {
+    color: var(--colour-3);
+}
+
+.breadcrumbs.web-device a:hover span,
+.breadcrumbs.web-device a:focus span {
+    border-bottom: 0.2rem solid var(--colour-3);
+}
+
+.breadcrumbs.web-device li.item.home {
+    color: var(--colour-3);
+}
+
+button.btn.btn-default.des-search-button svg,
+button.btn.btn-default.g-search-button svg {
+    color: var(--colour-3);
+}
+
+.searchbox .input-group .close-icon::after {
+    color: var(--colour-3);
+}
+
+.ammenu-menu-overlay {
+    background-color: var(--colour-15);
+}
+
+.searchbox .input-group input:hover,
+.searchbox .input-group input:focus,
+.searchbox .input-group input:active,
+.search-bar-internal .input-group input:hover,
+.search-bar-internal .input-group input:focus,
+.search-bar-internal .input-group input:active {
+    border: 0.2rem solid var(--colour-3) !important;
+}
+
+.overlay-content .navbar-nav .header-btn.mobile_header_btn {
+    border: 0.2rem solid var(--colour-3);
+}
+
+.button:hover {
+    background-color: var(--colour-4);
+    color: var(--colour-13);
+}
+
+.search:focus+.searchbutton {
+    background-color: var(--colour-4);
+    color: var(--colour-13);
+}
+
+.search {
+    background-color: var(--colour-4);
+}
+
+.header-inner .dropdown-menu.show {
+    box-shadow: var(--colour-16) 0rem 0.3rem 0.5rem 0.2rem;
+}
+
+a.header-hover.show {
+    color: var(--colour-2);
+}
+
+.display-section1 {
+    background: var(--colour-6);
+}
+
+.display-section1 p {
+    color: var(--colour-14);
+}
+
+.display-section2 h5 {
+    color: var(--colour-3);
+}
+
+.devider-section {
+    color: var(--colour-2);
+}
+
+.display-section2 ul {
+    border-bottom: 0.1rem solid var(--colour-11);
+}
+
+ul.text-size li a {
+    color: var(--colour-14);
+}
+
+.display-section2.display-section5 .reset-all {
+    border-top: 0.1rem solid var(--colour-11);
+}
+
+.reset-border-btn {
+    border: 0.2rem solid var(--colour-3);
+}
+
+.display-section2.display-section5 .reset-all a {
+    color: var(--colour-3);
+}
+
+.header-btn:hover {
+    border: 0.2rem solid var(--colour-7);
+}
+
+.search-menu .help-link-div .section-link span:hover {
+    border-bottom: 0.2rem solid var(--colour-3);
+}
+
+.desktop-logo a:focus .desktop-2 {
+    color: var(--colour-3);
+}
+
+.task-card h2 {
+    color: var(--colour-14);
+}
+
+.display-cross,
+.mobile-search {
+    color: var(--colour-2);
+}
+
+.text-fields .input-group {
+    border: 0.1rem solid var(--colour-13);
+}
+
+.text-fields .input-group input {
+    border-right: 0.1rem solid var(--colour-13) !important;
+}
+
+.search-menu .help-link-div.search-div-m .section-link {
+    border-bottom: 0.1rem solid var(--colour-6);
+}
+
+.bg-search-opacity::before {
+    background-color: var(--colour-15);
+}
+
+footer.page-footer .footer-social {
+    border-bottom: 0.1rem solid var(--colour-10);
+}
+
+footer.page-footer .footer-social .social-f-logo a svg path {
+    fill: var(--colour-4);
+}
+
+footer.page-footer .footer-menu .menu-column .f-title {
+    color: var(--colour-7);
+}
+
+footer.page-footer .footer-menu .menu-column .f-title button {
+    color: var(--colour-7);
+}
+
+footer.page-footer .footer-menu .menu-column button.hide-desktop {
+    border-color: var(--colour-19);
+    color: var(--colour-7);
+}
+
+footer.page-footer .footer-menu .menu-column button.hide-desktop:hover em,
+footer.page-footer .footer-menu .menu-column button.hide-desktop:focus em {
+    color: var(--colour-3);
+}
+
+footer.page-footer .footer-menu .menu-column button.hide-desktop:hover,
+footer.page-footer .footer-menu .menu-column button.hide-desktop:focus {
+    background: var(--colour-4);
+    color: var(--colour-3);
+    border-color: var(--colour-4);
+}
+
+footer.page-footer .footer-menu .menu-column ul.showlink {
+    border-right: 0.1rem solid var(--colour-19);
+    border-left: 0.6rem solid var(--colour-4);
+    border-bottom: 0.1rem solid var(--colour-19);
+}
+
+footer.page-footer .footer-bottom {
+    color: var(--colour-2);
+}
+
+.social-f-logo .s-link {
+    border: 0.1rem solid var(--colour-4);
+}
+
+.s-link:hover,
+.s-link:focus {
+    background: var(--colour-6);
+}
+
+.s-link:hover path,
+.s-link:focus path {
+    fill: var(--colour-3) !important;
+}
+
+footer.page-footer h3.showarrow {
+    background: var(--colour-4);
+    color: var(--colour-10) !important;
+}
+
+footer.page-footer .menu-column.is-active {
+    border-left: 0.4rem solid var(--colour-4) !important;
+}
+
+footer.page-footer div.footer-menu .menu-column .f-title button {
+    border-color: var(--colour-10) var(--colour-10) var(--colour-10) var(--colour-19);
+    color: var(--colour-7);
+}
+
+footer.page-footer div.footer-menu .menu-column .f-title button:hover,
+footer.page-footer div.footer-menu .menu-column .f-title button:focus {
+    background: var(--colour-4);
+    color: var(--colour-3);
+    border-color: var(--colour-4);
+}
+
+footer.page-footer div.footer-menu .menu-column .f-title button[aria-expanded="true"] {
+    background-color: var(--colour-4);
+    color: var(--colour-3);
+    border-color: var(--colour-4);
+}
+
+.right-cont-component a:hover {
+    color: var(--colour-3);
+}
+
+.our-service a.secondary-btn.destop-link::before {
+    border-left: 0.1rem solid var(--colour-3);
+}
+
+.four-column-block.content-block .main-content .left-content h3 {
+    color: var(--colour-3);
+}
+
+.four-column-block.content-block .main-content .left-content .content-title span::after {
+    color: var(--colour-2);
+}
+
+.four-column-block.content-block .main-content .left-content p {
+    color: var(--colour-14);
+}
+
+.four-column-block.content-block .main-content .right-content .block-image-box {
+    background: var(--colour-11);
+}
+
+.four-column-block.content-block .main-content .right-content h5 {
+    color: var(--colour-3);
+}
+
+.four-column-block.content-block .main-content .right-content p {
+    color: var(--colour-14);
+}
+
+.events_section .section-head p {
+    color: var(--colour-14);
+}
+
+section.our-service.blocks-contents .section-link {
+    color: var(--colour-3);
+}
+
+.topic-box {
+    border: 0.1rem solid var(--colour-11);
+}
+
+.topic-box:hover::before {
+    background-color: var(--colour-25);
+}
+
+.topic-box::before {
+    background-color: var(--colour-26);
+}
+
+.topic-img {
+    background-color: var(--colour-13);
+}
+
+.topic-content {
+    color: var(--colour-2);
+}
+
+.topic-box:hover .topic-content {
+    color: var(--colour-2);
+}
+
+.topic-box a:focus .topic-content {
+    color: var(--colour-2);
+}
+
+.topic-box:hover .field {
+    color: var(--colour-13);
+}
+
+.topic-box a:focus .field {
+    color: var(--colour-13);
+}
+
+.events-content-wrapper:hover {
+    color: var(--colour-2);
+}
+
+.events-content-wrapper:hover i.fas.fa-arrow-right {
+    color: var(--colour-20);
+}
+
+.events-content-wrapper:hover .tagbox {
+    background-color: var(--colour-21);
+    color: var(--colour-13);
+}
+
+.t-content-area .card p {
+    color: var(--colour-14);
+}
+
+.t-content-area .page-title::after {
+    color: var(--colour-2);
+}
+
+.t-content-area .component-item:nth-of-type(2n+1) {
+    background: var(--colour-4);
+}
+
+.t-content-area .component-item:nth-of-type(2n) {
+    background: var(--colour-4);
+}
+
+.news-heading-div a.secondary-btn::before {
+    border-left: 0.1rem solid var(--colour-3);
+}
+
+.events-heading-div a.secondary-btn::before {
+    border-left: 0.1rem solid var(--colour-3);
+}
+
+.section-link.destop-link a {
+    color: var(--colour-3);
+}
+
+.icon-half-rightarrow::before {
+    color: var(--colour-3);
+}
+
+.news-detail-page .faq-section .accordion-container a {
+    color: var(--colour-3);
+}
+
+.news-detail-page .faq-section .accordion-container ul li {
+    color: var(--colour-14);
+}
+
+.path-node.page-node-type-page .block-alert-message-block .alert-message-block .alert_message_top_page p {
+    border-bottom: 0.2rem solid var(--colour-14);
+}
+
+.path-node.page-node-type-page .block-alert-message-block .alert-message-block .close span:hover,
+.path-node.page-node-type-page .block-alert-message-block .alert-message-block .close span:focus,
+.path-node.page-node-type-page .block-alert-message-block .alert-message-block .close span:active {
+    background: var(--colour-4);
+    color: var(--colour-24);
+}
+
+.rerurn-to-page.donate-thank-you .region-return-to-page .block-donation-stripe .txtLblReturn span {
+    border-bottom: 0.2rem solid var(--colour-3);
+}
+
+.rerurn-to-page.donate-thank-you .region-return-to-page .block-donation-stripe .txtLblReturn:hover span {
+    border-bottom: 0.2rem solid var(--colour-4);
+}
+
+.top_page .alert-message-block {
+    background: var(--colour-24);
+}
+
+.top_page .alert-message-block .alert_message_top_page.alert-info a:hover,
+.top_page .alert-message-block .alert_message_top_page.alert-info a:focus,
+.top_page .alert-message-block .alert_message_top_page.alert-info a:active {
+    background: var(--colour-4);
+    color: var(--colour-24) !important;
+}
+
+.news-detail-page .region-sidebar-first .accordion ul li a {
+    background: var(--colour-4);
+    color: var(--colour-14);
+    border-left: 0.4rem solid var(--colour-11);
+}
+
+.odd-even-section .component-item:nth-of-type(2n+1) {
+    background: var(--colour-9) !important;
+}
+
+.odd-even-section .component-item:nth-of-type(2n) {
+    background: var(--colour-4) !important;
+}
+
+.event-component-item:nth-of-type(2n+1) {
+    background: var(--colour-9) !important;
+}
+
+.event-component-item:nth-of-type(2n) {
+    background: var(--colour-4) !important;
+}
+
+.cta_banner {
+    background: var(--colour-4);
+    border-top: 0.1rem solid var(--colour-11);
+    border-bottom: 0.1rem solid var(--colour-11);
+}
+
+.cta_banner .footer-bottom .mobile-hide a {
+    color: var(--colour-14);
+}
+
+.cta_banner .footer-bottom .mobile-hide a svg.svg-inline--fa.fa-arrow-up {
+    color: var(--colour-14);
+}
+
+.cta_banner .cta_txt {
+    background: var(--colour-9);
+    border-bottom: 0rem solid var(--colour-11);
+}
+
+.cta_banner .cta_txt p {
+    color: var(--colour-28);
+    background: var(--colour-9);
+    border-bottom: 0rem solid var(--colour-11);
+}
+
+.cta_banner .cta-txt {
+    color: var(--colour-3);
+    border: 0.1rem solid var(--colour-4);
+}
+
+.cta_banner .pl-5 {
+    color: var(--colour-3);
+    border: 0.1rem solid var(--colour-4);
+}
+
+.top-up {
+    color: var(--colour-14);
+}
+
+.top-up:active {
+    color: var(--colour-2);
+}
+
+.border-btn {
+    border: 0.2rem solid var(--colour-3);
+    color: var(--colour-3);
+}
+
+.map-head {
+    color: var(--colour-14);
+}
+
+.divider-line {
+    background: var(--colour-11);
+}
+
+.map-card ul li span {
+    color: var(--colour-10);
+    border-bottom: 0.2rem solid var(--colour-10);
+}
+
+.table-caption span {
+    color: var(--colour-14);
+}
+
+.cta_txt {
+    background: var(--colour-4);
+}
+
+.news-heading-div .section-link {
+    color: var(--colour-3);
+}
+
+.news-heading-div .section-head p {
+    color: var(--colour-14);
+}
+
+.news-heading-div .news-box {
+    border: 0.1rem solid var(--colour-11);
+    background: var(--colour-4);
+}
+
+.news-heading-div .news-box:hover {
+    box-shadow: var(--colour-15) 0.2rem 0.2rem 1rem 0.4rem;
+}
+
+.news-heading-div .news-img {
+    border-bottom: 0.6rem solid var(--colour-16);
+}
+
+.news-heading-div .news-title {
+    color: var(--colour-3);
+}
+
+.news-heading-div .news-desp,
+.news-heading-div .accordion .card-body p {
+    color: var(--colour-14);
+}
+
+.news-heading-div .news-date {
+    background: var(--colour-9);
+    color: var(--colour-12);
+}
+
+.news-heading-div .news-link {
+    color: var(--colour-3);
+}
+
+.news-heading-div .news-link:hover {
+    color: var(--colour-18);
+}
+
+.videosection .field--type-video-embed-field {
+    box-shadow: var(--colour-5) 0px 1.6rem 3.2rem 0px;
+}
+
+.videosection .page-title span::after {
+    color: var(--colour-2);
+}
+
+.videosection p {
+    color: var(--colour-14);
+}
+
+.videosection a.viewlink {
+    color: var(--colour-3);
+}
+
+.videosection span.share-link {
+    border-bottom: 0.2rem solid var(--colour-10);
+}
+
+.videosection .sharevid a {
+    color: var(--colour-3);
+}
+
+.videosection .sharevid svg {
+    color: var(--colour-10);
+}
+
+.videosection .icon-half-rightarrow::before {
+    color: var(--colour-3);
+}
+
+.videosection .page-title span::after {
+    color: var(--colour-2);
+}
+
+.videosection a.viewlink {
+    color: var(--colour-3);
+}
+
+.icon-half-rightarrow::before {
+    color: var(--colour-3);
+}
+
+.task-card h2 {
+    color: var(--colour-14);
+}
+
+.task-card .card {
+    border: 0.1rem solid var(--colour-16);
+    background-color: var(--colour-4);
+}
+
+.mobile-menu-div ul {
+    background-color: var(--colour-4);
+}
+
+.mobile-menu-div a {
+    color: var(--colour-3);
+}
+
+.mobile-menu-div .side-menu {
+    background-color: var(--colour-4);
+}
+
+.border-btn {
+    border: 0.2rem solid var(--colour-3);
+    color: var(--colour-3);
+}
+
+.cta_txt {
+    background: var(--colour-4);
+}
+
+.up-mobile {
+    border-bottom: 0.1rem solid var(--colour-11);
+    border-top: 0.1rem solid var(--colour-11);
+}
+
+.cta_banner .cta_txt {
+    background: var(--colour-4);
+}
+
+.card.next-step-content {
+    border-color: var(--colour-16) var(--colour-16) var(--colour-16) var(--colour-3);
+}
+
+.next-step-content h3 {
+    color: var(--colour-3);
+}
+
+.next-step-content p {
+    color: var(--colour-14);
+}
+
+a {
+    color: var(--colour-3);
+}
+
+.card.next-step-content:hover,
+.next-step-content:focus {
+    color: var(--colour-2);
+}
+
+.card.next-step-content:hover .next-content,
+.next-step-content:focus .next-content {
+    border-left: 0.1rem solid var(--colour-16);
+}
+
+.next-step svg {
+    color: var(--colour-3);
+}
+
+section.banner-design .bgblue::before {
+    color: var(--colour-2);
+}
+
+.hero-banner-box {
+    background-color: var(--colour-9);
+}
+
+.hero-banner-box .card:focus {
+    color: var(--colour-2);
+}
+
+.contentpage-banner .content-banner {
+    color: var(--colour-2);
+}
+
+.contentpage-banner .content-banner::before {
+    color: var(--colour-2);
+}
+
+.contentpage-banner .content-banner .c-banner .c-bannertext a:focus {
+    border: 0.2rem solid var(--colour-7);
+    color: var(--colour-3);
+}
+
+.contentpage-banner .content-banner .c-banner .c-bannertext .event-dt,
+.contentpage-banner .content-banner .c-banner .c-bannertext .published-dt {
+    background: var(--colour-9);
+    color: var(--colour-12);
+}
+
+.contentpage-banner .content-banner .c-banner .c-bannertext .event-dt svg path,
+.contentpage-banner .content-banner .c-banner .c-bannertext .published-dt svg path {
+    fill: var(--colour-12);
+}
+
+.general-block h1 {
+    color: var(--colour-3);
+}
+
+.general-block h1::after {
+    color: var(--colour-2);
+}
+
+.mobile-view .section-link {
+    color: var(--colour-3);
+}
+
+.faq-section .help-link-div ul li:last-of-type .secondary-btn:hover,
+.faq-section .help-link-div ul li:last-of-type .secondary-btn:focus {
+    background-color: var(--colour-10);
+}
+
+.faq-section .help-link-div ul li .secondary-btn {
+    border-bottom: 0.2rem solid var(--colour-3);
+}
+
+.faq-section .accordion .faq-card {
+    background: var(--colour-4);
+    border-color: var(--colour-16) var(--colour-16) var(--colour-16) var(--colour-17);
+}
+
+.faq-section .accordion .card-wrapper .card p {
+    color: var(--colour-14);
+}
+
+.faq-section .accordion .card-wrapper .card p.card-title {
+    color: var(--colour-3);
+}
+
+.faq-section .accordion a {
+    color: var(--colour-3);
+}
+
+.faq-section .accordion .card-header:first-child {
+    background: var(--colour-4);
+}
+
+.faq-section .card:hover p {
+    color: var(--colour-14);
+}
+
+.faq-section .row .col-md-12 a.border-btn:active {
+    color: var(--colour-2);
+}
+
+.faq-section .accordion .card-header.collapsed::after {
+    color: var(--colour-3);
+}
+
+.help-link-div .section-link {
+    color: var(--colour-3);
+}
+
+.paragraph .row .col-md-12 .border-btn {
+    border: 0.2rem solid var(--colour-3);
+    color: var(--colour-3);
+}
+
+.faq-section .accordion .card-header::after {
+    color: var(--colour-3);
+}
+
+.faq-section .accordion .faq-card.open-main {
+    border-color: var(--colour-10) var(--colour-10) var(--colour-10) var(--colour-3);
+}
+
+.news_section .news-inner-wrapper p {
+    color: var(--colour-14);
+}
+
+section.nav-section .navi-content>div {
+    color: var(--colour-19);
+}
+
+section.nav-section .navi-content .hometitle .block-title {
+    color: var(--colour-3);
+}
+
+section.nav-section .navi-content .hometitle .block-title::after {
+    color: var(--colour-2);
+}
+
+section.nav-section .navi-content p {
+    color: var(--colour-14);
+}
+
+section.nav-section .navi-content p {
+    color: var(--colour-14);
+}
+
+section.nav-section .navi-content .paragraph.paragraph--type--parallel-section-block.paragraph--view-mode--default .block-title .field.field--name-field-heading.field--type-string-long.field--label-hidden.field--item {
+    color: var(--colour-3);
+}
+
+.share-map-title label {
+    color: var(--colour-14);
+}
+
+.share-map-title h3::after {
+    color: var(--colour-2);
+}
+
+button.btn.btn-primary {
+    color: var(--colour-3);
+}
+
+button.btn.btn-secondary {
+    color: var(--colour-3);
+    border: 0.2rem solid var(--colour-3);
+}
+
+.component-item:nth-of-type(2n+1) {
+    background: var(--colour-4);
+}
+
+.component-item:nth-of-type(2n) {
+    background: var(--colour-9);
+}
+
+.news-detail-page .row .col-md-8 div p {
+    color: var(--colour-12);
+}
+
+.news-detail-page .row .col-md-8 .news-anchor li a.active {
+    color: var(--colour-14);
+    border-left: 0.4rem solid var(--colour-3);
+    background-color: var(--colour-9);
+}
+
+.news-detail-page .row .col-md-8 .event .field-header-small {
+    color: var(--colour-14);
+}
+
+.news-detail-page .row .col-md-8 .event strong {
+    color: var(--colour-14);
+}
+
+.news-detail-page .row .col-md-8 .event ul {
+    color: var(--colour-3);
+}
+
+.news-detail-page .row .col-md-8 .event li {
+    color: var(--colour-14);
+}
+
+.page-node-type-event section.our-service.blocks-contents p {
+    color: var(--colour-14);
+}
+
+.callout-section.py-3 h3 {
+    color: var(--colour-14);
+}
+
+.news-detail-page .news-anchor h5 {
+    color: var(--colour-14);
+}
+
+.news-detail-page .row .col-md-8 div#item0 section.next-step ol {
+    color: var(--colour-3);
+}
+
+.news-detail-page .component-item:nth-of-type(2n+1) {
+    background: var(--colour-9) !important;
+}
+
+.news-detail-page .component-item:nth-of-type(2n) {
+    background: var(--colour-4) !important;
+}
+
+.card.link-card.active .task_card_description {
+    color: var(--colour-14);
+}
+
+.our-service.foundation .card a {
+    border-top: 0.6rem solid var(--colour-17);
+}
+
+.path-about-us-who-we-are .odd-even-section .component-item:nth-of-type(2n+1) {
+    background: var(--colour-4) !important;
+}
+
+.path-about-us-who-we-are .odd-even-section .component-item:nth-of-type(2n+2) {
+    background: var(--colour-9) !important;
+}
+
+.accordion-container .set a.accord-tab {
+    color: var(--colour-14);
+}
+
+.accordion-container .set a.accord-tab:hover,
+.accordion-container .set a.accord-tab:focus,
+.accordion-container .set a.accord-tab.active {
+    color: var(--colour-14);
+}
+
+.path-technology-products-overview .odd-even-section .component-item:nth-of-type(2n+1) {
+    background: var(--colour-4) !important;
+}
+
+.path-technology-products-overview .odd-even-section .component-item:nth-of-type(2n) {
+    background: var(--colour-9) !important;
+}
+
+.field--item .news_section_column .news-inner-wrapper .news-desp {
+    color: var(--colour-14);
+}
+
+.section-link {
+    color: var(--colour-3);
+}
+
+.section-link:hover {
+    color: var(--colour-3);
+}
+
+.section-head p {
+    color: var(--colour-14);
+}
+
+.news_section .news-box {
+    border: 0.1rem solid var(--colour-11);
+    background: var(--colour-4);
+}
+
+.news_section .news-box:hover {
+    box-shadow: var(--colour-29) 0.2rem 0.2rem 1rem 0.4rem;
+}
+
+.news_section .news-img {
+    border-bottom: 0.6rem solid var(--colour-20);
+}
+
+.news_section .news-title {
+    color: var(--colour-14);
+}
+
+.news_section .news-desp {
+    color: var(--colour-14);
+}
+
+.news_section .news-date {
+    background: var(--colour-9);
+    color: var(--colour-12);
+}
+
+.news_section .news-link {
+    color: var(--colour-3);
+}
+
+.news_section .news-link:hover {
+    color: var(--colour-18);
+}
+
+.news-inner-overlay {
+    background: var(--colour-6);
+}
+
+.news-inner-content {
+    border-left: 0.6rem solid var(--colour-17);
+    background: var(--colour-4);
+}
+
+.news-inner-content .news-inner-heading p {
+    color: var(--colour-14);
+}
+
+.news-inner-content .news-inner-author {
+    color: var(--colour-12);
+}
+
+.news-box {
+    border: 0.1rem solid var(--colour-11);
+    background: var(--colour-4);
+}
+
+.navbar-brand a.site-title {
+    color: var(--colour-14);
+}
+
+.navbar-brand a.site-title:hover {
+    color: var(--colour-14);
+}
+
+.table-dark th,
+.table-dark td,
+.table-dark thead th {
+    background-color: var(--colour-14);
+}
+
+.alert-dismissible .close {
+    color: var(--colour-13);
+}
+
+.content-block .main-content .left-content h3 {
+    color: var(--colour-3);
+}
+
+.content-block .main-content .left-content .content-title span::after {
+    color: var(--colour-2);
+}
+
+.content-block .main-content .left-content p {
+    color: var(--colour-14);
+}
+
+.content-block .main-content .left-content a.secondary {
+    color: var(--colour-3);
+}
+
+.service-page-title .viewall::after {
+    color: var(--colour-3);
+}
+
+.service-page-title .viewall::after {
+    color: var(--colour-3);
+}
+
+.map-card ul li span a {
+    color: var(--colour-3);
+}
+
+.tabs-wrapper .nav-tabs {
+    border: 0.1rem solid var(--colour-6);
+}
+
+.tabs-wrapper .nav-item.active {
+    background-color: var(--colour-6);
+}
+
+.tabs-wrapper:not(.is-collapsible) .nav-item:not(:first-of-type) {
+    border-top: 0.1rem solid var(--colour-6);
+}
+
+.tabs-wrapper.is-collapsible .is-open .nav-item:not(.active) {
+    border-top: 0.1rem solid var(--colour-6);
+}
+
+article .field--name-body.field--type-text-with-summary a:visited,
+.sfContentBlock a:visited,
+.general_content_block a:visited {
+    color: var(--colour-30) !important;
+}
+
+.donateThanksHeader {
+    color: var(--colour-2);
+}
+
+.cta_banner.mt-5 .footer-bottom .region-content-bottom {
+    border-top: 0.1rem solid var(--colour-11);
+}
+
+.faq-section .accordion .faq-card {
+    background: var(--colour-4);
+    border-color: var(--colour-16) var(--colour-16) var(--colour-16) var(--colour-19);
+}
+
+.accordion .faq-card {
+    background: var(--colour-4);
+}
+
+.faq-section .accordion .card-title {
+    color: var(--colour-3);
+}
+
+.faq-section .accordion .card-title:hover {
+    color: var(--colour-3);
+}
+
+.overlay-content .navbar-nav .nav-item .nav-link:hover,
+.overlay-content .navbar-nav .nav-item .nav-link:focus {
+    color: var(--colour-2);
+}
+
+.overlay-content .navbar-nav .dropdown .dropdown-menu .dropdown-item span:hover,
+.overlay-content .navbar-nav .dropdown .dropdown-menu .dropdown-item span:focus {
+    border-bottom: 0.1rem solid var(--colour-14);
+}
+
+.menu_bold .dropdown-item {
+    color: var(--colour-3);
+    border-left: 0.4rem solid var(--colour-4);
+}
+
+.menu_bold .dropdown-item:focus,
+.menu_bold .dropdown-item:hover {
+    color: var(--colour-14);
+}
+
+.menu_bold .dropdown-item span:focus,
+.menu_bold .dropdown-item span:hover {
+    color: var(--colour-14);
+    border-bottom: 0.1rem solid var(--colour-14);
+}
+
+.overlay-content .navbar-nav .dropdown .dropdown-menu .dropdown-item span:hover {
+    border-bottom: 0.1rem solid var(--colour-14);
+}
+
+.content_block_with_img section.nav-section {
+    background: var(--colour-9);
+}
+
+.content_block_with_img .navi-left {
+    color: var(--colour-19);
+}
+
+.content_block_with_img .navi-left .hometitle span::after {
+    color: var(--colour-2);
+}
+
+.content_block_with_img .navi-left .page-title {
+    color: var(--colour-3);
+}
+
+.content_block_with_img .navi-left p {
+    color: var(--colour-14);
+}
+
+.content_block_with_img .navi-left a.viewlink {
+    color: var(--colour-3);
+}
+
+.content_block_with_img .navi-box {
+    border: 0.1rem solid var(--colour-16);
+}
+
+.content_block_with_img .n-box p {
+    color: var(--colour-14);
+}
+
+.content_block_with_img .card {
+    border: 0.1rem solid var(--colour-16);
+}
+
+.content_block_with_img a:hover {
+    color: var(--colour-3);
+}
+
+.content_block_with_img a {
+    color: var(--colour-3);
+}
+
+.content_block_with_img .icon-half-rightarrow::before {
+    color: var(--colour-3);
+}
+
+.content_block_with_img .img_block_section .card {
+    border: 0.1rem solid var(--colour-16);
+}
+
+.content_block_with_img .img_block_section .card.active {
+    border-color: var(--colour-19);
+}
+
+.group-list-stat {
+    color: var(--colour-14);
+}
+
+.group-list-inline .views-row a {
+    color: var(--colour-10);
+    border-bottom: 0.2rem solid var(--colour-10);
+}
+
+.news-detail-page section.nav-section .navi-content {
+    color: var(--colour-19);
+}
+
+.block_quotes h3 {
+    color: var(--colour-3);
+}
+
+.region-sidebar-first nav h2 a,
+.news-detail-page .row .col-md-4 .event-back {
+    color: var(--colour-14);
+}
+
+.news-detail-page .row .col-md-8 .content a.item-inner {
+    background: var(--colour-4);
+    box-shadow: var(--colour-31) 0px 0px 0.4rem 2rem;
+}
+
+label.error {
+    color: var(--colour-32) !important;
+}
+
+.form-group.form-item .form-control.error {
+    box-shadow: var(--colour-32) 0px 0px 0.4rem 0px;
+    background-color: var(--colour-4);
+    border: 0.2rem solid var(--colour-32) !important;
+    color: var(--colour-32) !important;
+}
+
+.user-login-form {
+    background-color: var(--colour-4);
+    box-shadow: var(--colour-31) 0px 0px 0.4rem 0.2rem;
+}
+
+.required.error {
+    box-shadow: var(--colour-32) 0px 0px 0.4rem 0px;
+    background-color: var(--colour-4);
+    border: 0.2rem solid var(--colour-32) !important;
+    color: var(--colour-32) !important;
+}
+
+.user-pass {
+    background-color: var(--colour-4);
+    box-shadow: var(--colour-31) 0px 0px 0.4rem 0.2rem;
+}
+
+#edit-actions input#edit-actions-submit {
+    color: var(--colour-3);
+}
+
+.news-detail-page span.img-caption {
+    color: var(--colour-14);
+}
+
+.news-detail-page .row .col-md-8 .news-anchor li.active {
+    color: var(--colour-14);
+    border-left: 0.4rem solid var(--colour-3);
+    background: var(--colour-9);
+}
+
+.news-detail-page h2.event-sub-title {
+    color: var(--colour-14);
+}
+
+.accordion a.card.faq-card:hover,
+.accordion a.card.faq-card:focus {
+    color: var(--colour-2);
+}
+
+.accordion .faq-section .accordion .faq-card .card-body {
+    background: var(--colour-4);
+}
+
+.news-detail-page .row .col-md-8 .news-anchor li a:hover,
+.news-detail-page .row .col-md-8 .news-anchor li a:focus {
+    color: var(--colour-14);
+    border-left: 0.4rem solid var(--colour-3);
+}
+
+.news-detail-page .row .col-md-8 .news-anchor li a:active {
+    color: var(--colour-14);
+    border-left: 0.4rem solid var(--colour-3);
+    background: var(--colour-9);
+}
+
+.news-detail-page .row .col-md-8 .news-anchor a {
+    border-left: 0.4rem solid var(--colour-6);
+    color: var(--colour-14) !important;
+}
+
+.news-detail-page .row .col-md-8 .news-anchor a:hover {
+    color: var(--colour-14);
+}
+
+.news-detail-page .row .col-md-8 .news .field-header-small {
+    color: var(--colour-14);
+}
+
+.news-detail-page .row .col-md-8 .news strong {
+    color: var(--colour-14);
+}
+
+.news-detail-page .row .col-md-8 .news ul {
+    color: var(--colour-3) !important;
+}
+
+.news-detail-page .row .col-md-8 .news li {
+    color: var(--colour-14) !important;
+}
+
+.news-detail-page .row .col-md-8 .next-step ul {
+    color: var(--colour-3);
+}
+
+.news-detail-page .row .col-md-8 .next-step li {
+    color: var(--colour-14);
+}
+
+.news-detail-page .row .col-md-8 .next-step li::marker {
+    color: var(--colour-3);
+}
+
+.news-detail-page .row .col-md-8 .next-step p strong {
+    color: var(--colour-14);
+}
+
+.news-detail-page .row .col-md-8 .news ol {
+    color: var(--colour-3) !important;
+}
+
+.news-detail-page .row .col-md-8 .news ol li {
+    color: var(--colour-14) !important;
+}
+
+.news-detail-page .row .col-md-8 p {
+    color: var(--colour-14);
+}
+
+.news-detail-page .row .col-md-8 .block_quotes h3 {
+    color: var(--colour-14);
+}
+
+.news-detail-page .row .col-md-8 .block_quotes .block_quotes_inner {
+    background: var(--colour-9);
+    border-left: 0.6rem solid var(--colour-19);
+}
+
+.block_quotes p.pehra-one {
+    color: var(--colour-14);
+}
+
+.block_quotes p b {
+    color: var(--colour-14);
+}
+
+#accordian h3 {
+    background: var(--colour-14);
+}
+
+#accordian h3:hover {
+    text-shadow: var(--colour-33) 0px 0px 0.1rem;
+}
+
+.active .submenu-list li a {
+    color: var(--colour-14);
+    background: var(--colour-27) !important;
+    border-left: 0.4rem solid var(--colour-3) !important;
+}
+
+ul.sub-menulist li {
+    border-bottom: 0.1rem solid var(--colour-11);
+}
+
+ul.sub-menulist li:first-child {
+    border-bottom: 0.1rem solid var(--colour-11);
+}
+
+.event-back {
+    color: var(--colour-14);
+}
+
+.news-detail-page .row .col-md-8 .block_quotes .block_quotes_inner p {
+    color: var(--colour-14);
+}
+
+.news-detail-page .row .col-md-8 .block_quotes p.quotes-title {
+    color: var(--colour-12);
+}
+
+.news-detail-page .row .col-md-8 .block_quotes p.quotes-title b {
+    color: var(--colour-12);
+}
+
+.content .card.image-card a:focus .badge {
+    background-color: var(--colour-21);
+    color: var(--colour-13);
+}
+
+.faq-section .accordion .faq-card .card-body {
+    background: var(--colour-4);
+}
+
+.faq-section .accordion .card-wrapper .card.open-main {
+    color: var(--colour-2);
+}
+
+.faq-section .accordion .card-wrapper .card .card-body p {
+    color: var(--colour-14);
+}
+
+#edit-combine-collapsible .form-no-label,
+details[id^="edit-combine-collapsible"] .form-no-label {
+    background: var(--colour-4);
+    border: 0.1rem solid var(--colour-11);
+}
+
+#edit-combine-collapsible .form-no-label input[id^="edit-combine"],
+details[id^="edit-combine-collapsible"] .form-no-label input[id^="edit-combine"] {
+    border: 0.1rem solid var(--colour-28);
+    background: var(--colour-4);
+}
+
+#edit-combine-collapsible .form-no-label input,
+div[id^="edit-combine-collapsible"] .form-no-label input {
+    border: 0.1rem solid var(--colour-28);
+    background: var(--colour-4);
+}
+
+.view-filters .filter_wraper summary:focus {
+    border-bottom: 0.2rem solid var(--colour-3);
+}
+
+#edit-created-collapsible #edit-created-wrapper,
+div[id^="edit-created-collapsible"] div[id^="edit-created-wrapper"] {
+    background: var(--colour-4);
+}
+
+.filter_label {
+    color: var(--colour-3);
+}
+
+.filter-label {
+    color: var(--colour-3);
+}
+
+.filter_wraper .control-label.option {
+    color: var(--colour-14);
+}
+
+.bef-toggle:hover {
+    color: var(--colour-3);
+}
+
+.table-section .table-div table tbody tr td a:focus {
+    border: 0.1rem solid var(--colour-3);
+}
+
+.s-link:hover,
+.s-link:focus {
+    background: var(--colour-6);
+}
+
+.div[id^="edit-sort-order"],
+#edit-created-collapsible #edit-created-wrapper {
+    background: var(--colour-4);
+    border-color: var(--colour-11) var(--colour-11) var(--colour-11) var(--colour-19);
+}
+
+.accordion-container .set.active-tab {
+    border-right-color: var(--colour-16);
+    border-bottom-color: var(--colour-16);
+    border-left-color: var(--colour-3);
+}
+
+.accordion-container .set .accord-heading .accord-tab {
+    background-color: var(--colour-4);
+    border-color: var(--colour-16) var(--colour-16) var(--colour-16) var(--colour-19);
+    color: var(--colour-3);
+}
+
+.news-detail-page .news-anchor h2 {
+    color: var(--colour-14);
+}
+
+.news-detail-page .news-anchor h2:focus {
+    border: 0.2rem solid var(--colour-3);
+}
+
+.pehra-one {
+    color: var(--colour-14);
+}
+
+.table_caption {
+    color: var(--colour-14);
+}
+
+.accordion-new-sec.faq-section .accordion-container .set .acc-content {
+    background-color: var(--colour-4);
+}
+
+button.btn.btn-default.des-search-button {
+    border-left: 0.1rem solid var(--colour-14);
+}
+
+.searchbox form input.form-control {
+    color: var(--colour-14);
+    border: 0.1rem solid var(--colour-14);
+}
+
+.set .acc-content a {
+    border-bottom: 0.2rem solid var(--colour-4);
+    color: var(--colour-3);
+}
+
+.set .acc-content a:focus {
+    border-bottom: 0.2rem solid var(--colour-3);
+}
+
+.region.region-sidebar-first #accordian ul ul li a:hover,
+.region.region-sidebar-first #accordian ul ul li a:focus {
+    color: var(--colour-2);
+}
+
+h2#block-mainnavigation-6-menu a:focus {
+    background: var(--colour-10);
+}
+
+.form-data.manual-form#forgot-pw-form p#username-email-error.error {
+    background: var(--colour-34);
+    color: var(--colour-14) !important;
+}
+
+.form-data.manual-form#forgot-pw-form p#username-email-error.error .icon-error-warning::before {
+    color: var(--colour-22);
+}
+
+.form-data.manual-form .form-control {
+    border: 0.1rem solid var(--colour-12);
+    color: var(--colour-14);
+}
+
+.form-data.manual-form .form-control:focus {
+    border: 0.2rem solid var(--colour-3);
+    box-shadow: var(--colour-3) 0px 0px 0.4rem 0px;
+}
+
+.form-data.manual-form label {
+    color: var(--colour-12);
+}
+
+.form-data.manual-form a.flex-item {
+    color: var(--colour-3);
+}
+
+.form-data.manual-form .forgot {
+    color: var(--colour-3);
+}
+
+.form-data.manual-form .forgot span {
+    border-bottom: 0.2rem solid var(--colour-3);
+}
+
+.form-data.manual-form .btn.btn-va.bnt-white {
+    color: var(--colour-3);
+    background-color: var(--colour-4);
+    border: 0.2rem solid var(--colour-3);
+}
+
+.container.login-form .box-check-mail-msg {
+    background-color: var(--colour-35);
+    border-left: 6px solid var(--colour-24);
+}
+
+.container.login-form .box-check-mail-msg .headp {
+    color: var(--colour-14);
+}
+
+.container.login-form .box-check-mail-msg svg.fa-circle-info {
+    color: var(--colour-24);
+}
+
+.container.login-form .box-check-mail-msg .icon-info-msg::before {
+    color: var(--colour-24);
+}
+
+.container.login-form .form-box {
+    background-color: var(--colour-4);
+}
+
+.container.login-form .form-box .status-response {
+    color: var(--colour-32);
+    border-left: 6px solid var(--colour-32);
+    background: var(--colour-34);
+}
+
+.container.login-form .form-box .status-response .icon-error-warning::before {
+    color: var(--colour-22);
+}
+
+.container.login-form .form-box .status-response p {
+    color: var(--colour-14);
+}
+
+.container.login-form .page-header {
+    color: var(--colour-3);
+}
+
+.container.login-form .page-header::after {
+    color: var(--colour-2);
+}
+
+.container.login-form .form-box ul,
+.container.login-form .form-box p {
+    color: var(--colour-14);
+}
+
+.form-bottom.clearfix a:hover,
+.form-bottom.clearfix a:focus {
+    background-color: var(--colour-10);
+}
+
+.form-bottom.clearfix a:active {
+    color: var(--colour-2);
+}
+
+.form-bottom.clearfix a span {
+    color: var(--colour-3);
+    border-bottom: 0.2rem solid var(--colour-3);
+}
+
+.btn-group.forgot-btn-group h2.tab-heading {
+    color: var(--colour-3);
+}
+
+.btn-group.forgot-btn-group button {
+    background-color: var(--colour-4);
+    border: 0.1rem solid var(--colour-3);
+    color: var(--colour-3);
+}
+
+.box-forgot-email div {
+    color: var(--colour-14);
+}
+
+td,
+th {
+    border-top: 0.1rem solid var(--colour-11);
+}
+
+.news-inner-content {
+    border-left: 0.6rem solid var(--colour-19);
+}
+
+.filter-search-section h1 {
+    color: var(--colour-3);
+}
+
+.filter-search-section h2 {
+    color: var(--colour-3);
+}
+
+.head-cap {
+    color: var(--colour-14);
+}
+
+.filter-box h3 a {
+    color: var(--colour-10);
+}
+
+.filter-box p {
+    color: var(--colour-14);
+}
+
+.filter-box h3 a:visited {
+    color: var(--colour-30);
+    border-bottom: 0.2rem solid var(--colour-30);
+}
+
+.searchfilter-box .filter-box {
+    color: var(--colour-14);
+    border-bottom: 0.1rem dotted var(--colour-11);
+}
+
+.search-bar-internal .input-group input {
+    border: 0.1rem solid var(--colour-14);
+}
+
+.search-bar-internal .input-group .close-icon:hover,
+.search-bar-internal .input-group .close-icon:focus {
+    color: var(--colour-2);
+}
+
+.search-bar-internal .input-group-btn {
+    border-left: 0.1rem solid var(--colour-14);
+}
+
+.gcsc-more-maybe-branding-root .gcsc-find-more-on-google {
+    border: 0.2rem solid var(--colour-3);
+    color: var(--colour-3);
+}
+
+.gcsc-branding-clickable:hover,
+.gcsc-branding-clickable:focus {
+    border: 0.1rem solid var(--colour-14);
+}
+
+.paragraph .navi-content.navi-right {
+    border-right: 0.6rem solid var(--colour-19);
+}
+
+.mobile-searchbox .vaFrmSearch .input-group .form-control::placeholder,
+.search-bar-internal input::placeholder,
+.searchbox input.form-control::placeholder {
+    color: var(--colour-14);
+}
+
+.container.mobile-wrapper {
+    background: var(--colour-4);
+}
+
+.mobile-wrapper {
+    background: var(--colour-4);
+    border: 0.1rem solid var(--colour-11);
+}
+
+.boxContent h2 section p {
+    color: var(--colour-3);
+}
+
+.boxContent h2 section p span {
+    color: var(--colour-2);
+}
+
+.table_caption svg {
+    color: var(--colour-28);
+}
+
+.table-div table tbody td:first-child {
+    border-top: 0.1rem solid var(--colour-11);
+}
+
+.boxContent.boxYourDetail h2,
+.boxContent.boxPaymentInfo h2 {
+    color: var(--colour-3);
+}
+
+.boxContent.boxYourDetail h2 span,
+.boxContent.boxPaymentInfo h2 span {
+    color: var(--colour-2);
+}
+
+.overlay-content .navbar-nav .dropdown-menu.active li a {
+    color: var(--colour-14);
+}
+
+.boxPrivacy.include-link a {
+    border-bottom: 0.2rem solid var(--colour-3);
+}
+
+a.enter-address-manually.link-default,
+a.enter-address-automatically.link-default {
+    border-bottom: 0.2rem solid var(--colour-3);
+}
+
+#manual-address-section .icon-info::before {
+    color: var(--colour-3);
+}
+
+.path-node .webform label.error {
+    color: var(--colour-32);
+}
+
+.path-node input.error {
+    border-color: var(--colour-32);
+    background-color: var(--colour-36);
+    box-shadow: var(--colour-37) 0px 0.5rem 0.5rem -0.5rem inset;
+    color: var(--colour-32);
+}
+
+.path-node input.error:focus {
+    border-color: var(--colour-32);
+    background-color: var(--colour-38);
+}
+
+.path-donate .boxContent.boxDonateThanksText,
+.path-donate .boxContent.boxDonateDetails {
+    box-shadow: var(--colour-31) 0px 0px 0.4rem 0.2rem;
+    background-color: var(--colour-4);
+}
+
+.path-donate .boxContent.boxDonateThanksText {
+    background: var(--colour-4);
+}
+
+.path-donate .boxContent.boxDonateThanksText h2 {
+    color: var(--colour-3);
+}
+
+.path-donate .boxContent.boxDonateThanksText h2 span {
+    color: var(--colour-2);
+}
+
+.path-donate .boxContent.boxDonateThanksText {
+    background: var(--colour-4);
+}
+
+.path-donate .boxThanks.va h1 {
+    color: var(--colour-3);
+}
+
+.path-donate .boxThanks.va h1 span {
+    color: var(--colour-2);
+}
+
+.box-share-family {
+    color: var(--colour-2);
+}
+
+.box-share-family h2 {
+    color: var(--colour-3);
+}
+
+.box-share-family h2 span {
+    color: var(--colour-2);
+}
+
+.social-media-sharing {
+    box-shadow: var(--colour-31) 0px 0px 0.4rem 0.2rem;
+    background-color: var(--colour-4);
+}
+
+.social-media-sharing ul li a {
+    border: 0.2rem solid var(--colour-3);
+}
+
+.tabs-wrapper.is-collapsible .is-open .nav-item:not(.active) {
+    border-top: 0.1rem solid var(--colour-6);
+}
+
+.view-filters .form--inline.form-inline details summary {
+    color: var(--colour-3);
+}
+
+.view-filters .form--inline.form-inline details summary #edit-sort-by--wrapper {
+    background: var(--colour-4);
+}
+
+.view-filters .form--inline.form-inline details summary #edit-sort-order--wrapper {
+    background: var(--colour-4);
+}
+
+.topic-box.no-bg-image .topic-img a {
+    background: var(--colour-4);
+}
+
+#edit-sort-bef-combine,
+.filter_list div[id*="edit"].form-checkboxes,
+#edit-sort-order,
+.form-radios.form--inline,
+.filter_wraper div[id^="edit-sort-by"],
+.filter_wraper div[id^="edit-sort-order"],
+.filter_wraper div[id^="edit-sort-bef-combine"] {
+    background-color: var(--colour-4);
+    border-color: var(--colour-11) var(--colour-11) var(--colour-11) var(--colour-19);
+}
+
+#edit-field-categories-target-id .form-item,
+div[id^="edit-field-categories-target-id"] .form-item {
+    color: var(--colour-14);
+}
+
+#edit-field-categories-target-id .form-item label,
+div[id^="edit-field-categories-target-id"] .form-item label {
+    color: var(--colour-14);
+}
+
+.content_block_with_img .navi-left p {
+    color: var(--colour-14);
+}
+
+section.task-card .container h4 {
+    color: var(--colour-14);
+}
+
+.news-detail-page .row .col-md-8 hr {
+    background-color: var(--colour-16);
+}
+
+.nav-section .n-box:hover .icon-half-rightarrow::before,
+.nav-section .card:focus .n-box .icon-half-rightarrow::before {
+    color: var(--colour-20);
+}
+
+.cta_banner .footer-bottom .border-btn {
+    color: var(--colour-3);
+}
+
+#accordian ul li a {
+    border-left: 0.4rem solid var(--colour-11);
+}
+
+.breadcrumbs.web-device {
+    background-color: var(--colour-4);
+}
+
+.col-md-4.mobile-sidebar a:hover {
+    color: var(--colour-3);
+}
+
+.mobile_breadcrumb ul.list-breadcrumb {
+    color: var(--colour-3);
+    background: var(--colour-27);
+}
+
+.mobile_breadcrumb .event-back {
+    color: var(--colour-3);
+}
+
+.mobile_breadcrumb .event-back:focus span,
+.mobile_breadcrumb .event-back:hover span {
+    border-bottom: 0.2rem solid var(--colour-3);
+}
+
+.mobile_breadcrumb .event-back span:hover {
+    border-bottom: 0.2rem solid var(--colour-3);
+}
+
+body.path-node.page-node-type-news section.nav-section .navi-content .hometitle .block-title {
+    color: var(--colour-14);
+}
+
+.section-next-step h2 {
+    color: var(--colour-14);
+}
+
+.section-next-step h2.section-header {
+    color: var(--colour-14);
+}
+
+.section-next-step p {
+    color: var(--colour-14);
+}
+
+.section-next-step h3.general-list {
+    color: var(--colour-14);
+}
+
+.section-next-step .dot-ul li,
+.section-next-step ol li {
+    color: var(--colour-14);
+}
+
+.navi-content ul li {
+    color: var(--colour-14);
+}
+
+.sharevid svg.svg-inline--fa.fa-eye,
+.sharevid svg.svg-inline--fa.fa-share-nodes {
+    color: var(--colour-3);
+}
+
+.news-detail-page article.media-page- h1 {
+    color: var(--colour-14);
+}
+
+section.nav-section .navi-content .hometitle .block-title {
+    color: var(--colour-14) !important;
+}
+
+.page-node-type-event .news-detail-page .next-step h1 {
+    color: var(--colour-14);
+}
+
+.event-date span.date-time {
+    color: var(--colour-14);
+}
+
+p.event_datetime span.Date,
+p.event_datetime span.Time {
+    color: var(--colour-14);
+}
+
+p.event_location span.Location {
+    color: var(--colour-14);
+}
+
+.page-node-type-event .news-detail-page .next-step h1 {
+    color: var(--colour-14);
+}
+
+.event-date span.date-time {
+    color: var(--colour-14);
+}
+
+p.event_datetime span.Date,
+p.event_datetime span.Time {
+    color: var(--colour-14);
+}
+
+.content-banner.pattern-banner .banner-title h1 span {
+    color: var(--colour-3);
+}
+
+.filter_wraper .form--inline.form-inline.clearfix summary:focus {
+    border-color: var(--colour-3);
+}
+
+.filter_wraper .form-checkboxes label.control-label.option::before {
+    background: var(--colour-4);
+    border: 0.1rem solid var(--colour-12);
+}
+
+.filter_wraper .form-checkboxes input:checked+label::after {
+    color: var(--colour-3);
+    border: 0.2rem solid var(--colour-3);
+}
+
+.filter_wraper .form-checkboxes label.control-label.option:hover::before,
+.filter_wraper .form-checkboxes label.control-label.option:focus::before {
+    background-color: var(--colour-12);
+}
+
+.filter_wraper .form-checkboxes input:checked+label:hover::after,
+.filter_wraper .form-checkboxes input:checked+label:focus::after {
+    border-color: var(--colour-3);
+}
+
+.filter_wraper .js-form-type-radio .control-label.option::before {
+    background: var(--colour-4);
+    border: 0.1rem solid var(--colour-12);
+}
+
+.filter_wraper .js-form-type-radio .form-radio:checked+label::after {
+    color: var(--colour-2);
+}
+
+.filter_wraper .js-form-type-radio .form-radio:checked+label::before {
+    border: 0.2rem solid var(--colour-3);
+}
+
+.filter_wraper .js-form-type-radio .form-radio:checked+label:hover::before,
+.filter_wraper .js-form-type-radio .form-radio:checked+label:focus::before {
+    background-color: var(--colour-12);
+}
+
+.filter_wraper .js-form-type-radio .form-radio:checked+label:hover::after,
+.filter_wraper .js-form-type-radio .form-radio:checked+label:focus::after {
+    background: var(--colour-4);
+}
+
+.filter_wraper .js-form-type-radio .control-label.option:hover::before,
+.filter_wraper .js-form-type-radio .control-label.option:focus::before {
+    background-color: var(--colour-12);
+}
+
+.hover_me:hover,
+.hover_me:focus {
+    border-bottom: 0.2rem solid var(--colour-3) !important;
+}
+
+.field--item .container_flude .section-link {
+    color: var(--colour-3);
+}
+
+.field--item .news_section_column .news-inner-wrapper .news-desp {
+    color: var(--colour-14);
+}
+
+.sitemap .sitemap-item ul li a:hover {
+    color: var(--colour-10);
+}
+
+.sitemap div>ul li a:hover,
+.sitemap div>ul li a:focus {
+    background-color: var(--colour-10);
+}
+
+.full-component-desc h6,
+.full-component-desc h5 {
+    color: var(--colour-3) !important;
+}
+
+ul.pagination.js-pager__items li a:hover,
+ul.pagination.js-pager__items li a:focus {
+    color: var(--colour-10) !important;
+    border-bottom: 0.2rem solid var(--colour-10) !important;
+}
+
+ul.pagination.js-pager__items li.page-item.pager__item--previous a:hover,
+ul.pagination.js-pager__items li.page-item.pager__item--previous a:focus {
+    background-color: var(--colour-10);
+}
+
+ul.pagination.js-pager__items li.page-item.pager__item--previous a:active {
+    color: var(--colour-2);
+}
+
+ul.pagination.js-pager__items li.page-item.pager__item--next a:hover,
+ul.pagination.js-pager__items li.page-item.pager__item--next a:focus {
+    background-color: var(--colour-10);
+}
+
+ul.pagination.js-pager__items li.page-item span,
+ul.pagination.js-pager__items li.page-item a {
+    color: var(--colour-14);
+}
+
+li.page-item.is-active.active a:hover {
+    color: var(--colour-13) !important;
+}
+
+ul.pagination.js-pager__items li a:hover {
+    color: var(--colour-13);
+    border-bottom: 0.2rem solid var(--colour-3);
+}
+
+li.pager__item:hover svg * {
+    background: var(--colour-4);
+}
+
+.pagerer-center-pane ul .pager__item--previous *,
+.pagerer-center-pane ul .pager__item--next * {
+    color: var(--colour-14);
+}
+
+.pagerer-center-pane ul li.pager__item.is-active a {
+    border-bottom: 0.2rem solid var(--colour-3);
+}
+
+.pagerer-center-pane ul li:hover a {
+    border-bottom: 0.2rem solid var(--colour-3) !important;
+}
+
+.pagerer-center-pane ul li a:focus {
+    border-bottom: 0.2rem solid var(--colour-3);
+}
+
+.pagerer-center-pane ul li a {
+    color: var(--colour-13);
+}
+
+.pagerer-left-pane ul li.pager__item.pager__item--previous a,
+.pagerer-left-pane ul li.pager__item.pager__item--next a {
+    color: var(--colour-14);
+}
+
+li.pager__item.pager__item--previous a:hover,
+li.pager__item.pager__item--previous a:focus,
+li.pager__item.pager__item--next a:hover,
+li.pager__item.pager__item--next a:focus {
+    background: var(--colour-10);
+}
+
+li.pager__item.pager__item--next:hover,
+li.pager__item.pager__item--next:focus {
+    background: var(--colour-10) !important;
+}
+
+.table-div table tbody tr.not-active:hover td {
+    color: var(--colour-14) !important;
+}
+
+.table-div table thead th {
+    color: var(--colour-14);
+    border-bottom: 0.2rem solid var(--colour-3);
+}
+
+.table-div table tbody td:first-child {
+    color: var(--colour-14);
+    border-top: 0.1rem solid var(--colour-6);
+}
+
+.table-div table tbody td {
+    color: var(--colour-14);
+}
+
+.custom-table th {
+    background: var(--colour-4);
+}
+
+tr:nth-of-type(2n) {
+    background: var(--colour-9);
+}
+
+td,
+th {
+    border-top: 0.1rem solid var(--colour-6);
+}
+
+td {
+    border-bottom: 0.1rem solid var(--colour-6);
+}
+
+td::before {
+    color: var(--colour-14);
+}
+
+.custom-table tr {
+    border-top: 0.2rem solid var(--colour-3);
+}
+
+.custom-table td {
+    border-top: 0.1rem solid var(--colour-11);
+}
+
+p {
+    color: var(--colour-14);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    color: var(--colour-3);
+}
+
+.alert-light h6 {
+    color: var(--colour-14);
+}
+
+.alert-light .alert-icon.al-info::before {
+    color: var(--colour-24);
+}
+
+.alert-light .alert-icon.al-error::before {
+    color: var(--colour-22);
+}
+
+.alert-light .alert-icon.al-warning::before {
+    color: var(--colour-23);
+}
+
+.alert-light .alert-icon.al-success::before {
+    color: var(--colour-18);
+}
+
+.alert-light .alert-icon .fa.fa-info-circle {
+    color: var(--colour-24);
+}
+
+.alert-light .alert-icon .fa.fa-times-circle {
+    color: var(--colour-22);
+}
+
+.alert-light .alert-icon .fa.fa-exclamation-circle {
+    color: var(--colour-23);
+}
+
+.alert-light .alert-icon .fa.fa-check-circle {
+    color: var(--colour-18);
+}
+
+.alert-light .alert-instruction .alert-information .alert-data {
+    color: var(--colour-14);
+}
+
+.alert-light .alert-instruction .alert-detail .alert-detail-data {
+    color: var(--colour-14);
+}
+
+.alert-light.alert-info {
+    background-color: var(--colour-35);
+    border-left: 0.4rem solid var(--colour-24);
+}
+
+.alert-light.alert-error {
+    background-color: var(--colour-34);
+    border-left: 0.4rem solid var(--colour-22);
+}
+
+.alert-light.alert-warning {
+    background-color: var(--colour-39);
+    border-left: 0.4rem solid var(--colour-23);
+}
+
+.alert-light.alert-success {
+    background-color: var(--colour-40);
+    border-left: 0.4rem solid var(--colour-18);
+}
+
+.header-notification.error {
+    background-color: var(--colour-22);
+}
+
+.header-notification.warning {
+    background-color: var(--colour-23);
+}
+
+.header-notification.success {
+    background-color: var(--colour-18);
+}
+
+.header-notification.info {
+    background-color: var(--colour-24);
+}
+
+.header-notification .notification-close {
+    color: var(--colour-24);
+}
+
+.header-notification:hover .notification-close {
+    background-color: var(--colour-4);
+    color: var(--colour-24);
+}
+
+.header-notification:hover .notification-close .maintenance-close {
+    color: var(--colour-22);
+}
+
+.header-notification:hover .notification-close .cautious-close {
+    color: var(--colour-23);
+}
+
+.header-notification:hover .notification-close .news-close {
+    color: var(--colour-18);
+}
+
+.header-notification:hover .notification-close .information-close {
+    color: var(--colour-24);
+}
+
+.button {
+    color: var(--colour-3) !important;
+    border: 0.2rem solid var(--colour-3) !important;
+    background: var(--colour-4) !important;
+}
+
+.webform input:hover,
+.webform select:hover,
+.webform textarea:hover {
+    background-color: var(--colour-9);
+    border: 0.1rem solid var(--colour-12);
+}
+
+.webform input:focus,
+.webform input:active,
+.webform select:focus,
+.webform select:active,
+.webform textarea:focus,
+.webform textarea:active {
+    background-color: var(--colour-4);
+    border: 0.2rem solid var(--colour-12);
+}
+
+.news-detail-page .field.field--name-body.field--type-text-with-summary.field--label-hidden.field--item ul li {
+    color: var(--colour-12);
+}
+
+.blog-post .comment-default-comments-form.comment-form {
+    background: var(--colour-9);
+}
+
+article.pages-for-donor.full.clearfix.full-view-node .field--label {
+    color: var(--colour-14);
+}
+
+article.pages-for-donor.full.clearfix.full-view-node h2 {
+    color: var(--colour-14);
+}
+
+article.pages-for-donor.full.clearfix.full-view-node h3 {
+    color: var(--colour-14);
+}
+
+article.pages-for-donor.full.clearfix.full-view-node .field--item {
+    color: var(--colour-14);
+}
+
+input,
+select {
+    border: 0.1rem solid var(--colour-12);
+    color: var(--colour-14);
+}
+
+.pages-for-donor a:hover {
+    color: var(--colour-3);
+}
+
+.webform a:hover {
+    color: var(--colour-3);
+}
+
+.webform li a {
+    color: var(--colour-14);
+}
+
+ul.entity-moderation-form {
+    border: 0.1rem dashed var(--colour-11);
+    background: var(--colour-4);
+}
+
+tr.odd .webform-likert-table-wrapper th,
+.webform-likert-table-wrapper td {
+    border: 0.1rem solid var(--colour-11);
+}
+
+section#block-consentonthevisionaustralia .field.field--name-body.field--type-text-with-summary.field--label-hidden.field--item p {
+    color: var(--colour-14);
+}
+
+a.amountOpt:hover span.views-field.views-field-field-amount span.field-content,
+a.amountOpt:focus span.views-field.views-field-field-amount span.field-content,
+a.amountOpt:active span.views-field.views-field-field-amount span.field-content {
+    color: var(--colour-2);
+}
+
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+    outline: -webkit-focus-ring-color auto 0.5rem;
+}
+
+output {
+    color: var(--colour-28);
+}
+
+.form-control {
+    border: 0.1rem solid var(--colour-14);
+    color: var(--colour-14);
+    background-color: var(--colour-4);
+    box-shadow: var(--colour-41) 0px 0.1rem 0.1rem inset;
+}
+
+.form-control::-webkit-input-placeholder {
+    color: var(--colour-16);
+}
+
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+    background-color: var(--colour-6);
+}
+
+.help-block {
+    color: var(--colour-28);
+}
+
+.btn-group.open .dropdown-toggle {
+    box-shadow: var(--colour-42) 0px 0.3rem 0.5rem inset;
+}
+
+.input-group .form-control {
+    color: var(--colour-14);
+}
+
+.input-group-addon {
+    color: var(--colour-28);
+    background-color: var(--colour-6);
+    border: 0.1rem solid var(--colour-11);
+}
+
+body {
+    color: var(--colour-14);
+    background-color: var(--colour-4);
+}
+
+.padded-multiline {
+    border-left: 2rem solid var(--colour-7);
+}
+
+.padded-multiline-2 {
+    border-left: 2rem solid var(--colour-7);
+}
+
+.padded-multiline-2 h2 {
+    color: var(--colour-2);
+}
+
+.carols h1,
+.carols h2,
+.carols h3 {
+    color: var(--colour-3);
+}
+
+.carols h1 span,
+.carols h2 span,
+.carols h3 span {
+    color: var(--colour-2);
+}
+
+.carols h1 span {
+    box-shadow: var(--colour-7) 0.3rem 0px 0rem 0.5rem;
+    border-left: 0.6rem solid var(--colour-7);
+}
+
+.carols .padded-multiline h1,
+.carols .padded-multiline h2,
+.carols .padded-multiline-2 h1,
+.carols .padded-multiline-2 h2 {
+    color: var(--colour-7);
+}
+
+.carols .padded-multiline,
+.carols .padded-multiline-2,
+.carols .padded-multiline-3 {
+    border-left: 2rem solid var(--colour-7);
+}
+
+.carols .padded-multiline h1,
+.carols .padded-multiline h2,
+.carols .padded-multiline h3,
+.carols .padded-multiline-2 h1,
+.carols .padded-multiline-2 h2,
+.carols .padded-multiline-2 h3,
+.carols .padded-multiline-3 h1,
+.carols .padded-multiline-3 h2,
+.carols .padded-multiline-3 h3 {
+    color: var(--colour-2);
+}
+
+.carols h5 {
+    color: var(--colour-7);
+}
+
+.time-period-blue {
+    color: var(--colour-12);
+}
+
+.time-period-yellow {
+    color: var(--colour-7);
+}
+
+.btn.bnt-white {
+    color: var(--colour-3);
+    background-color: var(--colour-4);
+    border: 0.2rem solid var(--colour-3);
+}
+
+.btn.btn-blue:hover,
+.btn.btn-blue:focus {
+    color: var(--colour-3);
+    background-color: var(--colour-4);
+    border: 0.2rem solid var(--colour-7);
+}
+
+.btn.btn-grey {
+    color: var(--colour-12);
+    background-color: var(--colour-11);
+    border: 0.2rem solid var(--colour-11);
+}
+
+.btn.btn-grey:hover,
+.btn.btn-grey:focus,
+.btn.btn-grey:active {
+    color: var(--colour-11);
+    background: var(--colour-12);
+    border: 0.2rem solid var(--colour-11);
+}
+
+.btn.btn-purple:hover,
+.btn.btn-purple:focus,
+.btn.btn-purple:active {
+    color: var(--colour-3);
+    background-color: var(--colour-4);
+    border: 0.2rem solid var(--colour-7);
+}
+
+.icon-info::before {
+    color: var(--colour-3);
+}
+
+.icon-add-new::before {
+    color: var(--colour-3);
+}
+
+.icon-default::before {
+    color: var(--colour-3);
+}
+
+.icon-profile-picture::before {
+    color: var(--colour-12);
+}
+
+.icon-location-blue::before {
+    color: var(--colour-3);
+}
+
+.icon-tick-selected .path1::before {
+    color: var(--colour-7);
+}
+
+.icon-tick-selected .path2::before {
+    color: var(--colour-3);
+}
+
+.icon-email::before {
+    color: var(--colour-3);
+}
+
+.icon-expand_arrow::before {
+    color: var(--colour-3);
+}
+
+.icon-export::before {
+    color: var(--colour-3);
+}
+
+.icon-VA-Logo_for-mobile::before {
+    color: var(--colour-7);
+}
+
+.icon-VA_Logo::before {
+    color: var(--colour-7);
+}
+
+.icon-phone::before {
+    color: var(--colour-3);
+}
+
+.icon-person::before {
+    color: var(--colour-3);
+}
+
+.alert-success a,
+.alert-success a:hover,
+.alert-success a:focus {
+    color: var(--colour-18);
+}
+
+.alert-info a,
+.alert-info a:hover,
+.alert-info a:focus {
+    color: var(--colour-24);
+}
+
+.alert-warning a,
+.alert-warning a:hover,
+.alert-warning a:focus {
+    color: var(--colour-23);
+}
+
+.alert-danger a,
+.alert-danger a:hover,
+.alert-danger a:focus {
+    color: var(--colour-43);
+}
+
+.boxDonate form select:focus,
+.boxDonate form select.StripeElement--focus,
+.boxDonate form input:focus,
+.boxDonate form input.StripeElement--focus,
+.boxDonate form .card-element:focus,
+.boxDonate form .card-element.StripeElement--focus,
+.boxDonate form input[type="text"]:focus,
+.boxDonate form input[type="text"].StripeElement--focus,
+.boxDonate form input[type="number"]:focus,
+.boxDonate form input[type="number"].StripeElement--focus,
+.boxDonate form input[type="email"]:focus,
+.boxDonate form input[type="email"].StripeElement--focus,
+.boxDonate form input[type="password"]:focus,
+.boxDonate form input[type="password"].StripeElement--focus,
+.donate-thank-you form select:focus,
+.donate-thank-you form select.StripeElement--focus,
+.donate-thank-you form input:focus,
+.donate-thank-you form input.StripeElement--focus,
+.donate-thank-you form .card-element:focus,
+.donate-thank-you form .card-element.StripeElement--focus,
+.donate-thank-you form input[type="text"]:focus,
+.donate-thank-you form input[type="text"].StripeElement--focus,
+.donate-thank-you form input[type="number"]:focus,
+.donate-thank-you form input[type="number"].StripeElement--focus,
+.donate-thank-you form input[type="email"]:focus,
+.donate-thank-you form input[type="email"].StripeElement--focus,
+.donate-thank-you form input[type="password"]:focus,
+.donate-thank-you form input[type="password"].StripeElement--focus,
+.box-purchase-membership form select:focus,
+.box-purchase-membership form select.StripeElement--focus,
+.box-purchase-membership form input:focus,
+.box-purchase-membership form input.StripeElement--focus,
+.box-purchase-membership form .card-element:focus,
+.box-purchase-membership form .card-element.StripeElement--focus,
+.box-purchase-membership form input[type="text"]:focus,
+.box-purchase-membership form input[type="text"].StripeElement--focus,
+.box-purchase-membership form input[type="number"]:focus,
+.box-purchase-membership form input[type="number"].StripeElement--focus,
+.box-purchase-membership form input[type="email"]:focus,
+.box-purchase-membership form input[type="email"].StripeElement--focus,
+.box-purchase-membership form input[type="password"]:focus,
+.box-purchase-membership form input[type="password"].StripeElement--focus {
+    border: 0.2rem solid var(--colour-3);
+    box-shadow: var(--colour-3) 0px 0px 0.4rem 0rem;
+}
+
+.boxDonate form select.error,
+.boxDonate form select.StripeElement--invalid,
+.boxDonate form input.error,
+.boxDonate form input.StripeElement--invalid,
+.boxDonate form .card-element.error,
+.boxDonate form .card-element.StripeElement--invalid,
+.boxDonate form input[type="text"].error,
+.boxDonate form input[type="text"].StripeElement--invalid,
+.boxDonate form input[type="number"].error,
+.boxDonate form input[type="number"].StripeElement--invalid,
+.boxDonate form input[type="email"].error,
+.boxDonate form input[type="email"].StripeElement--invalid,
+.boxDonate form input[type="password"].error,
+.boxDonate form input[type="password"].StripeElement--invalid,
+.donate-thank-you form select.error,
+.donate-thank-you form select.StripeElement--invalid,
+.donate-thank-you form input.error,
+.donate-thank-you form input.StripeElement--invalid,
+.donate-thank-you form .card-element.error,
+.donate-thank-you form .card-element.StripeElement--invalid,
+.donate-thank-you form input[type="text"].error,
+.donate-thank-you form input[type="text"].StripeElement--invalid,
+.donate-thank-you form input[type="number"].error,
+.donate-thank-you form input[type="number"].StripeElement--invalid,
+.donate-thank-you form input[type="email"].error,
+.donate-thank-you form input[type="email"].StripeElement--invalid,
+.donate-thank-you form input[type="password"].error,
+.donate-thank-you form input[type="password"].StripeElement--invalid,
+.box-purchase-membership form select.error,
+.box-purchase-membership form select.StripeElement--invalid,
+.box-purchase-membership form input.error,
+.box-purchase-membership form input.StripeElement--invalid,
+.box-purchase-membership form .card-element.error,
+.box-purchase-membership form .card-element.StripeElement--invalid,
+.box-purchase-membership form input[type="text"].error,
+.box-purchase-membership form input[type="text"].StripeElement--invalid,
+.box-purchase-membership form input[type="number"].error,
+.box-purchase-membership form input[type="number"].StripeElement--invalid,
+.box-purchase-membership form input[type="email"].error,
+.box-purchase-membership form input[type="email"].StripeElement--invalid,
+.box-purchase-membership form input[type="password"].error,
+.box-purchase-membership form input[type="password"].StripeElement--invalid {
+    border: 0.2rem solid var(--colour-32);
+    box-shadow: var(--colour-32) 0px 0px 0.4rem 0rem;
+}
+
+.boxDonate form label.error,
+.boxDonate form label.card-error,
+.boxDonate form label.err,
+.boxDonate form span.error,
+.boxDonate form span.card-error,
+.boxDonate form span.err,
+.donate-thank-you form label.error,
+.donate-thank-you form label.card-error,
+.donate-thank-you form label.err,
+.donate-thank-you form span.error,
+.donate-thank-you form span.card-error,
+.donate-thank-you form span.err,
+.box-purchase-membership form label.error,
+.box-purchase-membership form label.card-error,
+.box-purchase-membership form label.err,
+.box-purchase-membership form span.error,
+.box-purchase-membership form span.card-error,
+.box-purchase-membership form span.err {
+    color: var(--colour-32);
+}
+
+.has-glyphicons .boxDonate form .select-wrapper::before,
+.has-glyphicons .donate-thank-you form .select-wrapper::before,
+.has-glyphicons .box-purchase-membership form .select-wrapper::before {
+    color: var(--colour-3);
+}
+
+span.glyphicon.glyphicon-ok::before {
+    color: var(--colour-3);
+}
+
+.views-field.views-field-nothing.active,
+.boxDonate form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing.active,
+.boxDonate form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing.active,
+.boxDonate form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing.active,
+.box-purchase-membership form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing.active,
+.box-purchase-membership form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing.active,
+.box-purchase-membership form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing.active,
+.box-purchase-membership form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing.active {
+    border: 0.2rem solid var(--colour-3);
+}
+
+.boxDonate form .select-wrapper.error::before,
+.donate-thank-you form .select-wrapper.error::before,
+.box-purchase-membership form .select-wrapper.error::before {
+    color: var(--colour-32);
+}
+
+.boxDonate.carols form select:focus,
+.boxDonate.carols form input[type="text"]:focus,
+.boxDonate.carols form input[type="number"]:focus,
+.boxDonate.carols form input[type="email"]:focus,
+.boxDonate.carols form input[type="password"]:focus,
+.donate-thank-you.carols form select:focus,
+.donate-thank-you.carols form input[type="text"]:focus,
+.donate-thank-you.carols form input[type="number"]:focus,
+.donate-thank-you.carols form input[type="email"]:focus,
+.donate-thank-you.carols form input[type="password"]:focus,
+.box-purchase-membership.carols form select:focus,
+.box-purchase-membership.carols form input[type="text"]:focus,
+.box-purchase-membership.carols form input[type="number"]:focus,
+.box-purchase-membership.carols form input[type="email"]:focus,
+.box-purchase-membership.carols form input[type="password"]:focus {
+    border: 0.2rem solid var(--colour-3);
+    box-shadow: var(--colour-3) 0px 0px 0.4rem 0rem;
+}
+
+.boxDonate.carols form select.error,
+.boxDonate.carols form input[type="text"].error,
+.boxDonate.carols form input[type="number"].error,
+.boxDonate.carols form input[type="email"].error,
+.boxDonate.carols form input[type="password"].error,
+.donate-thank-you.carols form select.error,
+.donate-thank-you.carols form input[type="text"].error,
+.donate-thank-you.carols form input[type="number"].error,
+.donate-thank-you.carols form input[type="email"].error,
+.donate-thank-you.carols form input[type="password"].error,
+.box-purchase-membership.carols form select.error,
+.box-purchase-membership.carols form input[type="text"].error,
+.box-purchase-membership.carols form input[type="number"].error,
+.box-purchase-membership.carols form input[type="email"].error,
+.box-purchase-membership.carols form input[type="password"].error {
+    border: 0.2rem solid var(--colour-32);
+    box-shadow: var(--colour-32) 0px 0px 0.4rem 0rem;
+}
+
+.has-glyphicons .boxDonate.carols form .select-wrapper::before,
+.has-glyphicons .donate-thank-you.carols form .select-wrapper::before,
+.has-glyphicons .box-purchase-membership.carols form .select-wrapper::before {
+    color: var(--colour-3);
+}
+
+.boxDonate form .boxContent,
+.boxDonate form .box-content,
+.box-purchase-membership form .boxContent,
+.box-purchase-membership form .box-content {
+    box-shadow: var(--colour-31) 0px 0px 0.4rem 0.2rem;
+    background-color: var(--colour-4);
+}
+
+.boxDonate form .boxContent.content-recaptcha .recaptcha-error,
+.boxDonate form .box-content.content-recaptcha .recaptcha-error,
+.box-purchase-membership form .boxContent.content-recaptcha .recaptcha-error,
+.box-purchase-membership form .box-content.content-recaptcha .recaptcha-error {
+    color: var(--colour-32);
+}
+
+.boxDonate form .boxContent .boxChk input[type="checkbox"]~label.lbl-checkbox::before,
+.boxDonate form .box-content .boxChk input[type="checkbox"]~label.lbl-checkbox::before,
+.box-purchase-membership form .boxContent .boxChk input[type="checkbox"]~label.lbl-checkbox::before,
+.box-purchase-membership form .box-content .boxChk input[type="checkbox"]~label.lbl-checkbox::before {
+    background: var(--colour-4);
+    border: 0.1rem solid var(--colour-12);
+}
+
+.boxDonate form .boxContent .boxChk input[type="checkbox"]:focus~label.lbl-checkbox::before,
+.boxDonate form .box-content .boxChk input[type="checkbox"]:focus~label.lbl-checkbox::before,
+.box-purchase-membership form .boxContent .boxChk input[type="checkbox"]:focus~label.lbl-checkbox::before,
+.box-purchase-membership form .box-content .boxChk input[type="checkbox"]:focus~label.lbl-checkbox::before {
+    box-shadow: var(--colour-3) 0px 0px 0.4rem 0rem;
+    border: 0.2rem solid var(--colour-3);
+}
+
+.boxDonate form .boxContent .boxChk input[type="checkbox"]:checked:focus~label.lbl-checkbox .icon-tick-selected .path2::before,
+.boxDonate form .box-content .boxChk input[type="checkbox"]:checked:focus~label.lbl-checkbox .icon-tick-selected .path2::before,
+.box-purchase-membership form .boxContent .boxChk input[type="checkbox"]:checked:focus~label.lbl-checkbox .icon-tick-selected .path2::before,
+.box-purchase-membership form .box-content .boxChk input[type="checkbox"]:checked:focus~label.lbl-checkbox .icon-tick-selected .path2::before {
+    color: var(--colour-3);
+}
+
+.boxDonate form .boxContent .boxGroupDonateType>button,
+.boxDonate form .box-content .boxGroupDonateType>button,
+.box-purchase-membership form .boxContent .boxGroupDonateType>button,
+.box-purchase-membership form .box-content .boxGroupDonateType>button {
+    background-color: var(--colour-4) !important;
+    color: var(--colour-3) !important;
+    border: 0.1rem solid var(--colour-3) !important;
+}
+
+.boxDonate form .boxContent .boxGroupDonateType>button:focus,
+.boxDonate form .box-content .boxGroupDonateType>button:focus,
+.box-purchase-membership form .boxContent .boxGroupDonateType>button:focus,
+.box-purchase-membership form .box-content .boxGroupDonateType>button:focus {
+    outline: var(--colour-44) auto;
+}
+
+.boxDonate form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a,
+.boxDonate form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a,
+.boxDonate form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a,
+.boxDonate form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a,
+.box-purchase-membership form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a,
+.box-purchase-membership form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a,
+.box-purchase-membership form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a,
+.box-purchase-membership form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a {
+    background-color: var(--colour-4);
+    box-shadow: var(--colour-31) 0px 0px 0.4rem 0.2rem;
+}
+
+.boxDonate form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image>.field-content .wrapImagecolor,
+.boxDonate form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image>.field-content .wrap-image-color,
+.boxDonate form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image>.field-content .wrapImagecolor,
+.boxDonate form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image>.field-content .wrap-image-color,
+.boxDonate form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image>.field-content .wrapImagecolor,
+.boxDonate form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image>.field-content .wrap-image-color,
+.boxDonate form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image>.field-content .wrapImagecolor,
+.boxDonate form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image>.field-content .wrap-image-color,
+.box-purchase-membership form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image>.field-content .wrapImagecolor,
+.box-purchase-membership form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image>.field-content .wrap-image-color,
+.box-purchase-membership form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image>.field-content .wrapImagecolor,
+.box-purchase-membership form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image>.field-content .wrap-image-color,
+.box-purchase-membership form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image>.field-content .wrapImagecolor,
+.box-purchase-membership form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image>.field-content .wrap-image-color,
+.box-purchase-membership form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image>.field-content .wrapImagecolor,
+.box-purchase-membership form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image>.field-content .wrap-image-color {
+    color: var(--colour-2);
+}
+
+.boxDonate form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing.active,
+.boxDonate form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing.active,
+.boxDonate form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing.active,
+.boxDonate form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing.active,
+.box-purchase-membership form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing.active,
+.box-purchase-membership form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing.active,
+.box-purchase-membership form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing.active,
+.box-purchase-membership form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing.active {
+    border: 0.2rem solid var(--colour-3);
+    box-shadow: var(--colour-31) 0px 0px 0.4rem 0.2rem;
+}
+
+.boxDonate form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing.focus,
+.boxDonate form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing.focus,
+.boxDonate form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing.focus,
+.boxDonate form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing.focus,
+.box-purchase-membership form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing.focus,
+.box-purchase-membership form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing.focus,
+.box-purchase-membership form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing.focus,
+.box-purchase-membership form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing.focus {
+    border: 0.2rem solid var(--colour-3);
+}
+
+.boxDonate form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:hover>.views-field.views-field-field-amount .field-content,
+.boxDonate form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:focus>.views-field.views-field-field-amount .field-content,
+.boxDonate form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:active>.views-field.views-field-field-amount .field-content,
+.boxDonate form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:hover>.views-field.views-field-field-amount .field-content,
+.boxDonate form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:focus>.views-field.views-field-field-amount .field-content,
+.boxDonate form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:active>.views-field.views-field-field-amount .field-content,
+.boxDonate form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:hover>.views-field.views-field-field-amount .field-content,
+.boxDonate form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:focus>.views-field.views-field-field-amount .field-content,
+.boxDonate form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:active>.views-field.views-field-field-amount .field-content,
+.boxDonate form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:hover>.views-field.views-field-field-amount .field-content,
+.boxDonate form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:focus>.views-field.views-field-field-amount .field-content,
+.boxDonate form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:active>.views-field.views-field-field-amount .field-content,
+.box-purchase-membership form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:hover>.views-field.views-field-field-amount .field-content,
+.box-purchase-membership form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:focus>.views-field.views-field-field-amount .field-content,
+.box-purchase-membership form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:active>.views-field.views-field-field-amount .field-content,
+.box-purchase-membership form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:hover>.views-field.views-field-field-amount .field-content,
+.box-purchase-membership form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:focus>.views-field.views-field-field-amount .field-content,
+.box-purchase-membership form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:active>.views-field.views-field-field-amount .field-content,
+.box-purchase-membership form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:hover>.views-field.views-field-field-amount .field-content,
+.box-purchase-membership form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:focus>.views-field.views-field-field-amount .field-content,
+.box-purchase-membership form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:active>.views-field.views-field-field-amount .field-content,
+.box-purchase-membership form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:hover>.views-field.views-field-field-amount .field-content,
+.box-purchase-membership form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:focus>.views-field.views-field-field-amount .field-content,
+.box-purchase-membership form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:active>.views-field.views-field-field-amount .field-content {
+    color: var(--colour-2);
+}
+
+.boxDonate form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active,
+.boxDonate form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active,
+.boxDonate form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active,
+.boxDonate form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active,
+.box-purchase-membership form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active,
+.box-purchase-membership form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active,
+.box-purchase-membership form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active,
+.box-purchase-membership form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active {
+    color: var(--colour-14);
+    background-color: var(--colour-4);
+}
+
+.boxDonate form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active>.views-field.views-field-field-image>.field-content .wrapImagecolor.focus,
+.boxDonate form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active>.views-field.views-field-field-image>.field-content .wrap-image-color.focus,
+.boxDonate form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active>.views-field.views-field-field-image>.field-content .wrapImagecolor.focus,
+.boxDonate form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active>.views-field.views-field-field-image>.field-content .wrap-image-color.focus,
+.boxDonate form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active>.views-field.views-field-field-image>.field-content .wrapImagecolor.focus,
+.boxDonate form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active>.views-field.views-field-field-image>.field-content .wrap-image-color.focus,
+.boxDonate form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active>.views-field.views-field-field-image>.field-content .wrapImagecolor.focus,
+.boxDonate form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active>.views-field.views-field-field-image>.field-content .wrap-image-color.focus,
+.box-purchase-membership form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active>.views-field.views-field-field-image>.field-content .wrapImagecolor.focus,
+.box-purchase-membership form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active>.views-field.views-field-field-image>.field-content .wrap-image-color.focus,
+.box-purchase-membership form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active>.views-field.views-field-field-image>.field-content .wrapImagecolor.focus,
+.box-purchase-membership form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active>.views-field.views-field-field-image>.field-content .wrap-image-color.focus,
+.box-purchase-membership form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active>.views-field.views-field-field-image>.field-content .wrapImagecolor.focus,
+.box-purchase-membership form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active>.views-field.views-field-field-image>.field-content .wrap-image-color.focus,
+.box-purchase-membership form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active>.views-field.views-field-field-image>.field-content .wrapImagecolor.focus,
+.box-purchase-membership form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active>.views-field.views-field-field-image>.field-content .wrap-image-color.focus {
+    color: var(--colour-2);
+}
+
+.boxDonate form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active>.views-field.views-field-field-amount .field-content,
+.boxDonate form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active>.views-field.views-field-field-amount .field-content,
+.boxDonate form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active>.views-field.views-field-field-amount .field-content,
+.boxDonate form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active>.views-field.views-field-field-amount .field-content,
+.box-purchase-membership form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active>.views-field.views-field-field-amount .field-content,
+.box-purchase-membership form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active>.views-field.views-field-field-amount .field-content,
+.box-purchase-membership form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active>.views-field.views-field-field-amount .field-content,
+.box-purchase-membership form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active>.views-field.views-field-field-amount .field-content {
+    color: var(--colour-2);
+}
+
+.boxDonate form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active:hover>.views-field.views-field-field-image>.field-content .wrapImagecolor,
+.boxDonate form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active:hover>.views-field.views-field-field-image>.field-content .wrap-image-color,
+.boxDonate form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active:hover>.views-field.views-field-field-image>.field-content .wrapImagecolor,
+.boxDonate form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active:hover>.views-field.views-field-field-image>.field-content .wrap-image-color,
+.boxDonate form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active:hover>.views-field.views-field-field-image>.field-content .wrapImagecolor,
+.boxDonate form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active:hover>.views-field.views-field-field-image>.field-content .wrap-image-color,
+.boxDonate form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active:hover>.views-field.views-field-field-image>.field-content .wrapImagecolor,
+.boxDonate form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active:hover>.views-field.views-field-field-image>.field-content .wrap-image-color,
+.box-purchase-membership form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active:hover>.views-field.views-field-field-image>.field-content .wrapImagecolor,
+.box-purchase-membership form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active:hover>.views-field.views-field-field-image>.field-content .wrap-image-color,
+.box-purchase-membership form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active:hover>.views-field.views-field-field-image>.field-content .wrapImagecolor,
+.box-purchase-membership form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active:hover>.views-field.views-field-field-image>.field-content .wrap-image-color,
+.box-purchase-membership form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active:hover>.views-field.views-field-field-image>.field-content .wrapImagecolor,
+.box-purchase-membership form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active:hover>.views-field.views-field-field-image>.field-content .wrap-image-color,
+.box-purchase-membership form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active:hover>.views-field.views-field-field-image>.field-content .wrapImagecolor,
+.box-purchase-membership form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active:hover>.views-field.views-field-field-image>.field-content .wrap-image-color {
+    color: var(--colour-2);
+}
+
+.boxDonate form .boxContent .boxAmount .help-block,
+.boxDonate form .box-content .boxAmount .help-block,
+.box-purchase-membership form .boxContent .boxAmount .help-block,
+.box-purchase-membership form .box-content .boxAmount .help-block {
+    color: var(--colour-14);
+}
+
+.boxDonate form .boxContent.boxYourDetail .form-group .add-help-text,
+.boxDonate form .boxContent.box-your-detail .form-group .add-help-text,
+.boxDonate form .box-content.boxYourDetail .form-group .add-help-text,
+.boxDonate form .box-content.box-your-detail .form-group .add-help-text,
+.box-purchase-membership form .boxContent.boxYourDetail .form-group .add-help-text,
+.box-purchase-membership form .boxContent.box-your-detail .form-group .add-help-text,
+.box-purchase-membership form .box-content.boxYourDetail .form-group .add-help-text,
+.box-purchase-membership form .box-content.box-your-detail .form-group .add-help-text {
+    background-color: var(--colour-11);
+}
+
+.boxDonate form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new,
+.boxDonate form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new,
+.box-purchase-membership form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new,
+.box-purchase-membership form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new {
+    background-color: var(--colour-4);
+    box-shadow: var(--colour-31) 0px 0px 0.4rem 0.2rem;
+}
+
+.boxDonate form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new .add-card .text,
+.boxDonate form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new .add-card .text,
+.box-purchase-membership form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new .add-card .text,
+.box-purchase-membership form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new .add-card .text {
+    color: var(--colour-3);
+}
+
+.boxDonate form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new:hover,
+.boxDonate form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new:focus,
+.boxDonate form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new:hover,
+.boxDonate form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new:focus,
+.box-purchase-membership form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new:hover,
+.box-purchase-membership form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new:focus,
+.box-purchase-membership form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new:hover,
+.box-purchase-membership form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new:focus {
+    color: var(--colour-2);
+}
+
+.boxDonate form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new:active,
+.boxDonate form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new:active,
+.box-purchase-membership form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new:active,
+.box-purchase-membership form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new:active {
+    color: var(--colour-2);
+}
+
+.boxDonate form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new:active .add-card .icon-add-new::before,
+.boxDonate form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new:active .add-card .text,
+.boxDonate form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new:active .add-card .icon-add-new::before,
+.boxDonate form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new:active .add-card .text,
+.box-purchase-membership form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new:active .add-card .icon-add-new::before,
+.box-purchase-membership form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new:active .add-card .text,
+.box-purchase-membership form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new:active .add-card .icon-add-new::before,
+.box-purchase-membership form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new:active .add-card .text {
+    color: var(--colour-3);
+}
+
+.boxDonate form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.icon-tick-selected .update-default.icon-default::before,
+.boxDonate form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.icon-tick-selected .update-default.icon-default::before,
+.box-purchase-membership form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.icon-tick-selected .update-default.icon-default::before,
+.box-purchase-membership form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.icon-tick-selected .update-default.icon-default::before {
+    color: var(--colour-7);
+}
+
+.boxDonate form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.active.icon-tick-selected,
+.boxDonate form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.active.icon-tick-selected,
+.box-purchase-membership form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.active.icon-tick-selected,
+.box-purchase-membership form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.active.icon-tick-selected {
+    color: var(--colour-2);
+}
+
+.boxDonate form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner:hover,
+.boxDonate form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner:hover,
+.box-purchase-membership form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner:hover,
+.box-purchase-membership form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner:hover {
+    color: var(--colour-2);
+}
+
+.boxDonate form .boxContent.box-payment-method .form-group.box-check input[type="checkbox"]+label::before,
+.boxDonate form .box-content.box-payment-method .form-group.box-check input[type="checkbox"]+label::before,
+.box-purchase-membership form .boxContent.box-payment-method .form-group.box-check input[type="checkbox"]+label::before,
+.box-purchase-membership form .box-content.box-payment-method .form-group.box-check input[type="checkbox"]+label::before {
+    background: var(--colour-4);
+    border: 0.1rem solid var(--colour-12);
+}
+
+.boxDonate form .boxContent.box-payment-method .form-group.box-check input[type="checkbox"]:focus+label::before,
+.boxDonate form .box-content.box-payment-method .form-group.box-check input[type="checkbox"]:focus+label::before,
+.box-purchase-membership form .boxContent.box-payment-method .form-group.box-check input[type="checkbox"]:focus+label::before,
+.box-purchase-membership form .box-content.box-payment-method .form-group.box-check input[type="checkbox"]:focus+label::before {
+    box-shadow: var(--colour-3) 0px 0px 0.4rem 0rem;
+    border: 0.2rem solid var(--colour-3);
+}
+
+.boxDonate form .boxContent.box-payment-method .form-group.box-check input[type="checkbox"]:checked:focus+label .icon-tick-selected .path2::before,
+.boxDonate form .box-content.box-payment-method .form-group.box-check input[type="checkbox"]:checked:focus+label .icon-tick-selected .path2::before,
+.box-purchase-membership form .boxContent.box-payment-method .form-group.box-check input[type="checkbox"]:checked:focus+label .icon-tick-selected .path2::before,
+.box-purchase-membership form .box-content.box-payment-method .form-group.box-check input[type="checkbox"]:checked:focus+label .icon-tick-selected .path2::before {
+    color: var(--colour-3);
+}
+
+.boxDonate form .boxContent .donate-info-top-content .tile-document .item-file,
+.boxDonate form .box-content .donate-info-top-content .tile-document .item-file,
+.box-purchase-membership form .boxContent .donate-info-top-content .tile-document .item-file,
+.box-purchase-membership form .box-content .donate-info-top-content .tile-document .item-file {
+    box-shadow: var(--colour-31) 0px 0px 0.4rem 0.2rem;
+    background-color: var(--colour-4);
+}
+
+.boxDonate form .boxContent .donate-info-top-content .tile-document .item-file:hover,
+.boxDonate form .boxContent .donate-info-top-content .tile-document .item-file:focus,
+.boxDonate form .box-content .donate-info-top-content .tile-document .item-file:hover,
+.boxDonate form .box-content .donate-info-top-content .tile-document .item-file:focus,
+.box-purchase-membership form .boxContent .donate-info-top-content .tile-document .item-file:hover,
+.box-purchase-membership form .boxContent .donate-info-top-content .tile-document .item-file:focus,
+.box-purchase-membership form .box-content .donate-info-top-content .tile-document .item-file:hover,
+.box-purchase-membership form .box-content .donate-info-top-content .tile-document .item-file:focus {
+    color: var(--colour-2);
+}
+
+.boxDonate.seda form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path1::before,
+.boxDonate.seda form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path1::before,
+.boxDonate.seda form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path1::before,
+.boxDonate.seda form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path1::before,
+.boxDonate.radio-donate-page form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path1::before,
+.boxDonate.radio-donate-page form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path1::before,
+.boxDonate.radio-donate-page form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path1::before,
+.boxDonate.radio-donate-page form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path1::before,
+.box-purchase-membership.seda form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path1::before,
+.box-purchase-membership.seda form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path1::before,
+.box-purchase-membership.seda form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path1::before,
+.box-purchase-membership.seda form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path1::before,
+.box-purchase-membership.radio-donate-page form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path1::before,
+.box-purchase-membership.radio-donate-page form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path1::before,
+.box-purchase-membership.radio-donate-page form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path1::before,
+.box-purchase-membership.radio-donate-page form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path1::before {
+    color: var(--colour-7);
+}
+
+.boxDonate.seda form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path2::before,
+.boxDonate.seda form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path2::before,
+.boxDonate.seda form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path2::before,
+.boxDonate.seda form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path2::before,
+.boxDonate.radio-donate-page form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path2::before,
+.boxDonate.radio-donate-page form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path2::before,
+.boxDonate.radio-donate-page form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path2::before,
+.boxDonate.radio-donate-page form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path2::before,
+.box-purchase-membership.seda form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path2::before,
+.box-purchase-membership.seda form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path2::before,
+.box-purchase-membership.seda form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path2::before,
+.box-purchase-membership.seda form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path2::before,
+.box-purchase-membership.radio-donate-page form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path2::before,
+.box-purchase-membership.radio-donate-page form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path2::before,
+.box-purchase-membership.radio-donate-page form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path2::before,
+.box-purchase-membership.radio-donate-page form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path2::before {
+    color: var(--colour-3);
+}
+
+.boxDonate.carols form .boxContent a,
+.boxDonate.carols form .box-content a,
+.box-purchase-membership.carols form .boxContent a,
+.box-purchase-membership.carols form .box-content a {
+    color: var(--colour-3);
+}
+
+.boxDonate.carols form .boxContent .boxChk input[type="checkbox"]~label.lbl-checkbox::before,
+.boxDonate.carols form .box-content .boxChk input[type="checkbox"]~label.lbl-checkbox::before,
+.box-purchase-membership.carols form .boxContent .boxChk input[type="checkbox"]~label.lbl-checkbox::before,
+.box-purchase-membership.carols form .box-content .boxChk input[type="checkbox"]~label.lbl-checkbox::before {
+    background: var(--colour-4);
+    border: 0.1rem solid var(--colour-12);
+}
+
+.boxDonate.carols form .boxContent .boxChk input[type="checkbox"]~label.lbl-checkbox .icon-tick-selected .path2::before,
+.boxDonate.carols form .box-content .boxChk input[type="checkbox"]~label.lbl-checkbox .icon-tick-selected .path2::before,
+.box-purchase-membership.carols form .boxContent .boxChk input[type="checkbox"]~label.lbl-checkbox .icon-tick-selected .path2::before,
+.box-purchase-membership.carols form .box-content .boxChk input[type="checkbox"]~label.lbl-checkbox .icon-tick-selected .path2::before {
+    color: var(--colour-3);
+}
+
+.boxDonate.carols form .boxContent .boxChk input[type="checkbox"]:focus~label.lbl-checkbox::before,
+.boxDonate.carols form .box-content .boxChk input[type="checkbox"]:focus~label.lbl-checkbox::before,
+.box-purchase-membership.carols form .boxContent .boxChk input[type="checkbox"]:focus~label.lbl-checkbox::before,
+.box-purchase-membership.carols form .box-content .boxChk input[type="checkbox"]:focus~label.lbl-checkbox::before {
+    box-shadow: var(--colour-3) 0px 0px 0.4rem 0rem;
+    border: 0.2rem solid var(--colour-3);
+}
+
+.boxDonate.carols form .boxContent .boxChk input[type="checkbox"]:checked:focus~label.lbl-checkbox .icon-tick-selected .path2::before,
+.boxDonate.carols form .box-content .boxChk input[type="checkbox"]:checked:focus~label.lbl-checkbox .icon-tick-selected .path2::before,
+.box-purchase-membership.carols form .boxContent .boxChk input[type="checkbox"]:checked:focus~label.lbl-checkbox .icon-tick-selected .path2::before,
+.box-purchase-membership.carols form .box-content .boxChk input[type="checkbox"]:checked:focus~label.lbl-checkbox .icon-tick-selected .path2::before {
+    color: var(--colour-3);
+}
+
+.boxDonate.carols form .boxContent .boxGroupDonateType>button,
+.boxDonate.carols form .box-content .boxGroupDonateType>button,
+.box-purchase-membership.carols form .boxContent .boxGroupDonateType>button,
+.box-purchase-membership.carols form .box-content .boxGroupDonateType>button {
+    background-color: var(--colour-4) !important;
+    color: var(--colour-3) !important;
+    border: 0.1rem solid var(--colour-3) !important;
+}
+
+.boxDonate.carols form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image>.field-content .wrapImagecolor,
+.boxDonate.carols form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image>.field-content .wrapImagecolor,
+.boxDonate.carols form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image>.field-content .wrapImagecolor,
+.boxDonate.carols form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image>.field-content .wrapImagecolor,
+.box-purchase-membership.carols form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image>.field-content .wrapImagecolor,
+.box-purchase-membership.carols form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image>.field-content .wrapImagecolor,
+.box-purchase-membership.carols form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image>.field-content .wrapImagecolor,
+.box-purchase-membership.carols form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image>.field-content .wrapImagecolor {
+    color: var(--colour-2);
+}
+
+.boxDonate.carols form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing:hover,
+.boxDonate.carols form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing:focus,
+.boxDonate.carols form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing:active,
+.boxDonate.carols form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing:hover,
+.boxDonate.carols form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing:focus,
+.boxDonate.carols form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing:active,
+.boxDonate.carols form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing:hover,
+.boxDonate.carols form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing:focus,
+.boxDonate.carols form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing:active,
+.boxDonate.carols form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing:hover,
+.boxDonate.carols form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing:focus,
+.boxDonate.carols form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing:active,
+.box-purchase-membership.carols form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing:hover,
+.box-purchase-membership.carols form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing:focus,
+.box-purchase-membership.carols form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing:active,
+.box-purchase-membership.carols form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing:hover,
+.box-purchase-membership.carols form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing:focus,
+.box-purchase-membership.carols form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing:active,
+.box-purchase-membership.carols form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing:hover,
+.box-purchase-membership.carols form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing:focus,
+.box-purchase-membership.carols form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing:active,
+.box-purchase-membership.carols form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing:hover,
+.box-purchase-membership.carols form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing:focus,
+.box-purchase-membership.carols form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing:active {
+    color: var(--colour-2);
+}
+
+.boxDonate.carols form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing.active,
+.boxDonate.carols form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing.active,
+.boxDonate.carols form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing.active,
+.boxDonate.carols form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing.active,
+.box-purchase-membership.carols form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing.active,
+.box-purchase-membership.carols form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing.active,
+.box-purchase-membership.carols form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing.active,
+.box-purchase-membership.carols form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing.active {
+    border: 0.2rem solid var(--colour-3);
+}
+
+.boxDonate.carols form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing.focus,
+.boxDonate.carols form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing.focus,
+.boxDonate.carols form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing.focus,
+.boxDonate.carols form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing.focus,
+.box-purchase-membership.carols form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing.focus,
+.box-purchase-membership.carols form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing.focus,
+.box-purchase-membership.carols form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing.focus,
+.box-purchase-membership.carols form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing.focus {
+    border: 0.2rem solid var(--colour-3);
+}
+
+.boxDonate.carols form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a,
+.boxDonate.carols form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a,
+.boxDonate.carols form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a,
+.boxDonate.carols form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a,
+.box-purchase-membership.carols form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a,
+.box-purchase-membership.carols form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a,
+.box-purchase-membership.carols form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a,
+.box-purchase-membership.carols form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a {
+    color: var(--colour-14);
+}
+
+.boxDonate.carols form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path1::before,
+.boxDonate.carols form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path1::before,
+.boxDonate.carols form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path1::before,
+.boxDonate.carols form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path1::before,
+.box-purchase-membership.carols form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path1::before,
+.box-purchase-membership.carols form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path1::before,
+.box-purchase-membership.carols form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path1::before,
+.box-purchase-membership.carols form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path1::before {
+    color: var(--colour-7);
+}
+
+.boxDonate.carols form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path2::before,
+.boxDonate.carols form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path2::before,
+.boxDonate.carols form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path2::before,
+.boxDonate.carols form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path2::before,
+.box-purchase-membership.carols form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path2::before,
+.box-purchase-membership.carols form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path2::before,
+.box-purchase-membership.carols form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path2::before,
+.box-purchase-membership.carols form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a>.views-field.views-field-field-image .triangleSelect.icon-tick-selected .path2::before {
+    color: var(--colour-3);
+}
+
+.boxDonate.carols form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:hover>.views-field.views-field-field-amount .field-content,
+.boxDonate.carols form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:focus>.views-field.views-field-field-amount .field-content,
+.boxDonate.carols form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:active>.views-field.views-field-field-amount .field-content,
+.boxDonate.carols form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:hover>.views-field.views-field-field-amount .field-content,
+.boxDonate.carols form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:focus>.views-field.views-field-field-amount .field-content,
+.boxDonate.carols form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:active>.views-field.views-field-field-amount .field-content,
+.boxDonate.carols form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:hover>.views-field.views-field-field-amount .field-content,
+.boxDonate.carols form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:focus>.views-field.views-field-field-amount .field-content,
+.boxDonate.carols form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:active>.views-field.views-field-field-amount .field-content,
+.boxDonate.carols form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:hover>.views-field.views-field-field-amount .field-content,
+.boxDonate.carols form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:focus>.views-field.views-field-field-amount .field-content,
+.boxDonate.carols form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:active>.views-field.views-field-field-amount .field-content,
+.box-purchase-membership.carols form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:hover>.views-field.views-field-field-amount .field-content,
+.box-purchase-membership.carols form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:focus>.views-field.views-field-field-amount .field-content,
+.box-purchase-membership.carols form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:active>.views-field.views-field-field-amount .field-content,
+.box-purchase-membership.carols form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:hover>.views-field.views-field-field-amount .field-content,
+.box-purchase-membership.carols form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:focus>.views-field.views-field-field-amount .field-content,
+.box-purchase-membership.carols form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:active>.views-field.views-field-field-amount .field-content,
+.box-purchase-membership.carols form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:hover>.views-field.views-field-field-amount .field-content,
+.box-purchase-membership.carols form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:focus>.views-field.views-field-field-amount .field-content,
+.box-purchase-membership.carols form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:active>.views-field.views-field-field-amount .field-content,
+.box-purchase-membership.carols form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:hover>.views-field.views-field-field-amount .field-content,
+.box-purchase-membership.carols form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:focus>.views-field.views-field-field-amount .field-content,
+.box-purchase-membership.carols form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a:active>.views-field.views-field-field-amount .field-content {
+    color: var(--colour-2);
+}
+
+.boxDonate.carols form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active,
+.boxDonate.carols form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active,
+.boxDonate.carols form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active,
+.boxDonate.carols form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active,
+.box-purchase-membership.carols form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active,
+.box-purchase-membership.carols form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active,
+.box-purchase-membership.carols form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active,
+.box-purchase-membership.carols form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active {
+    color: var(--colour-14);
+    background-color: var(--colour-4);
+}
+
+.boxDonate.carols form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active>.views-field.views-field-field-image>.field-content .wrapImagecolor.focus,
+.boxDonate.carols form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active>.views-field.views-field-field-image>.field-content .wrapImagecolor.focus,
+.boxDonate.carols form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active>.views-field.views-field-field-image>.field-content .wrapImagecolor.focus,
+.boxDonate.carols form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active>.views-field.views-field-field-image>.field-content .wrapImagecolor.focus,
+.box-purchase-membership.carols form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active>.views-field.views-field-field-image>.field-content .wrapImagecolor.focus,
+.box-purchase-membership.carols form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active>.views-field.views-field-field-image>.field-content .wrapImagecolor.focus,
+.box-purchase-membership.carols form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active>.views-field.views-field-field-image>.field-content .wrapImagecolor.focus,
+.box-purchase-membership.carols form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active>.views-field.views-field-field-image>.field-content .wrapImagecolor.focus {
+    color: var(--colour-2);
+}
+
+.boxDonate.carols form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active>.views-field.views-field-field-amount .field-content,
+.boxDonate.carols form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active>.views-field.views-field-field-amount .field-content,
+.boxDonate.carols form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active>.views-field.views-field-field-amount .field-content,
+.boxDonate.carols form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active>.views-field.views-field-field-amount .field-content,
+.box-purchase-membership.carols form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active>.views-field.views-field-field-amount .field-content,
+.box-purchase-membership.carols form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active>.views-field.views-field-field-amount .field-content,
+.box-purchase-membership.carols form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active>.views-field.views-field-field-amount .field-content,
+.box-purchase-membership.carols form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active>.views-field.views-field-field-amount .field-content {
+    color: var(--colour-2);
+}
+
+.boxDonate.carols form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active:hover>.views-field.views-field-field-image>.field-content .wrapImagecolor,
+.boxDonate.carols form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active:hover>.views-field.views-field-field-image>.field-content .wrapImagecolor,
+.boxDonate.carols form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active:hover>.views-field.views-field-field-image>.field-content .wrapImagecolor,
+.boxDonate.carols form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active:hover>.views-field.views-field-field-image>.field-content .wrapImagecolor,
+.box-purchase-membership.carols form .boxContent .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active:hover>.views-field.views-field-field-image>.field-content .wrapImagecolor,
+.box-purchase-membership.carols form .boxContent .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active:hover>.views-field.views-field-field-image>.field-content .wrapImagecolor,
+.box-purchase-membership.carols form .box-content .blockDonateType .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active:hover>.views-field.views-field-field-image>.field-content .wrapImagecolor,
+.box-purchase-membership.carols form .box-content .box-purchase-amount .view-content .views-view-grid .views-row>.views-col>.views-field.views-field-nothing a.active:hover>.views-field.views-field-field-image>.field-content .wrapImagecolor {
+    color: var(--colour-2);
+}
+
+.boxDonate.carols form .boxContent.boxYourDetail .form-group .add-help-ico>span.icon-info::before,
+.boxDonate.carols form .box-content.boxYourDetail .form-group .add-help-ico>span.icon-info::before,
+.box-purchase-membership.carols form .boxContent.boxYourDetail .form-group .add-help-ico>span.icon-info::before,
+.box-purchase-membership.carols form .box-content.boxYourDetail .form-group .add-help-ico>span.icon-info::before {
+    color: var(--colour-3);
+}
+
+.boxDonate.carols form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new,
+.boxDonate.carols form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new,
+.box-purchase-membership.carols form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new,
+.box-purchase-membership.carols form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new {
+    background-color: var(--colour-4);
+}
+
+.boxDonate.carols form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new .add-card .icon-add-new::before,
+.boxDonate.carols form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new .add-card .text,
+.boxDonate.carols form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new .add-card .icon-add-new::before,
+.boxDonate.carols form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new .add-card .text,
+.box-purchase-membership.carols form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new .add-card .icon-add-new::before,
+.box-purchase-membership.carols form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new .add-card .text,
+.box-purchase-membership.carols form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new .add-card .icon-add-new::before,
+.box-purchase-membership.carols form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new .add-card .text {
+    color: var(--colour-3);
+}
+
+.boxDonate.carols form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new:hover,
+.boxDonate.carols form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new:focus,
+.boxDonate.carols form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new:hover,
+.boxDonate.carols form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new:focus,
+.box-purchase-membership.carols form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new:hover,
+.box-purchase-membership.carols form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new:focus,
+.box-purchase-membership.carols form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new:hover,
+.box-purchase-membership.carols form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new:focus {
+    color: var(--colour-2);
+}
+
+.boxDonate.carols form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new:active,
+.boxDonate.carols form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new:active,
+.box-purchase-membership.carols form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new:active,
+.box-purchase-membership.carols form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new:active {
+    color: var(--colour-2);
+}
+
+.boxDonate.carols form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new:active .add-card .icon-add-new::before,
+.boxDonate.carols form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new:active .add-card .text,
+.boxDonate.carols form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new:active .add-card .icon-add-new::before,
+.boxDonate.carols form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new:active .add-card .text,
+.box-purchase-membership.carols form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new:active .add-card .icon-add-new::before,
+.box-purchase-membership.carols form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new:active .add-card .text,
+.box-purchase-membership.carols form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new:active .add-card .icon-add-new::before,
+.box-purchase-membership.carols form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.add-new:active .add-card .text {
+    color: var(--colour-3);
+}
+
+.boxDonate.carols form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.icon-tick-selected .path1::before,
+.boxDonate.carols form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.icon-tick-selected .path1::before,
+.box-purchase-membership.carols form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.icon-tick-selected .path1::before,
+.box-purchase-membership.carols form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.icon-tick-selected .path1::before {
+    color: var(--colour-7);
+}
+
+.boxDonate.carols form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.icon-tick-selected .path2::before,
+.boxDonate.carols form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.icon-tick-selected .path2::before,
+.box-purchase-membership.carols form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.icon-tick-selected .path2::before,
+.box-purchase-membership.carols form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.icon-tick-selected .path2::before {
+    color: var(--colour-3);
+}
+
+.boxDonate.carols form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.icon-tick-selected .update-default.icon-default::before,
+.boxDonate.carols form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.icon-tick-selected .update-default.icon-default::before,
+.box-purchase-membership.carols form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.icon-tick-selected .update-default.icon-default::before,
+.box-purchase-membership.carols form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.icon-tick-selected .update-default.icon-default::before {
+    color: var(--colour-7);
+}
+
+.boxDonate.carols form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.active.icon-tick-selected,
+.boxDonate.carols form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.active.icon-tick-selected,
+.box-purchase-membership.carols form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.active.icon-tick-selected,
+.box-purchase-membership.carols form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner.active.icon-tick-selected {
+    color: var(--colour-2);
+}
+
+.boxDonate.carols form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner:hover,
+.boxDonate.carols form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner:hover,
+.box-purchase-membership.carols form .boxContent.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner:hover,
+.box-purchase-membership.carols form .box-content.box-payment-method .payment-method .views-row .box-clickable-item.col-md-4 .item-inner:hover {
+    color: var(--colour-2);
+}
+
+.boxDonate.carols form .include-link a,
+.box-purchase-membership.carols form .include-link a {
+    border-bottom: 0.2rem solid var(--colour-3);
+}
+
+.add-new-card .modal-content .wrap-add-new-card .form-add-new-card .form-item label,
+.add-new-card .modal-content .wrap-add-new-card .form-add-new-card .form-check label {
+    color: var(--colour-14);
+}
+
+.add-new-card .modal-content .wrap-add-new-card .form-add-new-card .form-item label.error,
+.add-new-card .modal-content .wrap-add-new-card .form-add-new-card .form-item label.card-error,
+.add-new-card .modal-content .wrap-add-new-card .form-add-new-card .form-item span.error,
+.add-new-card .modal-content .wrap-add-new-card .form-add-new-card .form-item span.card-error {
+    color: var(--colour-32) !important;
+}
+
+.add-new-card .modal-content .wrap-add-new-card .form-add-new-card .form-item input,
+.add-new-card .modal-content .wrap-add-new-card .form-add-new-card .form-item .card-element {
+    border-color: var(--colour-12);
+}
+
+.add-new-card .modal-content .wrap-add-new-card .form-add-new-card .form-item input:focus,
+.add-new-card .modal-content .wrap-add-new-card .form-add-new-card .form-item input.StripeElement--focus,
+.add-new-card .modal-content .wrap-add-new-card .form-add-new-card .form-item .card-element:focus,
+.add-new-card .modal-content .wrap-add-new-card .form-add-new-card .form-item .card-element.StripeElement--focus {
+    box-shadow: var(--colour-3) 0px 0px 0.4rem 0rem;
+    border: 0.2rem solid var(--colour-3);
+}
+
+.add-new-card .modal-content .wrap-add-new-card .form-add-new-card .form-item input.StripeElement--invalid,
+.add-new-card .modal-content .wrap-add-new-card .form-add-new-card .form-item input.error,
+.add-new-card .modal-content .wrap-add-new-card .form-add-new-card .form-item .card-element.StripeElement--invalid,
+.add-new-card .modal-content .wrap-add-new-card .form-add-new-card .form-item .card-element.error {
+    box-shadow: var(--colour-32) 0px 0px 0.4rem 0rem;
+    border: 0.2rem solid var(--colour-32);
+}
+
+.add-new-card .modal-content .wrap-add-new-card .form-add-new-card .form-item.error input {
+    box-shadow: var(--colour-32) 0px 0px 0.4rem 0rem;
+    border: 0.2rem solid var(--colour-32);
+}
+
+.add-new-card .modal-content .wrap-add-new-card .form-add-new-card .form-item.error label.error,
+.add-new-card .modal-content .wrap-add-new-card .form-add-new-card .form-item.error span.error {
+    color: var(--colour-32) !important;
+}
+
+.add-new-card.carols .modal-content .wrap-add-new-card .form-add-new-card .form-item input:focus {
+    box-shadow: var(--colour-3) 0px 0px 0.4rem 0rem;
+    border: 0.2rem solid var(--colour-3);
+}
+
+.donate-thank-you .sectionDonateThanks .boxThanks .boxContent {
+    box-shadow: var(--colour-31) 0px 0px 0.4rem 0.2rem;
+    background-color: var(--colour-4);
+}
+
+.donate-thank-you .sectionDonateThanks .boxThanks .wrapThumbnailSocial {
+    box-shadow: var(--colour-31) 0px 0px 0.4rem 0.2rem;
+    background-color: var(--colour-4);
+}
+
+.donate-thank-you .sectionDonateThanks .boxThanks .wrapThumbnailSocial .boxThumbnail .box-share-family {
+    color: var(--colour-2);
+}
+
+.donate-thank-you .sectionDonateThanks .boxThanks .wrapThumbnailSocial .boxThumbnail .box-share-family h2 {
+    color: var(--colour-3);
+}
+
+.donate-thank-you .sectionDonateThanks .boxThanks .wrapThumbnailSocial .boxSocial .social-media-sharing>ul>li>a:focus {
+    outline: var(--colour-3) solid 0.2rem;
+}
+
+.donate-thank-you .sectionDonateThanks .boxThanks.carols .wrapThumbnailSocial .boxThumbnail .box-share-family {
+    color: var(--colour-2);
+}
+
+.donate-thank-you .sectionDonateThanks .boxThanks.carols .wrapThumbnailSocial .boxThumbnail .box-share-family h2 {
+    color: var(--colour-3);
+}
+
+.donate-thank-you .sectionDonateThanks .boxThanks.seda .wrapThumbnailSocial .box-share-family {
+    color: var(--colour-2);
+}
+
+.row.views-row.clearfix .views-field.views-field-nothing a.amountOpt {
+    background-color: var(--colour-4);
+    box-shadow: var(--colour-31) 0px 0px 0.4rem 0.2rem;
+}
+
+.row.views-row.clearfix .views-field.views-field-nothing a.amountOpt span.views-field.views-field-field-image span.wrapImagecolor {
+    color: var(--colour-2);
+}
+
+.boxPrivacy.include-link a {
+    border-bottom: 0.2rem solid var(--colour-4);
+}
+
+.boxPrivacy.include-link a:hover {
+    color: var(--colour-3) !important;
+    border-bottom: 0.2rem solid var(--colour-3) !important;
+}
+
+a.enter-address-manually.link-default {
+    border-bottom: 0.2rem solid var(--colour-4);
+}
+
+a.enter-address-manually.link-default:hover {
+    border-bottom: 0.2rem solid var(--colour-3) !important;
+}
+
+.select-wrapper select,
+.select-wrapper textarea {
+    border: 0.1rem solid var(--colour-12);
+}
+
+.footer.donate {
+    color: var(--colour-2);
+}
+
+.footer.donate .master-footer h5 {
+    color: var(--colour-7);
+}
+
+.block.block-donation-stripe.block-banner-donate.clearfix {
+    color: var(--colour-2);
+}
+
+.rerurn-to-page .txtLblReturn {
+    color: var(--colour-3);
+}
+
+.rerurn-to-page .txtLblReturn span {
+    border-bottom: 0.2rem solid var(--colour-3);
+}
+
+.rerurn-to-page .txtLblReturn:hover span,
+.rerurn-to-page .txtLblReturn:focus span {
+    border-bottom: 0.2rem solid var(--colour-4);
+}
+
+.form-control:focus {
+    background-color: var(--colour-4);
+    border: 0.2rem solid var(--colour-12) !important;
+}
+
+ul.pagination.js-pager__items li.active a {
+    color: var(--colour-14);
+    border-bottom: 0.2rem solid var(--colour-3);
+}
+
+ul.pagination.js-pager__items li a:hover {
+    color: var(--colour-13);
+    border-bottom: 0.2rem solid var(--colour-3);
+}
+
+.form-actions input {
+    border: 0.2rem solid var(--colour-3) !important;
+    color: var(--colour-3) !important;
+}
+
+.filter_wraper .form-radios .js-form-item-sort-order {
+    color: var(--colour-14);
+}
+
+.region-sidebar-first-mobile nav {
+    background: var(--colour-4);
+}
+
+.mobile-filter .filter_wraper.show {
+    background-color: var(--colour-4);
+}
+
+.mobile-filter .filter_wraper.show p.filter_label span.filter-label {
+    color: var(--colour-3);
+}
+
+.mobile-filter .form-actions.form-group.js-form-wrapper.form-wrapper input#edit-reset,
+.mobile-filter .form-actions.form-group.js-form-wrapper.form-wrapper input[data-drupal-selector="edit-reset"] {
+    color: var(--colour-3);
+}
+
+.mobile-filter .form-actions.form-group.js-form-wrapper.form-wrapper input#edit-reset:focus,
+.mobile-filter .form-actions.form-group.js-form-wrapper.form-wrapper input#edit-reset:hover,
+.mobile-filter .form-actions.form-group.js-form-wrapper.form-wrapper input[data-drupal-selector="edit-reset"]:focus,
+.mobile-filter .form-actions.form-group.js-form-wrapper.form-wrapper input[data-drupal-selector="edit-reset"]:hover {
+    background-color: var(--colour-10);
+}
+
+.mobile-filter .form-actions.form-group.js-form-wrapper.form-wrapper input#edit-submit-event-list-filter,
+.mobile-filter .form-actions.form-group.js-form-wrapper.form-wrapper input#edit-submit-blogs-listing-block {
+    color: var(--colour-3);
+    border: 0.2rem solid var(--colour-3);
+}
+
+.mobile-filter .filter_wraper div[id^="edit-sort-bef-combine"],
+.mobile-filter fieldset#edit-sort-bef-combine--wrapper div[id^="edit-sort-bef-combine"],
+.mobile-filter fieldset#edit-sort-order--wrapper div[id^="edit-sort-order"] {
+    background: var(--colour-4);
+}
+
+.mobile-filter div#edit-field-event-state-value {
+    background: var(--colour-4);
+}
+
+#edit-field-categories-target-id .form-item label,
+div[id^="edit-field-categories-target-id"] .form-item label {
+    color: var(--colour-14);
+}
+
+.mobile-filter .filter_wraper .form--inline.form-inline details {
+    background-color: var(--colour-4);
+}
+
+.content_block_with_img .navi-left p {
+    color: var(--colour-14);
+}
+
+.mobile-filter .filter_wraper .form--inline.form-inline details {
+    border-bottom: 0.1rem solid var(--colour-11);
+}
+
+.mobile-filter ul.mobile-list-outer li {
+    color: var(--colour-3);
+    border-right: 0.1rem solid var(--colour-11);
+    border-left: 0.1rem solid var(--colour-11);
+}
+
+.mobile-filter .filter_wraper.show {
+    background: var(--colour-4);
+}
+
+.mobile-filter .filter_wraper.show input[type="checkbox"]:focus+label::after,
+.mobile-filter .filter_wraper.show input[type="radio"]:focus+label::after,
+.mobile-filter .filter_wraper.show .form-checkboxes input:checked+label:hover::after,
+.mobile-filter .filter_wraper.show .form-checkboxes input:checked+label:focus::after {
+    color: var(--colour-3) !important;
+}
+
+.mobile-filter .filter_wraper.show .js-form-type-radio .control-label.option:hover::before,
+.mobile-filter .filter_wraper.show .js-form-type-radio .control-label.option:focus::before {
+    border-color: var(--colour-3);
+}
+
+.mobile-filter .filter_wraper.show .js-form-type-radio .form-radio:checked:focus+label::before {
+    border: 0.2rem solid var(--colour-3);
+    background-color: var(--colour-4) !important;
+}
+
+.mobile-filter .filter_wraper.show .js-form-type-radio .form-radio:checked:focus+label::after {
+    color: var(--colour-2);
+}
+
+.mobile-filter .filter_wraper.show .js-form-type-radio .form-radio:checked+label:hover::before,
+.mobile-filter .filter_wraper.show .js-form-type-radio .form-radio:checked+label:focus::before {
+    border: 0.2rem solid var(--colour-3);
+}
+
+.mobile-filter .filter_wraper.show .js-form-type-radio .form-radio:checked+label:hover::after,
+.mobile-filter .filter_wraper.show .js-form-type-radio .form-radio:checked+label:focus::after {
+    color: var(--colour-2);
+}
+
+.mobile-filter .filter_wraper.show .filter_label:hover,
+.mobile-filter .filter_wraper.show .filter_label:focus {
+    color: var(--colour-2);
+}
+
+.mobile-filter .filter_wraper .form--inline.form-inline details summary {
+    color: var(--colour-3);
+}
+
+.pager .pagination.js-pager__items .page-item.is-active.active a {
+    color: var(--colour-13);
+}
+
+.pager .pagination.js-pager__items .page-item.is-active.active::after {
+    color: var(--colour-13);
+}
+
+ul.pagination.js-pager__items li.active {
+    color: var(--colour-13);
+}
+
+.pagination.js-pager__items li.page-item:nth-last-child(3) a {
+    color: var(--colour-13);
+}
+
+.form-data.manual-form a.flex-item {
+    color: var(--colour-3);
+}
+
+.header-hover.search-bar {
+    color: var(--colour-14);
+}
+
+.header-hover.search-bar:hover,
+.header-hover.search-bar:focus {
+    color: var(--colour-2);
+}
+
+.header-hover.search-bar svg {
+    color: var(--colour-3);
+}
+
+.text.desktop svg {
+    background: var(--colour-4);
+    border-top-color: var(--colour-14);
+    border-right-color: var(--colour-14);
+    border-bottom-color: var(--colour-14);
+}
+
+.mobile-searchbox {
+    color: var(--colour-2);
+}
+
+.mobile-searchbox .vaFrmSearch .input-group .form-control {
+    border: 0.2rem solid var(--colour-3) !important;
+}
+
+.mobile-searchbox svg {
+    color: var(--colour-3) !important;
+}
+
+.mobile-searchbox .mobile-back-search {
+    background-color: var(--colour-4);
+    border-top-color: var(--colour-3);
+    border-bottom-color: var(--colour-3);
+    border-left-color: var(--colour-3);
+}
+
+.mobile-searchbox .mobile-back-search:hover,
+.mobile-searchbox .mobile-back-search:focus {
+    color: var(--colour-2);
+}
+
+.region.region-sidebar-first .expand-link-side-nav a {
+    background: var(--colour-4);
+    border-top: 0.1rem solid var(--colour-11);
+    border-bottom: 0.1rem solid var(--colour-11);
+    border-left: 0.1rem solid var(--colour-11);
+}
+
+.side-nav-overlay {
+    background: var(--colour-9);
+}
+
+a.event-back:hover {
+    color: var(--colour-3);
+}
+
+.mobile-searchbox .vaFrmSearch .close-icon:hover,
+.mobile-searchbox .vaFrmSearch .close-icon:focus {
+    color: var(--colour-2);
+}
+
+.mobile-searchbox .vaFrmSearch .input-group-btn .btn.btn-default {
+    border-top: 0.2rem solid var(--colour-3);
+    border-right: 0.2rem solid var(--colour-3);
+    border-bottom: 0.2rem solid var(--colour-3);
+}
+
+.pagerer-left-pane li.pager__item.pagerer-prefix span {
+    color: var(--colour-13);
+}
+
+.field--item .news_section_column .news-inner-wrapper .news-desp {
+    color: var(--colour-14);
+}
+
+.field--item .news_section_column .news-inner-wrapper .news-desp {
+    color: var(--colour-14);
+}
+
+.field--item .news_section_column .news-inner-wrapper .news-desp {
+    color: var(--colour-14);
+}
