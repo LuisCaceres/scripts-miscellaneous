@@ -1801,7 +1801,17 @@ form.webform-submission-form {
         display: block;
     }
 
+    /* Drupal form specific */
+    /* This inserts an asterisk to visally highlight mandatory fields. */
+    .form-required::after {
+        content: " *";
+    }
+
+    /* Drupal form specific */
+    .form-required::after,
+    /* Form Assembly specific */
     .asterisk,
+    /* Form Assembly specific */
     .wForm .reqMark::after {
         color: var(--red) !important;
         font-family: "BrownSTD";
