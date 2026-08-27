@@ -3,33 +3,42 @@ The following piece of code waits until the developer has finished typing to gen
 */
 
 import * as fs from 'fs/promises';
-import * as process from "process";
 
 /** Watch a file and fire file change events only after this function believes the developer has finished typing.
  * @param path - A path to a file.
  * @param delay - The number of seconds to wait at a minimum to fire a file change event.
  */
 async function* watchFile(path: string, delay: number) {
-    let timestamp1 = process.uptime();
+    const milliseconds = delay * 1000;
+    const changes = fs.watch(path)[Symbol.asyncIterator]();
 
-    for await (const change of fs.watch(path)) {
-        timestamp1 = process.uptime();
+    // Wait until the developer inserts or deletes the first character in the file.
+    await changes.next();
 
-        // Verify if the developer is still typing. This prevents a file change event from being fired constantly for every single character that's typed. Otherwise, this could cause Puppeteer or the web page to run out of resources and crash.
-        const isTyping = await new Promise(resolve =>
-            setTimeout(() => {
-                const timestamp2 = process.uptime();
-                const isTyping = (timestamp2 - timestamp1) < delay;
-                resolve(isTyping);
-            }, delay * 1000)
+    while (true) {
+        // Let `nextChange` be an insertion or deletion that hasn't yet occurred.
+        const nextChange = changes.next();
+        // Let `timer` be a mechanism which indicates whether the developer is continously typing (otherwise known as composing).
+        const timer = new Promise(resolve =>
+            setTimeout(resolve, milliseconds)
         );
 
-        // If the developer is still typing, wait longer to file change event.
+        // Either `timer` will expire first or the developer will insert or delete a character from the file.
+        const isTyping = await Promise.race([
+            nextChange,
+            timer
+        ]);
+
         if (isTyping) {
+            // The developer is still inserting or deleting characters from the file. Don't fire a file change event. Go back to the start of the `while` loop and start again.
             continue;
         }
 
-        yield change;
+        // Otherwise, `timer` expired first. The code now infers the developer is no longer modifying the file. Fire a file change event.
+        yield;
+
+        // Wait until the developer inserts or deletes the next character, go back to the beginning of the `while` loop and start again.
+        await nextChange;
     }
 }
 
